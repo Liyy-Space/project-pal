@@ -20,8 +20,8 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card shadow-card">
       <div className="container flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-3 font-bold text-xl text-foreground" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Neudata logo" className="w-10 h-10 object-contain" />
-          Neudata
+          <img src={logo} alt="Neudata logo" className="w-12 h-12 object-contain drop-shadow-md" />
+          <span className="text-lg md:text-xl">Neudata</span>
         </Link>
 
         {/* Desktop */}
