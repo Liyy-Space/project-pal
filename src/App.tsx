@@ -12,7 +12,7 @@ import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Books from "./pages/Books";
 import Contact from "./pages/Contact";
-import LogoCustomizer from "./pages/LogoCustomizer";
+
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
