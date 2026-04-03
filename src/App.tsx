@@ -12,6 +12,7 @@ import Services from "./pages/Services";
 import Projects from "./pages/Projects";
 import Books from "./pages/Books";
 import Contact from "./pages/Contact";
+import LogoCustomizer from "./pages/LogoCustomizer";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/projects" element={<Projects />} />
           <Route path="/books" element={<Books />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/logo" element={<LogoCustomizer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
