@@ -8,14 +8,14 @@ const services = [
     title: "Data Analytics & Visualization",
     desc: "Transform raw data into compelling visual stories that drive business decisions.",
     benefits: ["Interactive dashboards and reports", "Real-time data monitoring", "Custom KPI tracking", "Automated reporting systems", "Self-service analytics platforms"],
-    story: "Helped a retail chain increase sales by 23% through customer behavior analytics and personalized marketing campaigns.",
+    story: "Helped a retail client increase sales through customer behavior analytics.",
   },
   {
     icon: Lightbulb,
     title: "Machine Learning Solutions",
     desc: "Build intelligent systems that learn from your data and make predictions.",
     benefits: ["Predictive modeling and forecasting", "Automated decision-making systems", "Natural language processing", "Computer vision applications", "Recommendation systems"],
-    story: "Developed a predictive maintenance system for a manufacturing company, reducing equipment downtime by 40% and saving $2M annually.",
+    story: "Built a predictive maintenance system reducing equipment downtime significantly.",
   },
   {
     icon: Server,
@@ -29,7 +29,7 @@ const services = [
     title: "Training & Consulting",
     desc: "Empower your team with data science skills and strategic guidance.",
     benefits: ["Custom training programs", "Data strategy consulting", "Team skill development", "Best practices implementation", "Ongoing support and mentoring"],
-    story: "Trained 10+ employees at a healthcare organization, enabling them to build internal analytics capabilities and reduce external consulting costs by 60%.",
+    story: "Trained a healthcare team enabling internal analytics capabilities.",
   },
 ];
 

@@ -11,17 +11,24 @@ const values = [
 ];
 
 const team = [
-  { name: "Dr. Sarah Chen", title: "Chief Data Scientist", desc: "PhD in Machine Learning from MIT with 15+ years of experience in AI research and enterprise data solutions.", tags: ["Machine Learning", "Deep Learning", "NLP", "Computer Vision"] },
-  { name: "Marcus Rodriguez", title: "Senior Data Engineer", desc: "Expert in building scalable data infrastructure and real-time analytics systems.", tags: ["Data Engineering", "Cloud Architecture", "Apache Spark", "Kubernetes"] },
-  { name: "Dr. Aisha Patel", title: "Lead BI Analyst", desc: "Specializes in translating complex data insights into actionable business strategies.", tags: ["Business Intelligence", "Financial Analytics", "Data Visualization", "Strategy"] },
-  { name: "James Thompson", title: "Senior Consultant", desc: "Helps organizations implement data-driven cultures and processes.", tags: ["Digital Transformation", "Change Management", "Process Optimization", "Training"] },
+  { 
+    name: "Ben Osangir", 
+    title: "Founder & Lead Data Scientist", 
+    desc: "Passionate about turning raw data into meaningful insights with hands-on experience in machine learning, AI research, and delivering data-driven solutions for businesses.", 
+    tags: ["Machine Learning", "Deep Learning", "NLP", "Computer Vision"] 
+  },
+  { 
+    name: "James Wambua", 
+    title: "Senior Data Engineer", 
+    desc: "Expert in designing and building scalable data infrastructure, reliable pipelines, and real-time analytics systems that power business intelligence.", 
+    tags: ["Data Engineering", "Cloud Architecture", "SQL", "ETL Pipelines"] 
+  },
 ];
-
 const stats = [
   { number: "10+", label: "Projects Completed" },
   { number: "10+", label: "Happy Clients" },
-  { number: "10+", label: "Team Members" },
-  { number: "3", label: "Years Experience" },
+  { number: "3", label: "Team Members" },
+  { number: "2+", label: "Years Experience" },
 ];
 
 const About = () => (

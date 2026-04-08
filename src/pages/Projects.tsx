@@ -9,7 +9,7 @@ const projects = [
     desc: "Built a comprehensive analytics platform for a major e-commerce retailer to understand customer behavior, optimize product recommendations, and increase conversion rates.",
     achievements: ["35% increase in conversion rates", "Real-time personalization engine", "Advanced customer segmentation", "Automated A/B testing framework"],
     duration: "6 months", team: "8 team members",
-    impact: "$5M additional annual revenue",
+    impact: "Significant increase in conversion rates",
     img: "https://images.pexels.com/photos/590016/pexels-photo-590016.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
@@ -18,7 +18,7 @@ const projects = [
     desc: "Developed machine learning models to predict patient readmission risks and optimize treatment plans for a large hospital network.",
     achievements: ["25% reduction in readmission rates", "Early warning system for critical patients", "Optimized resource allocation", "Improved patient outcomes"],
     duration: "8 months", team: "12 team members",
-    impact: "50+ lives potentially saved annually",
+    impact: "Significant increase in conversion rates",
     img: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
@@ -27,7 +27,7 @@ const projects = [
     desc: "Created an advanced risk assessment platform for a financial institution to detect fraud, assess credit risk, and ensure regulatory compliance.",
     achievements: ["90% fraud detection accuracy", "Real-time risk scoring", "Automated compliance reporting", "Reduced false positives by 60%"],
     duration: "10 months", team: "15 team members",
-    impact: "$12M in prevented fraud losses",
+    impact: "Measurable reduction in readmission rates",
     img: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     desc: "Implemented IoT sensors and machine learning algorithms to optimize production processes and predict equipment failures.",
     achievements: ["40% reduction in equipment downtime", "15% increase in production efficiency", "Predictive maintenance system", "Quality control automation"],
     duration: "12 months", team: "10 team members",
-    impact: "$8M annual cost savings",
+    impact: "Reduced fraud losses considerably",
     img: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
