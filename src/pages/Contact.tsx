@@ -14,7 +14,7 @@ const Contact = () => {
 
     setSending(true);
     try {
-      await emailjs.sendForm("service_qt9ljwj", "template_en1j91w", formRef.current, {
+      await emailjs.sendForm("service_bkjb2ru", "template_en1j91w", formRef.current, {
         publicKey: "EXA1v79zfibZQipgZ",
       });
       toast.success("Message sent successfully!");
