@@ -7,10 +7,8 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
-  { to: "/projects", label: "Projects" },
   { to: "/books", label: "Books" },
   { to: "/contact", label: "Contact" },
-  
 ];
 
 const Navbar = () => {
@@ -26,7 +24,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex gap-1">
+        <div className="hidden md:flex items-center gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.to}
@@ -40,6 +38,13 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          {/* CTA Button */}
+          <Link
+            to="/contact"
+            className="ml-3 px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
+          >
+            Get In Touch
+          </Link>
         </div>
 
         {/* Mobile toggle */}
@@ -65,6 +70,14 @@ const Navbar = () => {
               {link.label}
             </Link>
           ))}
+          {/* CTA Button Mobile */}
+          <Link
+            to="/contact"
+            onClick={() => setOpen(false)}
+            className="block mt-2 px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-semibold text-center hover:opacity-90 transition-opacity"
+          >
+            Get In Touch
+          </Link>
         </div>
       )}
     </nav>

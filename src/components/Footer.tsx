@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 
 const Footer = () => (
   <footer className="bg-foreground text-muted">
@@ -22,8 +22,8 @@ const Footer = () => (
               { to: "/", label: "Home" },
               { to: "/about", label: "About Us" },
               { to: "/services", label: "Services" },
-              { to: "/projects", label: "Projects" },
               { to: "/books", label: "Books" },
+              { to: "/contact", label: "Contact" },
             ].map((l) => (
               <li key={l.to}>
                 <Link to={l.to} className="opacity-70 hover:opacity-100 transition-opacity">
@@ -40,10 +40,6 @@ const Footer = () => (
             <div className="flex items-center gap-2 opacity-70">
               <Mail className="w-4 h-4 shrink-0" />
               <span>info@neudata.com</span>
-            </div>
-            <div className="flex items-center gap-2 opacity-70">
-              <Phone className="w-4 h-4 shrink-0" />
-              <span>+254 703467349</span>
             </div>
             <div className="flex items-center gap-2 opacity-70">
               <MapPin className="w-4 h-4 shrink-0" />
