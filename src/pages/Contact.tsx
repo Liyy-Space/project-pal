@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { MessageCircle, MapPin, Phone, Mail } from "lucide-react";
+import { MessageCircle, MapPin, Mail } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import PageHero from "@/components/PageHero";
@@ -14,9 +14,12 @@ const Contact = () => {
 
     setSending(true);
     try {
-      await emailjs.sendForm("service_bkjb2ru", "template_en1j91w", formRef.current, {
-        publicKey: "EXA1v79zfibZQipgZ",
-      });
+      await emailjs.sendForm(
+        "service_bkjb2ru",
+        "template_en1j91w",
+        formRef.current,
+        { publicKey: "EXA1v79zfibZQipgZ" }
+      );
       toast.success("Message sent successfully!");
       formRef.current.reset();
     } catch {
@@ -29,11 +32,9 @@ const Contact = () => {
   return (
     <div className="pt-16">
       <PageHero icon={MessageCircle} title="Get In Touch" description="Ready to transform your business with data science? Let's discuss your project and explore how we can help." />
-
       <section className="py-20 bg-muted">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-8">
-            {/* Form */}
             <div className="bg-card rounded-lg shadow-card p-8">
               <h2 className="text-2xl font-bold text-foreground mb-6">Send us a message</h2>
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
@@ -51,10 +52,6 @@ const Contact = () => {
                   <div>
                     <label className="block text-sm font-medium text-foreground mb-1">Email</label>
                     <input name="email" type="email" required className="w-full px-4 py-2.5 rounded-lg border border-input bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent transition-all outline-none" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-foreground mb-1">Phone</label>
-                    <input name="phone" type="tel" className="w-full px-4 py-2.5 rounded-lg border border-input bg-background text-foreground focus:ring-2 focus:ring-ring focus:border-transparent transition-all outline-none" />
                   </div>
                 </div>
                 <div>
@@ -82,7 +79,6 @@ const Contact = () => {
               </form>
             </div>
 
-            {/* Info */}
             <div className="space-y-6">
               <div className="bg-card rounded-lg shadow-card p-8">
                 <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
@@ -93,13 +89,6 @@ const Contact = () => {
                       <h3 className="font-semibold text-foreground">Office Address</h3>
                       <p className="text-muted-foreground text-sm">Nairobi, Kenya</p>
                       <p className="text-xs text-muted-foreground/60 mt-1">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4">
-                    <Phone className="w-5 h-5 text-primary shrink-0 mt-1" />
-                    <div>
-                      <h3 className="font-semibold text-foreground">Phone</h3>
-                      <p className="text-muted-foreground text-sm">+254 703467349</p>
                     </div>
                   </div>
                   <div className="flex gap-4">
