@@ -39,12 +39,7 @@ const Navbar = () => {
             </Link>
           ))}
           {/* CTA Button */}
-          <Link
-            to="/contact"
-            className="ml-3 px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-semibold hover:opacity-90 transition-opacity"
-          >
-            Get In Touch
-          </Link>
+           
         </div>
 
         {/* Mobile toggle */}
@@ -71,13 +66,8 @@ const Navbar = () => {
             </Link>
           ))}
           {/* CTA Button Mobile */}
-          <Link
-            to="/contact"
-            onClick={() => setOpen(false)}
-            className="block mt-2 px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-semibold text-center hover:opacity-90 transition-opacity"
-          >
-            Get In Touch
-          </Link>
+           {/* CTA Button */}
+ 
         </div>
       )}
     </nav>

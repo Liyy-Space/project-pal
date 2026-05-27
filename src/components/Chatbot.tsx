@@ -4,58 +4,73 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface FAQ {
   keywords: string[];
-  question: string;
   answer: string;
 }
 
 const faqs: FAQ[] = [
   {
-    keywords: ["service", "offer", "do", "provide", "help"],
-    question: "What services do you offer?",
-    answer:
-      "We offer Data Analytics, Machine Learning, Data Engineering, and Strategic Consulting. Each service is tailored to help businesses make data-driven decisions and optimize operations.",
+    keywords: ["service", "offer", "do", "provide", "help", "what do you", "what can"],
+    answer: "We offer 4 core services:\n\n1. 📊 Data Analytics & Visualization\n2. 🤖 Machine Learning Solutions\n3. 🔧 Data Engineering & Infrastructure\n4. 🎓 Training & Consulting\n\nEach is tailored to your business needs. Visit our Services page to learn more!",
   },
   {
-    keywords: ["price", "cost", "pricing", "charge", "fee", "rate"],
-    question: "How much do your services cost?",
-    answer:
-      "Our pricing depends on the scope and complexity of each project. Contact us for a free consultation and we'll provide a detailed quote tailored to your needs.",
+    keywords: ["price", "cost", "pricing", "charge", "fee", "rate", "how much", "afford", "budget", "quote"],
+    answer: "Our pricing depends on the scope and complexity of your project. We offer flexible packages for businesses of all sizes.\n\nContact us for a FREE consultation and we'll provide a detailed quote tailored to your needs! 💼",
   },
   {
-    keywords: ["contact", "reach", "email", "phone", "talk"],
-    question: "How can I contact you?",
-    answer:
-      "You can reach us through the Contact page on our website, or email us directly. We typically respond within 24 hours on business days.",
+    keywords: ["contact", "reach", "email", "talk", "speak", "message", "touch", "connect", "call"],
+    answer: "You can reach us through:\n\n📧 info@neudata.com\n📧 sales@neudata.com\n📍 Nairobi, Kenya\n🕐 Mon-Fri: 9AM - 6PM\n\nOr visit our Contact page to send a message directly!",
   },
   {
-    keywords: ["project", "long", "timeline", "duration", "time"],
-    question: "How long does a typical project take?",
-    answer:
-      "Project timelines vary based on complexity. A simple analytics dashboard might take 2-4 weeks, while a full ML pipeline could take 2-3 months. We'll provide a clear timeline during our initial consultation.",
+    keywords: ["long", "timeline", "duration", "time", "take", "how long", "weeks", "months", "deadline"],
+    answer: "Project timelines vary based on complexity:\n\n⚡ Simple dashboard: 2-4 weeks\n📈 Analytics project: 1-2 months\n🤖 ML pipeline: 2-3 months\n🏗️ Full data infrastructure: 3-6 months\n\nWe'll give you a clear timeline during our initial consultation!",
   },
   {
-    keywords: ["industry", "sector", "work with", "client"],
-    question: "What industries do you work with?",
-    answer:
-      "We work across multiple industries including finance, healthcare, retail, manufacturing, and technology. Our data science solutions are adaptable to any sector.",
+    keywords: ["industry", "sector", "work with", "client", "business", "company", "who", "type"],
+    answer: "We work across many industries including:\n\n🏦 Finance & Banking\n🏥 Healthcare\n🛒 Retail & E-commerce\n🏭 Manufacturing\n💻 Technology\n📱 Startups\n\nOur solutions are adaptable to any sector!",
   },
   {
-    keywords: ["about", "who", "team", "company", "neudata"],
-    question: "Who is Neudata?",
-    answer:
-      "Neudata is a data science consulting firm that helps businesses unlock the power of their data. Our team of experts specializes in analytics, machine learning, and data engineering.",
+    keywords: ["about", "neudata", "company", "firm", "team", "founded", "who are"],
+    answer: "Neudata is a data science consulting firm based in Nairobi, Kenya 🇰🇪\n\nWe help businesses unlock the power of their data through analytics, machine learning, and data engineering.\n\nOur mission is to make advanced data science accessible to organizations of all sizes!",
   },
   {
-    keywords: ["book", "publication", "read", "resource"],
-    question: "Do you have any publications?",
-    answer:
-      "Yes! Check out our Books page where we share our publications on data science, analytics, and AI. They're great resources for both beginners and professionals.",
+    keywords: ["book", "publication", "read", "resource", "learn", "study", "material", "guide"],
+    answer: "Yes! We have published books on data science, analytics, and AI 📚\n\nThey're great resources for both beginners and professionals. Visit our Books page to check them out!",
   },
   {
-    keywords: ["start", "begin", "get started", "first step"],
-    question: "How do I get started?",
-    answer:
-      "Simply visit our Contact page and send us a message describing your project or challenge. We'll schedule a free consultation to discuss how we can help.",
+    keywords: ["start", "begin", "get started", "first step", "how do i", "next step", "ready"],
+    answer: "Getting started is easy! 🚀\n\n1. Visit our Contact page\n2. Send us a message about your project\n3. We'll schedule a FREE consultation\n4. We'll propose a tailored solution\n\nWe typically respond within 24 hours!",
+  },
+  {
+    keywords: ["machine learning", "ml", "ai", "artificial intelligence", "model", "prediction", "algorithm"],
+    answer: "Our Machine Learning services include:\n\n🤖 Predictive modeling\n🧠 Natural Language Processing (NLP)\n👁️ Computer Vision\n📊 Recommendation systems\n⚡ Real-time ML pipelines\n\nWe build custom AI solutions tailored to your business!",
+  },
+  {
+    keywords: ["data analytics", "analytics", "visualization", "dashboard", "report", "insight", "chart"],
+    answer: "Our Data Analytics services include:\n\n📊 Interactive dashboards\n📈 Business intelligence reports\n🔍 Data exploration & insights\n📉 KPI tracking & monitoring\n\nWe turn your raw data into actionable insights!",
+  },
+  {
+    keywords: ["data engineering", "pipeline", "infrastructure", "database", "etl", "cloud", "storage"],
+    answer: "Our Data Engineering services include:\n\n🔧 Data pipeline development\n☁️ Cloud architecture (AWS, GCP, Azure)\n🗄️ Database design & optimization\n⚡ Real-time data streaming\n\nWe build the foundation your data needs!",
+  },
+  {
+    keywords: ["training", "consulting", "workshop", "course", "learn", "teach", "education"],
+    answer: "Our Training & Consulting services include:\n\n🎓 Data science workshops\n👥 Team training programs\n📋 Strategic data consulting\n🗺️ Data roadmap planning\n\nWe help your team become data-driven!",
+  },
+  {
+    keywords: ["location", "where", "nairobi", "kenya", "office", "based", "country"],
+    answer: "We are based in Nairobi, Kenya 🇰🇪\n\n📍 Nairobi, Kenya\n🕐 Office Hours: Mon-Fri, 9AM - 6PM\n\nWe also work with clients remotely across Africa and beyond!",
+  },
+  {
+    keywords: ["hello", "hi", "hey", "good morning", "good afternoon", "howdy", "greetings"],
+    answer: "Hello! 👋 Welcome to Neudata!\n\nI'm here to help you learn about our data science services. What would you like to know?\n\n• Our services\n• Pricing\n• How to get started\n• Our team",
+  },
+  {
+    keywords: ["thank", "thanks", "appreciate", "helpful", "great", "awesome", "good"],
+    answer: "You're welcome! 😊 We're happy to help!\n\nIf you have any more questions or are ready to get started, don't hesitate to reach out via our Contact page. We'd love to work with you! 🚀",
+  },
+  {
+    keywords: ["bye", "goodbye", "see you", "later", "ciao"],
+    answer: "Goodbye! 👋 Thanks for chatting with us!\n\nFeel free to come back anytime. You can also reach us at info@neudata.com. Have a great day! 😊",
   },
 ];
 
@@ -73,12 +88,22 @@ interface Message {
 
 function findAnswer(input: string): string {
   const lower = input.toLowerCase();
+  
+  // Score each FAQ by how many keywords match
+  let bestScore = 0;
+  let bestAnswer = "";
+
   for (const faq of faqs) {
-    if (faq.keywords.some((kw) => lower.includes(kw))) {
-      return faq.answer;
+    const score = faq.keywords.filter((kw) => lower.includes(kw)).length;
+    if (score > bestScore) {
+      bestScore = score;
+      bestAnswer = faq.answer;
     }
   }
-  return "I'm not sure about that. Please visit our Contact page or ask about our services, pricing, projects, or team!";
+
+  if (bestScore > 0) return bestAnswer;
+
+  return "I'm not sure about that. 🤔\n\nYou can:\n• Ask about our services, pricing, or timeline\n• Visit our Contact page\n• Email us at info@neudata.com\n\nWe typically respond within 24 hours!";
 }
 
 const Chatbot = () => {
@@ -86,11 +111,11 @@ const Chatbot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "bot",
-      content:
-        "Hi! 👋 I'm Neudata's assistant. Ask me about our services, pricing, or how to get started!",
+      content: "Hi! 👋 I'm Neudata's assistant. Ask me about our services, pricing, or how to get started!",
     },
   ]);
   const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -98,11 +123,18 @@ const Chatbot = () => {
   }, [messages]);
 
   const send = (text: string) => {
-    if (!text.trim()) return;
+    if (!text.trim() || loading) return;
     const userMsg: Message = { role: "user", content: text.trim() };
-    const botMsg: Message = { role: "bot", content: findAnswer(text) };
-    setMessages((prev) => [...prev, userMsg, botMsg]);
+    setMessages((prev) => [...prev, userMsg]);
     setInput("");
+    setLoading(true);
+
+    // Simulate typing delay
+    setTimeout(() => {
+      const botMsg: Message = { role: "bot", content: findAnswer(text) };
+      setMessages((prev) => [...prev, botMsg]);
+      setLoading(false);
+    }, 800);
   };
 
   return (
@@ -154,7 +186,7 @@ const Chatbot = () => {
               {messages.map((msg, i) => (
                 <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div
-                    className={`max-w-[80%] px-3 py-2 rounded-xl text-sm leading-relaxed ${
+                    className={`max-w-[80%] px-3 py-2 rounded-xl text-sm leading-relaxed whitespace-pre-line ${
                       msg.role === "user"
                         ? "bg-primary text-primary-foreground rounded-br-sm"
                         : "bg-muted text-foreground rounded-bl-sm"
@@ -164,6 +196,13 @@ const Chatbot = () => {
                   </div>
                 </div>
               ))}
+              {loading && (
+                <div className="flex justify-start">
+                  <div className="bg-muted px-4 py-2 rounded-xl rounded-bl-sm text-sm text-muted-foreground animate-pulse">
+                    Typing...
+                  </div>
+                </div>
+              )}
               <div ref={endRef} />
             </div>
 
@@ -193,7 +232,7 @@ const Chatbot = () => {
               />
               <button
                 onClick={() => send(input)}
-                disabled={!input.trim()}
+                disabled={!input.trim() || loading}
                 className="w-9 h-9 rounded-lg bg-primary text-primary-foreground flex items-center justify-center disabled:opacity-50 hover:bg-primary/90 transition-colors"
               >
                 <Send className="w-4 h-4" />
