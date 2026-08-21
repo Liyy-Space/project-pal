@@ -1,4 +1,3 @@
- 
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { Calendar, Clock, MapPin, ArrowLeft, Users, Tag, CheckCircle } from "lucide-react";
@@ -61,7 +60,6 @@ const EventDetail = () => {
     }
     setSending(true);
     try {
-      // Save to Supabase
       const { error } = await supabase.from("registrations").insert({
         event_id: id,
         full_name: form.full_name,
@@ -72,7 +70,6 @@ const EventDetail = () => {
       });
       if (error) throw error;
 
-      // Send confirmation email via EmailJS
       await emailjs.send(
         "service_bkjb2ru",
         "template_en1j91w",
@@ -85,7 +82,8 @@ const EventDetail = () => {
       );
 
       setRegistered(true);
-    } catch {
+    } catch (err) {
+      console.error(err);
       toast.error("Registration failed. Please try again.");
     } finally {
       setSending(false);
@@ -229,11 +227,32 @@ const EventDetail = () => {
                   )}
                   <button
                     onClick={() => setShowForm(true)}
-                    className="w-full py-3.5 text-white rounded-xl font-semibold hover:opacity-90 transition-all shadow-lg mb-4"
+                    className="w-full py-3.5 text-white rounded-xl font-semibold hover:opacity-90 transition-all shadow-lg mb-3"
                     style={{ background: HERO_GRADIENT }}
                   >
                     Register for This Event
                   </button>
+
+                  {event.title === "Clinical Data Analysis in R" && (
+                    
+                      <a> href="https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full py-3 border border-gray-200 text-gray-700 rounded-xl text-sm font-semibold hover:bg-gray-50 transition-all mb-3"
+                    
+                      Or Register via Detailed Form
+                    </a>
+                  )}
+
+                  
+                   <a> href="/posters/clinical-data-r-poster.png"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-primary text-sm hover:underline mb-2"
+                  
+                    View Full Poster
+                  </a>
+
                   <p className="text-gray-400 text-xs">No payment required at this stage</p>
                 </div>
               ) : (
@@ -299,4 +318,3 @@ const EventDetail = () => {
 };
 
 export default EventDetail;
- 
