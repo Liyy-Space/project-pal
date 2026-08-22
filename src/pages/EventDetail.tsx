@@ -144,7 +144,7 @@ const EventDetail = () => {
               <span className="bg-teal-500 text-white text-xs font-semibold px-3 py-1 rounded-full">{event.category}</span>
             </div>
           )}
-          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">{event.title}</h1>
+           <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight">{event.title}</h1>
         </div>
       </div>
 
@@ -217,7 +217,7 @@ const EventDetail = () => {
 
           {/* Right — Register */}
           <div className="lg:col-span-1">
-            <div className="sticky top-24">
+          <div className="lg:sticky lg:top-24">
               {!showForm ? (
                 <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 text-center">
                   {event.price && (

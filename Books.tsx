@@ -1,23 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
-  BookOpen, BarChart2, ClipboardList, TrendingUp,
+  BookOpen, ExternalLink, BarChart2, ClipboardList, TrendingUp,
   FlaskConical, PenLine, FileText, Code2, Database, BrainCircuit,
   Microscope, GraduationCap, Star,
 } from "lucide-react";
 
 const categories = [
-  { id: "foundations", label: "Foundations & Data Science", icon: BarChart2, color: "text-teal-300", bg: "from-teal-900 to-teal-700" },
-  { id: "survey", label: "Survey Methodology", icon: ClipboardList, color: "text-blue-300", bg: "from-blue-900 to-blue-700" },
-  { id: "statistical", label: "Statistical Consultancy", icon: TrendingUp, color: "text-purple-300", bg: "from-purple-900 to-purple-700" },
-  { id: "clinical", label: "Clinical Trials", icon: FlaskConical, color: "text-red-300", bg: "from-red-900 to-red-700" },
-  { id: "writing", label: "Scientific Writing", icon: PenLine, color: "text-yellow-300", bg: "from-yellow-900 to-yellow-700" },
-  { id: "grants", label: "Grants & Proposals", icon: FileText, color: "text-orange-300", bg: "from-orange-900 to-orange-700" },
-  { id: "programming", label: "Programming & Software", icon: Code2, color: "text-green-300", bg: "from-green-900 to-green-700" },
-  { id: "engineering", label: "Data Engineering", icon: Database, color: "text-cyan-300", bg: "from-cyan-900 to-cyan-700" },
-  { id: "modelling", label: "Mathematical Modelling", icon: BrainCircuit, color: "text-pink-300", bg: "from-pink-900 to-pink-700" },
-  { id: "epidemiology", label: "Epidemiology", icon: Microscope, color: "text-rose-300", bg: "from-rose-900 to-rose-700" },
-  { id: "training", label: "Training & Reproducibility", icon: GraduationCap, color: "text-indigo-300", bg: "from-indigo-900 to-indigo-700" },
+  { id: "foundations", label: "Foundations & Data Science", icon: BarChart2, color: "text-teal-400", bg: "from-teal-900 to-teal-700" },
+  { id: "survey", label: "Survey Methodology", icon: ClipboardList, color: "text-blue-400", bg: "from-blue-900 to-blue-700" },
+  { id: "statistical", label: "Statistical Consultancy", icon: TrendingUp, color: "text-purple-400", bg: "from-purple-900 to-purple-700" },
+  { id: "clinical", label: "Clinical Trials", icon: FlaskConical, color: "text-red-400", bg: "from-red-900 to-red-700" },
+  { id: "writing", label: "Scientific Writing", icon: PenLine, color: "text-yellow-400", bg: "from-yellow-900 to-yellow-700" },
+  { id: "grants", label: "Grants & Proposals", icon: FileText, color: "text-orange-400", bg: "from-orange-900 to-orange-700" },
+  { id: "programming", label: "Programming & Software", icon: Code2, color: "text-green-400", bg: "from-green-900 to-green-700" },
+  { id: "engineering", label: "Data Engineering", icon: Database, color: "text-cyan-400", bg: "from-cyan-900 to-cyan-700" },
+  { id: "modelling", label: "Mathematical Modelling", icon: BrainCircuit, color: "text-pink-400", bg: "from-pink-900 to-pink-700" },
+  { id: "epidemiology", label: "Epidemiology", icon: Microscope, color: "text-rose-400", bg: "from-rose-900 to-rose-700" },
+  { id: "training", label: "Training & Reproducibility", icon: GraduationCap, color: "text-indigo-400", bg: "from-indigo-900 to-indigo-700" },
 ];
 
 interface Book {
@@ -73,9 +73,6 @@ const books: Book[] = [
   { number: 37, title: "Fundamentals of Data Visualization", author: "Claus O. Wilke", publisher: "O'Reilly, 2019", desc: "A practical, free guide to making clear, honest figures.", category: "training", rating: 4.7, isbn: "9781492031086", freeLink: "https://clauswilke.com/dataviz" },
 ];
 
-const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
-const STATS_GRADIENT = "linear-gradient(135deg, hsl(176 69% 22%) 0%, hsl(142 64% 32%) 100%)";
-
 function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex items-center gap-1">
@@ -93,45 +90,69 @@ function BookCard({ book, catMeta }: { book: Book; catMeta: typeof categories[0]
   const coverUrl = book.isbn ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg` : null;
 
   return (
-    <div className="group relative w-52 shrink-0 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 hover:z-10 shadow-xl">
-      <div className={`absolute inset-0 bg-gradient-to-br ${catMeta.bg}`} />
+    <div className="group relative w-52 shrink-0 rounded-2xl overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 hover:z-10">
+      {/* Background */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${catMeta.bg} opacity-90`} />
+
+      {/* Book cover image */}
       {coverUrl && !imgError ? (
         <img
           src={coverUrl}
           alt={book.title}
           onError={() => setImgError(true)}
-          className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-15 transition-opacity duration-500"
+          className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-20 transition-opacity duration-500"
         />
       ) : (
-        <div className="absolute inset-0 flex items-center justify-center opacity-10">
+        <div className="absolute inset-0 flex items-center justify-center opacity-20">
           <Icon className="w-20 h-20 text-white" />
         </div>
       )}
-      <div className="absolute inset-0 backdrop-blur-[1px] bg-black/10 group-hover:bg-black/5 transition-all duration-500" />
+
+      {/* Glassmorphism overlay */}
+      <div className="absolute inset-0 backdrop-blur-[2px] bg-black/20 group-hover:bg-black/10 transition-all duration-500" />
+
+      {/* Glass card content */}
       <div className="relative z-10 p-4 h-72 flex flex-col justify-between">
+        {/* Top */}
         <div>
-          <span className="text-white/30 text-xs font-bold">#{String(book.number).padStart(2, "0")}</span>
+          <span className="text-white/40 text-xs font-bold">#{String(book.number).padStart(2, "0")}</span>
           <h3 className="text-white font-bold text-sm leading-snug mt-1 line-clamp-2">{book.title}</h3>
-          <p className={`text-xs mt-1 font-medium ${catMeta.color}`}>{book.author}</p>
-          <div className="mt-2"><StarRating rating={book.rating} /></div>
+          <p className="text-white/70 text-xs mt-1">{book.author}</p>
+          <div className="mt-2">
+            <StarRating rating={book.rating} />
+          </div>
         </div>
+
+        {/* Description - shows on hover */}
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <p className="text-white/80 text-xs leading-relaxed line-clamp-3">{book.desc}</p>
         </div>
+
+        {/* Bottom */}
         <div className="flex flex-col gap-2">
-          <p className="text-white/40 text-xs">{book.publisher}</p>
+          <p className="text-white/50 text-xs">{book.publisher}</p>
+
+          {/* Glass buttons */}
           <div className="flex gap-2 flex-wrap">
             {book.freeLink && (
-              <a href={book.freeLink} target="_blank" rel="noopener noreferrer"
-                className="text-xs px-3 py-1.5 rounded-full backdrop-blur-md bg-teal-500/30 border border-teal-400/40 text-teal-200 hover:bg-teal-500/50 transition-all"
-                onClick={(e) => e.stopPropagation()}>
+              <a
+                href={book.freeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs px-3 py-1.5 rounded-full backdrop-blur-md bg-white/20 border border-white/30 text-white hover:bg-white/30 transition-all"
+                onClick={(e) => e.stopPropagation()}
+              >
                 Free Online ↗
               </a>
             )}
             {book.buyLink && (
-              <a href={book.buyLink} target="_blank" rel="noopener noreferrer"
+              <a
+                href={book.buyLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-xs px-3 py-1.5 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white/80 hover:bg-white/20 transition-all"
-                onClick={(e) => e.stopPropagation()}>
+                onClick={(e) => e.stopPropagation()}
+              >
                 Buy Now ↗
               </a>
             )}
@@ -145,25 +166,35 @@ function BookCard({ book, catMeta }: { book: Book; catMeta: typeof categories[0]
 function CategoryCarousel({ category }: { category: typeof categories[0] }) {
   const catBooks = books.filter((b) => b.category === category.id);
   if (catBooks.length === 0) return null;
+
+  // Duplicate books for infinite scroll effect
   const doubled = [...catBooks, ...catBooks, ...catBooks];
   const Icon = category.icon;
 
   return (
     <div className="mb-16">
+      {/* Category Header */}
       <div className="flex items-center gap-3 mb-6 px-4 md:px-0">
-        <div className={`w-9 h-9 rounded-xl bg-gradient-to-br ${category.bg} flex items-center justify-center shadow-lg`}>
+        <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${category.bg} flex items-center justify-center`}>
           <Icon className={`w-4 h-4 ${category.color}`} />
         </div>
         <h2 className="text-xl font-bold text-foreground">{category.label}</h2>
-        <span className="text-xs text-muted-foreground bg-muted-foreground/10 px-2 py-0.5 rounded-full">
-          {catBooks.length} books
-        </span>
+        <span className="text-sm text-muted-foreground">({catBooks.length} books)</span>
       </div>
+
+      {/* Carousel */}
       <div className="relative overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-muted to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-muted to-transparent z-10 pointer-events-none" />
-        <div className="flex gap-4 pb-4"
-          style={{ animation: `scroll-left ${catBooks.length * 5}s linear infinite`, width: "max-content" }}>
+        {/* Fade edges */}
+        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-muted to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-muted to-transparent z-10 pointer-events-none" />
+
+        <div
+          className="flex gap-4 pb-4"
+          style={{
+            animation: `scroll-left ${catBooks.length * 4}s linear infinite`,
+            width: "max-content",
+          }}
+        >
           {doubled.map((book, i) => (
             <BookCard key={`${book.number}-${i}`} book={book} catMeta={category} />
           ))}
@@ -176,34 +207,32 @@ function CategoryCarousel({ category }: { category: typeof categories[0] }) {
 const Books = () => {
   return (
     <div className="pt-16">
-
       {/* Hero Banner */}
-      <div className="relative h-80 md:h-[420px] overflow-hidden">
+      <div className="relative h-72 md:h-96 overflow-hidden">
         <img
           src="https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt="Books"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0" style={{ background: HERO_GRADIENT }} />
-        <div className="absolute inset-0 grid-pattern opacity-30" />
-        <div className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-20">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
-            <BookOpen className="w-3 h-3 text-teal-300" />
-            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">Curated Reading List</span>
-          </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 max-w-2xl leading-tight">
-            Essential Books for <span className="text-teal-300">Data Professionals</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-black/40 flex flex-col items-start justify-center px-8 md:px-20">
+          <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-2">Curated Reading List</p>
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 max-w-xl leading-tight">
+            Essential Books for Data Professionals
           </h1>
-          <p className="text-white/70 max-w-lg mb-8 text-sm md:text-base leading-relaxed">
-            37 hand-picked titles across data science, statistics, clinical research, and more — curated by our expert team.
+          <p className="text-white/70 max-w-lg mb-6 text-sm md:text-base">
+            37 hand-picked titles across data science, statistics, clinical research, and more.
           </p>
           <div className="flex gap-3 flex-wrap">
-            <a href="#books"
-              className="px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all text-sm shadow-lg shadow-teal-500/30">
-              Browse Collection →
+            <a
+              href="#books"
+              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity text-sm"
+            >
+              Browse Collection
             </a>
-            <Link to="/contact"
-              className="px-6 py-3 bg-white/10 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 transition-all text-sm backdrop-blur-sm">
+            <Link
+              to="/contact"
+              className="px-6 py-3 border border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm"
+            >
               Suggest a Book
             </Link>
           </div>
@@ -211,56 +240,49 @@ const Books = () => {
       </div>
 
       {/* Stats Bar */}
-      <div className="py-5 text-white" style={{ background: STATS_GRADIENT }}>
-        <div className="container flex flex-wrap justify-center gap-12 text-center">
-          {[
-            { num: "37", label: "Curated Books" },
-            { num: "11", label: "Categories" },
-            { num: "20+", label: "Free Online" },
-            { num: "100%", label: "Expert Picks" },
-          ].map((s) => (
-            <div key={s.label}>
-              <span className="font-bold text-2xl text-white">{s.num}</span>
-              <p className="text-xs text-white/60 mt-0.5">{s.label}</p>
-            </div>
-          ))}
+      <div className="bg-primary text-primary-foreground py-4">
+        <div className="container flex flex-wrap justify-center gap-8 text-center">
+          <div><span className="font-bold text-xl">37</span><p className="text-xs opacity-80">Curated Books</p></div>
+          <div><span className="font-bold text-xl">11</span><p className="text-xs opacity-80">Categories</p></div>
+          <div><span className="font-bold text-xl">20+</span><p className="text-xs opacity-80">Free Online</p></div>
+          <div><span className="font-bold text-xl">100%</span><p className="text-xs opacity-80">Expert Picks</p></div>
         </div>
       </div>
 
       {/* Carousels Section */}
       <section id="books" className="py-20 bg-muted">
         <div className="container">
-          <div className="text-center mb-14">
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">Our Library</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3">Browse by Category</h2>
-            <p className="text-muted-foreground max-w-lg mx-auto">Hover over any book card to reveal its description and access links.</p>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-2">Browse by Category</h2>
+            <p className="text-muted-foreground">Hover over any book to see more details.</p>
           </div>
 
           {categories.map((cat) => (
             <CategoryCarousel key={cat.id} category={cat} />
           ))}
 
-          <p className="text-center text-xs text-muted-foreground mt-4 opacity-50">
+          {/* Disclaimer */}
+          <p className="text-center text-xs text-muted-foreground mt-4 opacity-60">
             Book covers and information are provided for reference purposes only. All rights belong to their respective authors and publishers.
           </p>
 
-          {/* Suggest CTA */}
-          <div className="mt-12 rounded-2xl overflow-hidden shadow-xl">
-            <div className="p-10 text-center" style={{ background: HERO_GRADIENT }}>
-              <BookOpen className="w-10 h-10 text-teal-300 mx-auto mb-4 opacity-80" />
-              <h3 className="text-2xl font-bold text-white mb-3">Suggest a Title</h3>
-              <p className="text-white/60 mb-6 max-w-xl mx-auto">
-                This list grows. If there is a book that has shaped how you work — tell us and we will consider it for the collection.
-              </p>
-              <Link to="/contact"
-                className="inline-block px-8 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30">
-                Suggest a Book →
-              </Link>
-            </div>
+          {/* Suggest a title */}
+          <div className="mt-8 text-center bg-card rounded-lg p-8 shadow-card">
+            <h3 className="text-xl font-bold text-foreground mb-3">Suggest a Title</h3>
+            <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
+              This list grows. If there is a book that has shaped how you work — tell us and we will consider it for the collection.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block px-6 py-3 bg-primary text-primary-foreground rounded-lg font-semibold hover:opacity-90 transition-opacity"
+            >
+              Suggest a Book
+            </Link>
           </div>
         </div>
       </section>
 
+      {/* CSS for scroll animation */}
       <style>{`
         @keyframes scroll-left {
           0% { transform: translateX(0); }
@@ -272,4 +294,3 @@ const Books = () => {
 };
 
 export default Books;
- 

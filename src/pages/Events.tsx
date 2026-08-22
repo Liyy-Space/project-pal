@@ -144,7 +144,7 @@ const Events = () => {
             <Calendar className="w-3 h-3 text-teal-300" />
             <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">What's Happening</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-3">
+           <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-3">
             Our <span className="text-teal-300">Events</span>
           </h1>
           <p className="text-white/70 max-w-lg text-sm md:text-base">
@@ -190,8 +190,8 @@ const Events = () => {
                     <h3 className="text-lg font-semibold text-gray-500 mb-2">No upcoming events</h3>
                     <p className="text-gray-400 text-sm">Check back soon for new events!</p>
                   </div>
-                ) : (
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                ) : ( <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  
                     {upcoming.map((event) => (
                       <EventCard key={event.id} event={event} />
                     ))}
