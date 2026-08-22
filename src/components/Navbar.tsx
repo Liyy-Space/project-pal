@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
+  { to: "/events", label: "Events" },
   { to: "/books", label: "Books" },
   { to: "/contact", label: "Contact" },
 ];
@@ -18,10 +19,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card shadow-card">
       <div className="container flex items-center justify-between h-16">
-        <Link to="/" className="flex items-center gap-3 font-bold text-xl text-foreground" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Neudata logo" className="w-12 h-12 object-contain drop-shadow-md" />
-          <span className="text-lg md:text-xl">Neudata</span>
-        </Link>
+         <Link to="/" className="flex items-center gap-3 font-bold text-xl text-foreground" onClick={() => setOpen(false)}>
+  <img src={logo} alt="Neudata logo" className="w-12 h-12 object-contain drop-shadow-md" />
+  <span className="text-lg md:text-xl">Neudata</span>
+</Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-1">
