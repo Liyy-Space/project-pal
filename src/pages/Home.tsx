@@ -1,4 +1,4 @@
- 
+
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText, Database, Code2, BrainCircuit, Search, GraduationCap, MessageCircle, BookOpen, Star, Calendar, Clock, MapPin, Users } from "lucide-react";
@@ -78,14 +78,12 @@ const Home = () => (
           className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl max-w-5xl mx-auto"
         >
           {/* Left — Poster */}
-          <div className="relative">
+          <div className="relative bg-gray-50 flex items-center justify-center p-4 lg:p-6">
             <img
               src={posterImage}
               alt="Clinical Data Analysis in R"
-              className="w-full h-full object-cover object-top"
-              style={{ maxHeight: "580px" }}
+              className="w-full h-auto max-h-[580px] object-contain rounded-xl shadow-md"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/20" />
           </div>
 
           {/* Right — Event Details */}
@@ -115,7 +113,7 @@ const Home = () => (
                   </div>
                   <div>
                     <p className="text-white text-sm font-semibold">Every Tuesday</p>
-                    <p className="text-white/50 text-xs">7 September – 6 October 2026</p>
+                    <p className="text-white/50 text-xs">8 September – 6 October 2026</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
@@ -150,7 +148,10 @@ const Home = () => (
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-3">
                 <a
-                  href="mailto:myluong1710@gmail.com?subject=Registration%20-%20Clinical%20Data%20Analysis%20in%20R&body=Hello%2C%0A%0AI%20would%20like%20to%20register%20for%20the%20Clinical%20Data%20Analysis%20in%20R%20course%20(Phase%20I%20-%20Introductory%20Training).%0A%0AMy%20details%3A%0AName%3A%20%0AProfession%3A%20%0AEmail%3A%20%0A%0AThank%20you."
+
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform?usp=dialog"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30 text-sm"
                 >
                   Register Now <ArrowRight className="w-4 h-4" />
@@ -264,7 +265,7 @@ const Home = () => (
                     <p className="text-white font-bold text-xs leading-snug line-clamp-2">{book.title}</p>
                     <p className="text-teal-300 text-xs mt-0.5">{book.author}</p>
                     <div className="flex items-center gap-1 mt-1">
-                      {[1,2,3,4,5].map((s) => (
+                      {[1, 2, 3, 4, 5].map((s) => (
                         <Star key={s} className={`w-2.5 h-2.5 ${s <= Math.round(book.rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-500"}`} />
                       ))}
                     </div>
@@ -305,4 +306,3 @@ const Home = () => (
 );
 
 export default Home;
- 
