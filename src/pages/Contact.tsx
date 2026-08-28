@@ -86,8 +86,8 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="font-semibold text-white text-sm">Email Us</h3>
-                        <p className="text-white/60 text-sm mt-0.5">info@neudata.com</p>
-                        <p className="text-white/60 text-sm">sales@neudata.com</p>
+                        <p className="text-white/60 text-sm mt-0.5">info@neu-data.com</p>
+                        <p className="text-white/60 text-sm">contact@neu-data.com</p>
                       </div>
                     </div>
 

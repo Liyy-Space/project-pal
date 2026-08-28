@@ -39,7 +39,7 @@ const Footer = () => (
           <div className="space-y-3 text-sm">
             <div className="flex items-center gap-2 opacity-70">
               <Mail className="w-4 h-4 shrink-0" />
-              <span>info@neudata.com</span>
+              <span>info@neu-data.com</span>
             </div>
             <div className="flex items-center gap-2 opacity-70">
               <MapPin className="w-4 h-4 shrink-0" />

@@ -133,11 +133,11 @@ const Events = () => {
       {/* Hero */}
       <div className="relative h-64 md:h-80 overflow-hidden">
         <img
-          src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          src="/events/hero-image.jpg"
           alt="Events"
-          className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0" style={{ background: HERO_GRADIENT }} />
+        <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.85 }} />
         <div className="absolute inset-0 grid-pattern opacity-20" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
