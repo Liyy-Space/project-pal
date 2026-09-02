@@ -170,7 +170,7 @@ const EventDetail = () => {
 
                 {isClinicREvent && (
                   <a
-                    href="/posters/clinical-data-r-poster.png"
+                    href="/posters/Poster.png"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-primary text-sm hover:underline"
