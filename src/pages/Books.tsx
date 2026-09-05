@@ -1,4 +1,5 @@
 import { useState } from "react";
+import booksBanner from "@/assets/books-banner.jpg";
 import { Link } from "react-router-dom";
 import {
   BookOpen, BarChart2, ClipboardList, TrendingUp,
@@ -179,11 +180,11 @@ const Books = () => {
 
       {/* Hero Banner */}
       <div className="relative h-80 md:h-[420px] overflow-hidden">
-        <img
-          src="https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=1600"
-          alt="Books"
-          className="w-full h-full object-cover opacity-20"
-        />
+         <img
+              src={booksBanner}
+              alt="Books"
+              className="w-full h-full object-cover opacity-20"
+            />
         <div className="absolute inset-0" style={{ background: HERO_GRADIENT }} />
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-20">
