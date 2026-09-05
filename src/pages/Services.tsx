@@ -1,4 +1,5 @@
 import { useState } from "react";
+import servicesBanner from "@/assets/services-banner.jpg"
 import { Link } from "react-router-dom";
 import {
   BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText,
@@ -82,7 +83,7 @@ const Services = () => (
     {/* Hero Banner */}
 <div className="relative h-72 md:h-96 overflow-hidden">
   <img
-    src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    src={servicesBanner}
     alt="Our Services"
     className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60"
   />
