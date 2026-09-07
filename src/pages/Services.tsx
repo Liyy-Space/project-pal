@@ -39,10 +39,6 @@ function ServiceCard({ s }: { s: typeof services[0] }) {
       <div className={`w-14 h-14 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
         <Icon className={`w-6 h-6 ${s.textColor}`} />
       </div>
-
-      {/* Number */}
-      <span className="text-xs font-bold text-gray-300 mb-1">{s.number}</span>
-
       {/* Title */}
       <h3 className="text-base font-bold text-gray-900 mb-2 leading-snug">{s.title}</h3>
 
