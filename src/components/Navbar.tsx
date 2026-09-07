@@ -17,10 +17,10 @@ const Navbar = () => {
   const location = useLocation();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-card shadow-card">
-      <div className="container flex items-center justify-between h-16">
+     <nav className="fixed top-0 left-0 right-0 z-50 bg-card shadow-card">
+  <div className="container flex items-center justify-between h-20">
        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-  <img src={logo} alt="Neudata logo" className="h-12 w-auto object-contain drop-shadow-md" />
+  <img src={logo} alt="Neudata logo" className="h-16 w-auto object-contain drop-shadow-md" />
 </Link>
 
         {/* Desktop */}
