@@ -76,6 +76,7 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold text-white text-sm">Head Office</h3>
                         <p className="text-white/60 text-sm mt-0.5">Nairobi, Kenya</p>
+                      <p className="text-white/60 text-sm mt-0.5">Hanoi, Vietnam</p>
                         <p className="text-white/40 text-xs mt-0.5">Mon - Fri: 9:00 AM - 6:00 PM</p>
                       </div>
                     </div>
