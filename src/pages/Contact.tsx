@@ -33,14 +33,14 @@ const Contact = () => {
     <div className="pt-16">
 
       {/* Hero Banner */}
-       <div className="relative h-64 md:h-80 overflow-hidden">
-  <div className="absolute inset-0" style={{ background: HERO_GRADIENT }} />
-  <img
-    src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1600"
-    alt="Contact Us"
-    className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60"
-  />
-  <div className="absolute inset-0 grid-pattern opacity-20" />n
+      <div className="relative h-64 md:h-80 overflow-hidden">
+        <div className="absolute inset-0" style={{ background: HERO_GRADIENT }} />
+        <img
+          src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1600"
+          alt="Contact Us"
+          className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60"
+        />
+        <div className="absolute inset-0 grid-pattern opacity-20" />n
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
             <MessageCircle className="w-3 h-3 text-teal-300" />
@@ -82,12 +82,23 @@ const Contact = () => {
 
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                        <MapPin className="w-4 h-4 text-teal-300" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-white text-sm">Branches</h3>
+                        <p className="text-white/60 text-sm mt-0.5">Hanoi, Vietnam</p>
+                        <p className="text-white/40 text-xs mt-0.5">Mon - Fri: 9:00 AM - 6:00 PM (ICT)</p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                         <Mail className="w-4 h-4 text-teal-300" />
                       </div>
                       <div>
                         <h3 className="font-semibold text-white text-sm">Email Us</h3>
-                        <p className="text-white/60 text-sm mt-0.5">info@neudata.com</p>
-                        <p className="text-white/60 text-sm">sales@neudata.com</p>
+                        <p className="text-white/60 text-sm mt-0.5">info@neu-data.com</p>
+                        <p className="text-white/60 text-sm">contact@neu-data.com</p>
                       </div>
                     </div>
 
