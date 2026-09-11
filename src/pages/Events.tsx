@@ -12,6 +12,7 @@ interface Event {
   category: string;
   image_url: string;
   date: string;
+  end_date: string | null;
   start_time: string;
   end_time: string;
   location: string;
