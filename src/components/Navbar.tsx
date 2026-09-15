@@ -8,7 +8,7 @@ const navLinks = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/events", label: "Events" },
-  { to: "/books", label: "Books" },
+  { to: "/library", label: "Library" },
   { to: "/contact", label: "Contact" },
 ];
 
