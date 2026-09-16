@@ -81,9 +81,9 @@ const Services = () => (
   <img
     src={servicesBanner}
     alt="Our Services"
-    className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-60"
+    className="absolute inset-0 w-full h-full object-cover"
   />
-  <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)" }} />
+  <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)", opacity: 0.85 }} />
   <div className="absolute inset-0 grid-pattern opacity-20" />
   <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
     <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
@@ -94,7 +94,7 @@ const Services = () => (
       Our <span className="text-teal-300">Services</span>
     </h1>
     <p className="text-white/70 max-w-2xl text-sm md:text-base leading-relaxed">
-      An African quantitative-science partner to clinical trials, public-health programmes, research institutions and data-driven organisations.
+      A quantitative-science partner to clinical trials, public-health programmes, research institutions and data-driven organisations.
     </p>
   </div>
 </div>

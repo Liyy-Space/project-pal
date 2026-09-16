@@ -186,12 +186,12 @@ const Events = () => {
         <img
           src="https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1600"
           alt="Events"
-          className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-40"
+          className="absolute inset-0 w-full h-full object-cover"
         />
 
         <div
           className="absolute inset-0"
-          style={{ background: HERO_GRADIENT }}
+          style={{ background: HERO_GRADIENT, opacity: 0.85 }}
         />
 
         <div className="absolute inset-0 grid-pattern opacity-20" />
