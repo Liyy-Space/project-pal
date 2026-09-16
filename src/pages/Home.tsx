@@ -235,7 +235,7 @@ const Home = () => (
               Our team has curated 37 essential books across data science, statistics, clinical research, machine learning, and more.
             </p>
             <div className="flex flex-wrap gap-3">
-              <Link to="/books" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30">
+              <Link to="/library" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30">
                 Browse the Collection <ArrowRight className="w-4 h-4" />
               </Link>
               <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 transition-all">

@@ -13,8 +13,8 @@ const values = [
 ];
 
 const stats = [
-  { number: "10+", label: "Projects Completed" },
-  { number: "10+", label: "Happy Clients" },
+  { number: "40+", label: "Projects Completed" },
+  { number: "20+", label: "Happy Clients" },
   { number: "10", label: "Team Members" },
   { number: "2+", label: "Years Experience" },
 ];
