@@ -40,6 +40,7 @@ function EventCard({
       <div className="relative h-48 overflow-hidden bg-gray-100">
         {event.image_url ? (
           <img
+            loading="lazy"
             src={event.image_url}
             alt={event.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"

@@ -74,7 +74,7 @@ const About = () => (
           </div>
           <img
             src={aboutBanner}
-            alt="Data Science Team"
+            alt="Data Science Team" loading="lazy"
             className="rounded-lg shadow-card w-full object-cover h-80"
           />
         </div>

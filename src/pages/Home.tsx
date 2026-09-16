@@ -80,6 +80,7 @@ const Home = () => (
           {/* Left — Poster */}
           <div className="relative bg-gray-50 flex items-center justify-center p-4 lg:p-6">
             <img
+            loading="lazy"
               src={posterImage}
               alt="Clinical Data Analysis in R"
               className="w-full h-auto max-h-[580px] object-contain rounded-xl shadow-md"
@@ -258,6 +259,7 @@ const Home = () => (
                 className="group relative rounded-2xl overflow-hidden shadow-xl cursor-pointer hover:scale-105 transition-all duration-300">
                 <div className="relative h-48 bg-gradient-to-br from-teal-900 to-teal-700">
                   <img src={`https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`} alt={book.title}
+                    loading="lazy"
                     className="w-full h-full object-cover opacity-50 group-hover:opacity-30 transition-opacity duration-300"
                     onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
@@ -289,7 +291,7 @@ const Home = () => (
     <section className="gradient-cta py-20">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Team Collaboration" className="rounded-lg shadow-card w-full" />
+          <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Team Collaboration" className="rounded-lg shadow-card w-full" loading="lazy" />
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-primary-foreground">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Data?</h2>
             <p className="text-lg opacity-80 mb-8 leading-relaxed">
