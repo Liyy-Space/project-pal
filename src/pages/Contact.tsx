@@ -120,11 +120,11 @@ const Contact = () => {
                     <div className="flex gap-3">
                       {[
                         { icon: Twitter, href: "#" },
-                        { icon: Linkedin, href: "#" },
+                        { icon: Linkedin, href: "https://www.linkedin.com/company/neu-data/" },
                         { icon: Github, href: "#" },
                         { icon: Facebook, href: "#" },
                       ].map(({ icon: Icon, href }, i) => (
-                        <a key={i} href={href}
+                        <a key={i} href={href} target="_blank" rel="noopener noreferrer"
                           className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center hover:bg-teal-500/40 hover:border-teal-400/40 transition-all">
                           <Icon className="w-4 h-4 text-white" />
                         </a>

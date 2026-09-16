@@ -69,7 +69,7 @@ const Projects = () => (
           {projects.map((p, i) => (
             <AnimatedCard key={p.title} delay={i * 0.08}>
               <div className="relative">
-                <img src={p.img} alt={p.title} className="w-full h-48 object-cover rounded-t-lg" />
+                <img src={p.img} alt={p.title} className="w-full h-48 object-cover rounded-t-lg" loading="lazy" />
                 <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-medium px-3 py-1 rounded-full">{p.category}</span>
               </div>
               <div className="p-6">
