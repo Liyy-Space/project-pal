@@ -180,23 +180,23 @@ const Books = () => {
 
       {/* Hero Banner */}
       <div className="relative h-80 md:h-[420px] overflow-hidden">
-         <img
-              src={booksBanner}
-              alt="Books"
-              className="w-full h-full object-cover opacity-20"
-            />
+        <img
+          src={booksBanner}
+          alt="Books"
+          className="w-full h-full object-cover opacity-20"
+        />
         <div className="absolute inset-0" style={{ background: HERO_GRADIENT }} />
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-20">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
             <BookOpen className="w-3 h-3 text-teal-300" />
-            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">Curated Reading List</span>
+            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">Curated Library</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 max-w-2xl leading-tight">
-            Essential Books for <span className="text-teal-300">Data Professionals</span>
+            Essential Resources for <span className="text-teal-300">Data Professionals</span>
           </h1>
           <p className="text-white/70 max-w-lg mb-8 text-sm md:text-base leading-relaxed">
-            37 hand-picked titles across data science, statistics, clinical research, and more — curated by our expert team.
+            37 hand-picked resources across data science, statistics, clinical research, and more — curated by our expert team.
           </p>
           <div className="flex gap-3 flex-wrap">
             <a href="#books"
@@ -215,7 +215,7 @@ const Books = () => {
       <div className="py-5 text-white" style={{ background: STATS_GRADIENT }}>
         <div className="container flex flex-wrap justify-center gap-12 text-center">
           {[
-            { num: "37", label: "Curated Books" },
+            { num: "37", label: "Curated Resources" },
             { num: "11", label: "Categories" },
             { num: "20+", label: "Free Online" },
             { num: "100%", label: "Expert Picks" },
@@ -253,6 +253,7 @@ const Books = () => {
               <p className="text-white/60 mb-6 max-w-xl mx-auto">
                 This list grows. If there is a book that has shaped how you work — tell us and we will consider it for the collection.
               </p>
+              <h3 className="text-2xl font-bold text-white mb-3">Suggest a Title</h3>
               <Link to="/contact"
                 className="inline-block px-8 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30">
                 Suggest a Book →
@@ -273,4 +274,3 @@ const Books = () => {
 };
 
 export default Books;
- 
