@@ -100,6 +100,7 @@ function BookCard({ book, catMeta }: { book: Book; catMeta: typeof categories[0]
         <img
           src={coverUrl}
           alt={book.title}
+          loading="lazy"
           onError={() => setImgError(true)}
           className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-15 transition-opacity duration-500"
         />
@@ -163,8 +164,10 @@ function CategoryCarousel({ category }: { category: typeof categories[0] }) {
       <div className="relative overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-muted to-transparent z-10 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-muted to-transparent z-10 pointer-events-none" />
-        <div className="flex gap-4 pb-4"
-          style={{ animation: `scroll-left ${catBooks.length * 5}s linear infinite`, width: "max-content" }}>
+        <div
+          className="flex gap-4 pb-4 carousel-track"
+          style={{ animation: `scroll-left ${catBooks.length * 5}s linear infinite`, width: "max-content" }}
+        >
           {doubled.map((book, i) => (
             <BookCard key={`${book.number}-${i}`} book={book} catMeta={category} />
           ))}
@@ -182,10 +185,10 @@ const Books = () => {
       <div className="relative h-80 md:h-[420px] overflow-hidden">
         <img
           src={booksBanner}
-          alt="Books"
-          className="w-full h-full object-cover opacity-20"
+          alt="Library"
+          className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0" style={{ background: HERO_GRADIENT }} />
+        <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.85 }} />
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-20">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
@@ -234,7 +237,7 @@ const Books = () => {
           <div className="text-center mb-14">
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">Our Library</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3">Browse by Category</h2>
-            <p className="text-muted-foreground max-w-lg mx-auto">Hover over any book card to reveal its description and access links.</p>
+            <p className="text-muted-foreground max-w-lg mx-auto">Hover over any book card to reveal its description and access links. Hover over a row to pause it.</p>
           </div>
 
           {categories.map((cat) => (
@@ -253,7 +256,6 @@ const Books = () => {
               <p className="text-white/60 mb-6 max-w-xl mx-auto">
                 This list grows. If there is a book that has shaped how you work — tell us and we will consider it for the collection.
               </p>
-              <h3 className="text-2xl font-bold text-white mb-3">Suggest a Title</h3>
               <Link to="/contact"
                 className="inline-block px-8 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30">
                 Suggest a Book →
@@ -267,6 +269,9 @@ const Books = () => {
         @keyframes scroll-left {
           0% { transform: translateX(0); }
           100% { transform: translateX(-33.333%); }
+        }
+        .carousel-track:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </div>
