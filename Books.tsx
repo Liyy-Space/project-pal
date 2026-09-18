@@ -217,7 +217,7 @@ const Books = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 to-black/40 flex flex-col items-start justify-center px-8 md:px-20">
           <p className="text-primary text-sm font-semibold uppercase tracking-widest mb-2">Curated Reading List</p>
           <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 max-w-xl leading-tight">
-            Essential Books for Data Professionals
+             Essential Resources for Data Professionals
           </h1>
           <p className="text-white/70 max-w-lg mb-6 text-sm md:text-base">
             37 hand-picked titles across data science, statistics, clinical research, and more.
