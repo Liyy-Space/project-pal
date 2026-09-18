@@ -43,7 +43,7 @@ const Footer = () => (
             </div>
             <div className="flex items-center gap-2 opacity-70">
               <MapPin className="w-4 h-4 shrink-0" />
-              <span>Nairobi, Kenya | Hanoi, Vietnam</span>
+               <span>Nairobi, Kenya — soon expanding to Vietnam</span>
             </div>
           </div>
         </div>
