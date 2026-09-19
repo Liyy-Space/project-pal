@@ -360,5 +360,102 @@
     "ongoingBadge": "🟢 Ongoing",
     "pastBadge": "Past Event",
     "defaultCategory": "Event"
+  },
+  "eventDetail": {
+    "notFound": "Event not found",
+    "backToEvents": "Back to Events",
+    "dateLabel": "Date",
+    "timeLabel": "Time",
+    "locationLabel": "Location",
+    "capacityLabel": "Capacity",
+    "attendees": "attendees",
+    "aboutEvent": "About the Event",
+    "speakersGuests": "Speakers & Guests",
+    "registerButton": "Register for This Event ↗",
+    "registrationComingSoon": "Registration link coming soon.",
+    "viewPoster": "View Full Poster ↗",
+    "noPaymentRequired": "No payment required at this stage"
+  },
+  "books": {
+    "hero": {
+      "badge": "Curated Library",
+      "titleMain": "Essential Resources for",
+      "titleHighlight": "Data Professionals",
+      "subtitle": "37 hand-picked resources across data science, statistics, clinical research, and more — curated by our expert team.",
+      "browseButton": "Browse Collection →",
+      "suggestButton": "Suggest a Book"
+    },
+    "stats": {
+      "curatedResources": "Curated Resources",
+      "categories": "Categories",
+      "freeOnlineStat": "Free Online",
+      "expertPicks": "Expert Picks"
+    },
+    "section": {
+      "eyebrow": "Our Library",
+      "title": "Browse by Category",
+      "subtitle": "Hover over any book card to reveal its description and access links. Hover over a row to pause it."
+    },
+    "categories": {
+      "foundations": "Foundations & Data Science",
+      "survey": "Survey Methodology",
+      "statistical": "Statistical Consultancy",
+      "clinical": "Clinical Trials",
+      "writing": "Scientific Writing",
+      "grants": "Grants & Proposals",
+      "programming": "Programming & Software",
+      "engineering": "Data Engineering",
+      "modelling": "Mathematical Modelling",
+      "epidemiology": "Epidemiology",
+      "training": "Training & Reproducibility"
+    },
+    "booksCountSuffix": "books",
+    "freeOnline": "Free Online ↗",
+    "buyNow": "Buy Now ↗",
+    "disclaimer": "Book covers and information are provided for reference purposes only. All rights belong to their respective authors and publishers.",
+    "suggestCta": {
+      "title": "Suggest a Title",
+      "subtitle": "This list grows. If there is a book that has shaped how you work — tell us and we will consider it for the collection.",
+      "button": "Suggest a Book →"
+    },
+    "items": {
+      "b01": "The standard entry point to the tidyverse: importing, tidying, transforming, visualising and modelling data in R.",
+      "b02": "Data wrangling with pandas and NumPy, by the creator of pandas.",
+      "b03": "NumPy, pandas, Matplotlib and scikit-learn for the working data scientist.",
+      "b04": "Statistical thinking for a general and professional audience — excellent for non-specialist stakeholders.",
+      "b05": "A clear, modern treatment of survey sampling theory and practice.",
+      "b06": "The foundational text on total survey error, questionnaire design and survey operations.",
+      "b07": "The reference for design-based inference and calibration estimators in complex surveys.",
+      "b08": "The most accessible route into modern statistical learning; Springer-authorised free PDFs.",
+      "b09": "The advanced companion to ISL — the deeper theory behind the methods.",
+      "b10": "Indispensable for applied regression, splines, validation and prediction modelling.",
+      "b11": "The standard reference for logistic regression, contingency tables and models for categorical outcomes.",
+      "b12": "The core text on trial design, conduct, monitoring and analysis.",
+      "b13": "Practical guidance on research questions, study designs and sample size.",
+      "b14": "Group-sequential methods and interim monitoring — directly relevant to DSMB statistical work.",
+      "b15": "The definitive practical guide to running and contributing to DSMBs.",
+      "b16": "A practical guide to writing and publishing in the biological and health sciences.",
+      "b17": "A long-standing standard on structuring and submitting scientific manuscripts.",
+      "b18": "The essential checklists every manuscript and protocol should follow.",
+      "b19": "A structured, widely used workbook for building competitive proposals.",
+      "b20": "On narrative and structure in both papers and funding proposals.",
+      "b21": "How R really works — essential for writing robust, efficient R code and packages.",
+      "b22": "The reference for building, testing and shipping R packages.",
+      "b23": "Writing idiomatic, high-quality Python — a step beyond introductory texts.",
+      "b24": "Principles of readable, maintainable code that apply across languages.",
+      "b25": "A vendor-neutral map of the modern data lifecycle.",
+      "b26": "The reference on the systems behind reliable, scalable data infrastructure.",
+      "b27": "The short, foundational paper on structuring data for analysis — free.",
+      "b28": "The best modern introduction to applied Bayesian modelling.",
+      "b29": "The comprehensive Bayesian reference; the authors provide a free PDF.",
+      "b30": "The standard, fully free text on time-series forecasting.",
+      "b31": "The reference for compartmental and transmission-dynamic models.",
+      "b32": "The definitive graduate-level epidemiology reference.",
+      "b33": "The leading modern text on causal inference from observational data.",
+      "b34": "A clear, applied medical-statistics text widely used in public-health training.",
+      "b35": "Reproducible reporting and automated documents in R.",
+      "b36": "The classic on data visualisation and the ethics of showing data well.",
+      "b37": "A practical, free guide to making clear, honest figures."
+    }
   }
 }
