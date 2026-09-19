@@ -134,5 +134,47 @@
       "team": "Thành viên đội ngũ",
       "years": "Năm kinh nghiệm"
     }
+  },
+  "contact": {
+    "badge": "Chúng tôi rất muốn lắng nghe bạn",
+    "titlePrefix": "Liên hệ",
+    "titleHighlight": "với chúng tôi",
+    "subtitle": "Sẵn sàng chuyển đổi doanh nghiệp của bạn với khoa học dữ liệu? Hãy cùng thảo luận về dự án của bạn và khám phá cách chúng tôi có thể giúp đỡ.",
+    "getInTouch": "Liên hệ với chúng tôi",
+    "getInTouchDesc": "Điền vào biểu mẫu để bắt đầu cuộc trò chuyện. Đội ngũ của chúng tôi thường phản hồi trong vòng 24 giờ vào các ngày làm việc.",
+    "headOffice": "Trụ sở chính",
+    "headOfficeLocation": "Nairobi, Kenya",
+    "headOfficeHours": "Thứ Hai - Thứ Sáu: 9:00 - 18:00",
+    "branches": "Chi nhánh",
+    "branchesLocation": "Hà Nội, Việt Nam (Sắp ra mắt)",
+    "branchesNote": "Đang trong quá trình đăng ký",
+    "emailUs": "Email cho chúng tôi",
+    "responseTime": "Thời gian phản hồi",
+    "responseTimeValue": "Trong vòng 24 giờ",
+    "responseTimeNote": "Chỉ trong ngày làm việc",
+    "followUs": "Theo dõi chúng tôi",
+    "sendMessage": "Gửi tin nhắn cho chúng tôi",
+    "sendMessageDesc": "Chúng tôi rất muốn tìm hiểu thêm về dự án của bạn. Vui lòng điền thông tin bên dưới.",
+    "toastSuccess": "Tin nhắn đã được gửi thành công!",
+    "toastError": "Gửi tin nhắn thất bại. Vui lòng thử lại.",
+    "form": {
+      "firstName": "Tên",
+      "lastName": "Họ",
+      "email": "Email",
+      "company": "Công ty",
+      "serviceInterest": "Dịch vụ quan tâm",
+      "selectService": "Chọn một dịch vụ",
+      "services": {
+        "dataAnalytics": "Phân tích & Trực quan hóa dữ liệu",
+        "machineLearning": "Giải pháp học máy",
+        "dataEngineering": "Kỹ thuật & Hạ tầng dữ liệu",
+        "consulting": "Đào tạo & Tư vấn",
+        "other": "Khác"
+      },
+      "message": "Tin nhắn",
+      "messagePlaceholder": "Hãy cho chúng tôi biết về dự án của bạn...",
+      "sending": "Đang gửi...",
+      "send": "Gửi tin nhắn →"
+    }
   }
 }
