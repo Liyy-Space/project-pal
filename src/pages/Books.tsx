@@ -1,32 +1,33 @@
 import { useState } from "react";
 import booksBanner from "@/assets/books-banner.jpg";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   BookOpen, BarChart2, ClipboardList, TrendingUp,
   FlaskConical, PenLine, FileText, Code2, Database, BrainCircuit,
   Microscope, GraduationCap, Star,
 } from "lucide-react";
 
-const categories = [
-  { id: "foundations", label: "Foundations & Data Science", icon: BarChart2, color: "text-teal-300", bg: "from-teal-900 to-teal-700" },
-  { id: "survey", label: "Survey Methodology", icon: ClipboardList, color: "text-blue-300", bg: "from-blue-900 to-blue-700" },
-  { id: "statistical", label: "Statistical Consultancy", icon: TrendingUp, color: "text-purple-300", bg: "from-purple-900 to-purple-700" },
-  { id: "clinical", label: "Clinical Trials", icon: FlaskConical, color: "text-red-300", bg: "from-red-900 to-red-700" },
-  { id: "writing", label: "Scientific Writing", icon: PenLine, color: "text-yellow-300", bg: "from-yellow-900 to-yellow-700" },
-  { id: "grants", label: "Grants & Proposals", icon: FileText, color: "text-orange-300", bg: "from-orange-900 to-orange-700" },
-  { id: "programming", label: "Programming & Software", icon: Code2, color: "text-green-300", bg: "from-green-900 to-green-700" },
-  { id: "engineering", label: "Data Engineering", icon: Database, color: "text-cyan-300", bg: "from-cyan-900 to-cyan-700" },
-  { id: "modelling", label: "Mathematical Modelling", icon: BrainCircuit, color: "text-pink-300", bg: "from-pink-900 to-pink-700" },
-  { id: "epidemiology", label: "Epidemiology", icon: Microscope, color: "text-rose-300", bg: "from-rose-900 to-rose-700" },
-  { id: "training", label: "Training & Reproducibility", icon: GraduationCap, color: "text-indigo-300", bg: "from-indigo-900 to-indigo-700" },
+const categoryMeta = [
+  { id: "foundations", icon: BarChart2, color: "text-teal-300", bg: "from-teal-900 to-teal-700" },
+  { id: "survey", icon: ClipboardList, color: "text-blue-300", bg: "from-blue-900 to-blue-700" },
+  { id: "statistical", icon: TrendingUp, color: "text-purple-300", bg: "from-purple-900 to-purple-700" },
+  { id: "clinical", icon: FlaskConical, color: "text-red-300", bg: "from-red-900 to-red-700" },
+  { id: "writing", icon: PenLine, color: "text-yellow-300", bg: "from-yellow-900 to-yellow-700" },
+  { id: "grants", icon: FileText, color: "text-orange-300", bg: "from-orange-900 to-orange-700" },
+  { id: "programming", icon: Code2, color: "text-green-300", bg: "from-green-900 to-green-700" },
+  { id: "engineering", icon: Database, color: "text-cyan-300", bg: "from-cyan-900 to-cyan-700" },
+  { id: "modelling", icon: BrainCircuit, color: "text-pink-300", bg: "from-pink-900 to-pink-700" },
+  { id: "epidemiology", icon: Microscope, color: "text-rose-300", bg: "from-rose-900 to-rose-700" },
+  { id: "training", icon: GraduationCap, color: "text-indigo-300", bg: "from-indigo-900 to-indigo-700" },
 ];
 
 interface Book {
+  key: string;
   number: number;
   title: string;
   author: string;
   publisher: string;
-  desc: string;
   category: string;
   rating: number;
   isbn?: string;
@@ -35,43 +36,43 @@ interface Book {
 }
 
 const books: Book[] = [
-  { number: 1, title: "R for Data Science (2nd ed.)", author: "Hadley Wickham et al.", publisher: "O'Reilly, 2023", desc: "The standard entry point to the tidyverse: importing, tidying, transforming, visualising and modelling data in R.", category: "foundations", rating: 4.9, isbn: "9781492097402", freeLink: "https://r4ds.hadley.nz", buyLink: "https://www.amazon.com/dp/1492097403" },
-  { number: 2, title: "Python for Data Analysis (3rd ed.)", author: "Wes McKinney", publisher: "O'Reilly, 2022", desc: "Data wrangling with pandas and NumPy, by the creator of pandas.", category: "foundations", rating: 4.8, isbn: "9781098104030", freeLink: "https://wesmckinney.com/book", buyLink: "https://www.amazon.com/dp/109810403X" },
-  { number: 3, title: "Python Data Science Handbook (2nd ed.)", author: "Jake VanderPlas", publisher: "O'Reilly, 2023", desc: "NumPy, pandas, Matplotlib and scikit-learn for the working data scientist.", category: "foundations", rating: 4.8, isbn: "9781098121228", freeLink: "https://jakevdp.github.io/PythonDataScienceHandbook", buyLink: "https://www.amazon.com/dp/1098121228" },
-  { number: 4, title: "The Art of Statistics", author: "David Spiegelhalter", publisher: "Pelican/Basic Books, 2019", desc: "Statistical thinking for a general and professional audience — excellent for non-specialist stakeholders.", category: "foundations", rating: 4.7, isbn: "9781541618510", buyLink: "https://www.amazon.com/dp/1541618513" },
-  { number: 5, title: "Sampling: Design and Analysis (3rd ed.)", author: "Sharon L. Lohr", publisher: "Chapman & Hall/CRC, 2021", desc: "A clear, modern treatment of survey sampling theory and practice.", category: "survey", rating: 4.6, isbn: "9780367279509", buyLink: "https://www.routledge.com/Sampling-Design-and-Analysis/Lohr/p/book/9780367279509" },
-  { number: 6, title: "Survey Methodology (2nd ed.)", author: "Robert M. Groves et al.", publisher: "Wiley, 2009", desc: "The foundational text on total survey error, questionnaire design and survey operations.", category: "survey", rating: 4.5, isbn: "9780470465462", buyLink: "https://www.wiley.com/en-us/Survey+Methodology" },
-  { number: 7, title: "Model-Assisted Survey Sampling", author: "Carl-Erik Särndal et al.", publisher: "Springer, 2003", desc: "The reference for design-based inference and calibration estimators in complex surveys.", category: "survey", rating: 4.5, isbn: "9780387406206", buyLink: "https://www.springer.com/gp/book/9780387406206" },
-  { number: 8, title: "An Introduction to Statistical Learning", author: "Gareth James et al.", publisher: "Springer, 2021/2023", desc: "The most accessible route into modern statistical learning; Springer-authorised free PDFs.", category: "statistical", rating: 4.9, isbn: "9781461471370", freeLink: "https://www.statlearning.com" },
-  { number: 9, title: "The Elements of Statistical Learning (2nd ed.)", author: "Trevor Hastie et al.", publisher: "Springer, 2009", desc: "The advanced companion to ISL — the deeper theory behind the methods.", category: "statistical", rating: 4.8, isbn: "9780387848570", freeLink: "https://hastie.su.domains/ElemStatLearn" },
-  { number: 10, title: "Regression Modeling Strategies (2nd ed.)", author: "Frank E. Harrell Jr.", publisher: "Springer, 2015", desc: "Indispensable for applied regression, splines, validation and prediction modelling.", category: "statistical", rating: 4.7, isbn: "9783319194240", freeLink: "https://hbiostat.org/rmsc" },
-  { number: 11, title: "Categorical Data Analysis (3rd ed.)", author: "Alan Agresti", publisher: "Wiley, 2013", desc: "The standard reference for logistic regression, contingency tables and models for categorical outcomes.", category: "statistical", rating: 4.6, isbn: "9780470463635", buyLink: "https://www.wiley.com/en-us/Categorical+Data+Analysis" },
-  { number: 12, title: "Fundamentals of Clinical Trials (5th ed.)", author: "Lawrence M. Friedman et al.", publisher: "Springer, 2015", desc: "The core text on trial design, conduct, monitoring and analysis.", category: "clinical", rating: 4.7, isbn: "9783319185385", buyLink: "https://www.springer.com/gp/book/9783319185385" },
-  { number: 13, title: "Designing Clinical Research (4th ed.)", author: "Stephen B. Hulley et al.", publisher: "Wolters Kluwer, 2013", desc: "Practical guidance on research questions, study designs and sample size.", category: "clinical", rating: 4.6, isbn: "9781608318049", buyLink: "https://www.lww.com/Product/9781608318049" },
-  { number: 14, title: "Statistical Monitoring of Clinical Trials", author: "Michael A. Proschan et al.", publisher: "Springer, 2006", desc: "Group-sequential methods and interim monitoring — directly relevant to DSMB statistical work.", category: "clinical", rating: 4.5, isbn: "9780387300597", buyLink: "https://www.springer.com/gp/book/9780387300597" },
-  { number: 15, title: "Data Monitoring Committees in Clinical Trials (2nd ed.)", author: "Susan S. Ellenberg et al.", publisher: "Wiley, 2019", desc: "The definitive practical guide to running and contributing to DSMBs.", category: "clinical", rating: 4.6, isbn: "9781119512653", buyLink: "https://www.wiley.com/en-us/Data+Monitoring+Committees" },
-  { number: 16, title: "Successful Scientific Writing (4th ed.)", author: "Janice R. Matthews & Robert W. Matthews", publisher: "Cambridge University Press, 2014", desc: "A practical guide to writing and publishing in the biological and health sciences.", category: "writing", rating: 4.5, isbn: "9781107691551", buyLink: "https://www.cambridge.org/core/books/successful-scientific-writing/" },
-  { number: 17, title: "How to Write and Publish a Scientific Paper (8th ed.)", author: "Barbara Gastel & Robert A. Day", publisher: "Cambridge University Press, 2016", desc: "A long-standing standard on structuring and submitting scientific manuscripts.", category: "writing", rating: 4.5, isbn: "9781316612039", buyLink: "https://www.cambridge.org/core/books/how-to-write-and-publish-a-scientific-paper/" },
-  { number: 18, title: "Reporting Guidelines (EQUATOR Network)", author: "CONSORT, STROBE, PRISMA, SPIRIT", publisher: "EQUATOR Network", desc: "The essential checklists every manuscript and protocol should follow.", category: "writing", rating: 4.8, freeLink: "https://www.equator-network.org" },
-  { number: 19, title: "The Grant Application Writer's Workbook", author: "Stephen W. Russell & David C. Morrison", publisher: "Grant Writers' Seminars, 2020", desc: "A structured, widely used workbook for building competitive proposals.", category: "grants", rating: 4.5, buyLink: "https://www.grantcentral.com" },
-  { number: 20, title: "Writing Science", author: "Joshua Schimel", publisher: "Oxford University Press, 2012", desc: "On narrative and structure in both papers and funding proposals.", category: "grants", rating: 4.7, isbn: "9780199760244", buyLink: "https://www.amazon.com/dp/0199760241" },
-  { number: 21, title: "Advanced R (2nd ed.)", author: "Hadley Wickham", publisher: "Chapman & Hall/CRC, 2019", desc: "How R really works — essential for writing robust, efficient R code and packages.", category: "programming", rating: 4.8, isbn: "9780815384571", freeLink: "https://adv-r.hadley.nz", buyLink: "https://www.amazon.com/dp/0815384572" },
-  { number: 22, title: "R Packages (2nd ed.)", author: "Hadley Wickham & Jennifer Bryan", publisher: "O'Reilly, 2023", desc: "The reference for building, testing and shipping R packages.", category: "programming", rating: 4.7, isbn: "9781098134945", freeLink: "https://r-pkgs.org" },
-  { number: 23, title: "Fluent Python (2nd ed.)", author: "Luciano Ramalho", publisher: "O'Reilly, 2022", desc: "Writing idiomatic, high-quality Python — a step beyond introductory texts.", category: "programming", rating: 4.8, isbn: "9781492056355", buyLink: "https://www.amazon.com/dp/1492056359" },
-  { number: 24, title: "Clean Code", author: "Robert C. Martin", publisher: "Prentice Hall, 2008", desc: "Principles of readable, maintainable code that apply across languages.", category: "programming", rating: 4.7, isbn: "9780132350884", buyLink: "https://www.amazon.com/dp/0132350882" },
-  { number: 25, title: "Fundamentals of Data Engineering", author: "Joe Reis & Matt Housley", publisher: "O'Reilly, 2022", desc: "A vendor-neutral map of the modern data lifecycle.", category: "engineering", rating: 4.7, isbn: "9781098108298", buyLink: "https://www.amazon.com/dp/1098108302" },
-  { number: 26, title: "Designing Data-Intensive Applications", author: "Martin Kleppmann", publisher: "O'Reilly, 2017", desc: "The reference on the systems behind reliable, scalable data infrastructure.", category: "engineering", rating: 4.9, isbn: "9781449373320", buyLink: "https://www.amazon.com/dp/1449373321" },
-  { number: 27, title: "Tidy Data", author: "Hadley Wickham", publisher: "Journal of Statistical Software, 2014", desc: "The short, foundational paper on structuring data for analysis — free.", category: "engineering", rating: 4.6, freeLink: "https://www.jstatsoft.org/article/view/v059i10" },
-  { number: 28, title: "Statistical Rethinking (2nd ed.)", author: "Richard McElreath", publisher: "Chapman & Hall/CRC, 2020", desc: "The best modern introduction to applied Bayesian modelling.", category: "modelling", rating: 4.9, isbn: "9780367139919", freeLink: "https://xcelab.net/rm/statistical-rethinking", buyLink: "https://www.amazon.com/dp/036713991X" },
-  { number: 29, title: "Bayesian Data Analysis (3rd ed.)", author: "Andrew Gelman et al.", publisher: "Chapman & Hall/CRC, 2013", desc: "The comprehensive Bayesian reference; the authors provide a free PDF.", category: "modelling", rating: 4.8, isbn: "9781439840955", freeLink: "http://www.stat.columbia.edu/~gelman/book" },
-  { number: 30, title: "Forecasting: Principles and Practice (3rd ed.)", author: "Rob J. Hyndman & George Athanasopoulos", publisher: "OTexts, 2021", desc: "The standard, fully free text on time-series forecasting.", category: "modelling", rating: 4.8, freeLink: "https://otexts.com/fpp3" },
-  { number: 31, title: "Modeling Infectious Diseases in Humans and Animals", author: "Matt J. Keeling & Pejman Rohani", publisher: "Princeton University Press, 2008", desc: "The reference for compartmental and transmission-dynamic models.", category: "modelling", rating: 4.6, isbn: "9780691116174", buyLink: "https://www.amazon.com/dp/0691116172" },
-  { number: 32, title: "Modern Epidemiology (4th ed.)", author: "Kenneth J. Rothman et al.", publisher: "Wolters Kluwer, 2021", desc: "The definitive graduate-level epidemiology reference.", category: "epidemiology", rating: 4.7, isbn: "9781451193282", buyLink: "https://www.lww.com/Product/9781451193282" },
-  { number: 33, title: "Causal Inference: What If", author: "Miguel A. Hernán & James M. Robins", publisher: "Chapman & Hall/CRC, 2020", desc: "The leading modern text on causal inference from observational data.", category: "epidemiology", rating: 4.9, freeLink: "https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book" },
-  { number: 34, title: "Essential Medical Statistics (2nd ed.)", author: "Betty R. Kirkwood & Jonathan A. C. Sterne", publisher: "Wiley-Blackwell, 2003", desc: "A clear, applied medical-statistics text widely used in public-health training.", category: "epidemiology", rating: 4.6, isbn: "9780865428713", buyLink: "https://www.wiley.com/en-us/Essential+Medical+Statistics" },
-  { number: 35, title: "R Markdown: The Definitive Guide", author: "Yihui Xie et al.", publisher: "Chapman & Hall/CRC, 2018", desc: "Reproducible reporting and automated documents in R.", category: "training", rating: 4.7, isbn: "9781138359338", freeLink: "https://bookdown.org/yihui/rmarkdown" },
-  { number: 36, title: "The Visual Display of Quantitative Information (2nd ed.)", author: "Edward R. Tufte", publisher: "Graphics Press, 2001", desc: "The classic on data visualisation and the ethics of showing data well.", category: "training", rating: 4.8, isbn: "9780961392147", buyLink: "https://www.edwardtufte.com/tufte/books_vdqi" },
-  { number: 37, title: "Fundamentals of Data Visualization", author: "Claus O. Wilke", publisher: "O'Reilly, 2019", desc: "A practical, free guide to making clear, honest figures.", category: "training", rating: 4.7, isbn: "9781492031086", freeLink: "https://clauswilke.com/dataviz" },
+  { key: "b01", number: 1, title: "R for Data Science (2nd ed.)", author: "Hadley Wickham et al.", publisher: "O'Reilly, 2023", category: "foundations", rating: 4.9, isbn: "9781492097402", freeLink: "https://r4ds.hadley.nz", buyLink: "https://www.amazon.com/dp/1492097403" },
+  { key: "b02", number: 2, title: "Python for Data Analysis (3rd ed.)", author: "Wes McKinney", publisher: "O'Reilly, 2022", category: "foundations", rating: 4.8, isbn: "9781098104030", freeLink: "https://wesmckinney.com/book", buyLink: "https://www.amazon.com/dp/109810403X" },
+  { key: "b03", number: 3, title: "Python Data Science Handbook (2nd ed.)", author: "Jake VanderPlas", publisher: "O'Reilly, 2023", category: "foundations", rating: 4.8, isbn: "9781098121228", freeLink: "https://jakevdp.github.io/PythonDataScienceHandbook", buyLink: "https://www.amazon.com/dp/1098121228" },
+  { key: "b04", number: 4, title: "The Art of Statistics", author: "David Spiegelhalter", publisher: "Pelican/Basic Books, 2019", category: "foundations", rating: 4.7, isbn: "9781541618510", buyLink: "https://www.amazon.com/dp/1541618513" },
+  { key: "b05", number: 5, title: "Sampling: Design and Analysis (3rd ed.)", author: "Sharon L. Lohr", publisher: "Chapman & Hall/CRC, 2021", category: "survey", rating: 4.6, isbn: "9780367279509", buyLink: "https://www.routledge.com/Sampling-Design-and-Analysis/Lohr/p/book/9780367279509" },
+  { key: "b06", number: 6, title: "Survey Methodology (2nd ed.)", author: "Robert M. Groves et al.", publisher: "Wiley, 2009", category: "survey", rating: 4.5, isbn: "9780470465462", buyLink: "https://www.wiley.com/en-us/Survey+Methodology" },
+  { key: "b07", number: 7, title: "Model-Assisted Survey Sampling", author: "Carl-Erik Särndal et al.", publisher: "Springer, 2003", category: "survey", rating: 4.5, isbn: "9780387406206", buyLink: "https://www.springer.com/gp/book/9780387406206" },
+  { key: "b08", number: 8, title: "An Introduction to Statistical Learning", author: "Gareth James et al.", publisher: "Springer, 2021/2023", category: "statistical", rating: 4.9, isbn: "9781461471370", freeLink: "https://www.statlearning.com" },
+  { key: "b09", number: 9, title: "The Elements of Statistical Learning (2nd ed.)", author: "Trevor Hastie et al.", publisher: "Springer, 2009", category: "statistical", rating: 4.8, isbn: "9780387848570", freeLink: "https://hastie.su.domains/ElemStatLearn" },
+  { key: "b10", number: 10, title: "Regression Modeling Strategies (2nd ed.)", author: "Frank E. Harrell Jr.", publisher: "Springer, 2015", category: "statistical", rating: 4.7, isbn: "9783319194240", freeLink: "https://hbiostat.org/rmsc" },
+  { key: "b11", number: 11, title: "Categorical Data Analysis (3rd ed.)", author: "Alan Agresti", publisher: "Wiley, 2013", category: "statistical", rating: 4.6, isbn: "9780470463635", buyLink: "https://www.wiley.com/en-us/Categorical+Data+Analysis" },
+  { key: "b12", number: 12, title: "Fundamentals of Clinical Trials (5th ed.)", author: "Lawrence M. Friedman et al.", publisher: "Springer, 2015", category: "clinical", rating: 4.7, isbn: "9783319185385", buyLink: "https://www.springer.com/gp/book/9783319185385" },
+  { key: "b13", number: 13, title: "Designing Clinical Research (4th ed.)", author: "Stephen B. Hulley et al.", publisher: "Wolters Kluwer, 2013", category: "clinical", rating: 4.6, isbn: "9781608318049", buyLink: "https://www.lww.com/Product/9781608318049" },
+  { key: "b14", number: 14, title: "Statistical Monitoring of Clinical Trials", author: "Michael A. Proschan et al.", publisher: "Springer, 2006", category: "clinical", rating: 4.5, isbn: "9780387300597", buyLink: "https://www.springer.com/gp/book/9780387300597" },
+  { key: "b15", number: 15, title: "Data Monitoring Committees in Clinical Trials (2nd ed.)", author: "Susan S. Ellenberg et al.", publisher: "Wiley, 2019", category: "clinical", rating: 4.6, isbn: "9781119512653", buyLink: "https://www.wiley.com/en-us/Data+Monitoring+Committees" },
+  { key: "b16", number: 16, title: "Successful Scientific Writing (4th ed.)", author: "Janice R. Matthews & Robert W. Matthews", publisher: "Cambridge University Press, 2014", category: "writing", rating: 4.5, isbn: "9781107691551", buyLink: "https://www.cambridge.org/core/books/successful-scientific-writing/" },
+  { key: "b17", number: 17, title: "How to Write and Publish a Scientific Paper (8th ed.)", author: "Barbara Gastel & Robert A. Day", publisher: "Cambridge University Press, 2016", category: "writing", rating: 4.5, isbn: "9781316612039", buyLink: "https://www.cambridge.org/core/books/how-to-write-and-publish-a-scientific-paper/" },
+  { key: "b18", number: 18, title: "Reporting Guidelines (EQUATOR Network)", author: "CONSORT, STROBE, PRISMA, SPIRIT", publisher: "EQUATOR Network", category: "writing", rating: 4.8, freeLink: "https://www.equator-network.org" },
+  { key: "b19", number: 19, title: "The Grant Application Writer's Workbook", author: "Stephen W. Russell & David C. Morrison", publisher: "Grant Writers' Seminars, 2020", category: "grants", rating: 4.5, buyLink: "https://www.grantcentral.com" },
+  { key: "b20", number: 20, title: "Writing Science", author: "Joshua Schimel", publisher: "Oxford University Press, 2012", category: "grants", rating: 4.7, isbn: "9780199760244", buyLink: "https://www.amazon.com/dp/0199760241" },
+  { key: "b21", number: 21, title: "Advanced R (2nd ed.)", author: "Hadley Wickham", publisher: "Chapman & Hall/CRC, 2019", category: "programming", rating: 4.8, isbn: "9780815384571", freeLink: "https://adv-r.hadley.nz", buyLink: "https://www.amazon.com/dp/0815384572" },
+  { key: "b22", number: 22, title: "R Packages (2nd ed.)", author: "Hadley Wickham & Jennifer Bryan", publisher: "O'Reilly, 2023", category: "programming", rating: 4.7, isbn: "9781098134945", freeLink: "https://r-pkgs.org" },
+  { key: "b23", number: 23, title: "Fluent Python (2nd ed.)", author: "Luciano Ramalho", publisher: "O'Reilly, 2022", category: "programming", rating: 4.8, isbn: "9781492056355", buyLink: "https://www.amazon.com/dp/1492056359" },
+  { key: "b24", number: 24, title: "Clean Code", author: "Robert C. Martin", publisher: "Prentice Hall, 2008", category: "programming", rating: 4.7, isbn: "9780132350884", buyLink: "https://www.amazon.com/dp/0132350882" },
+  { key: "b25", number: 25, title: "Fundamentals of Data Engineering", author: "Joe Reis & Matt Housley", publisher: "O'Reilly, 2022", category: "engineering", rating: 4.7, isbn: "9781098108298", buyLink: "https://www.amazon.com/dp/1098108302" },
+  { key: "b26", number: 26, title: "Designing Data-Intensive Applications", author: "Martin Kleppmann", publisher: "O'Reilly, 2017", category: "engineering", rating: 4.9, isbn: "9781449373320", buyLink: "https://www.amazon.com/dp/1449373321" },
+  { key: "b27", number: 27, title: "Tidy Data", author: "Hadley Wickham", publisher: "Journal of Statistical Software, 2014", category: "engineering", rating: 4.6, freeLink: "https://www.jstatsoft.org/article/view/v059i10" },
+  { key: "b28", number: 28, title: "Statistical Rethinking (2nd ed.)", author: "Richard McElreath", publisher: "Chapman & Hall/CRC, 2020", category: "modelling", rating: 4.9, isbn: "9780367139919", freeLink: "https://xcelab.net/rm/statistical-rethinking", buyLink: "https://www.amazon.com/dp/036713991X" },
+  { key: "b29", number: 29, title: "Bayesian Data Analysis (3rd ed.)", author: "Andrew Gelman et al.", publisher: "Chapman & Hall/CRC, 2013", category: "modelling", rating: 4.8, isbn: "9781439840955", freeLink: "http://www.stat.columbia.edu/~gelman/book" },
+  { key: "b30", number: 30, title: "Forecasting: Principles and Practice (3rd ed.)", author: "Rob J. Hyndman & George Athanasopoulos", publisher: "OTexts, 2021", category: "modelling", rating: 4.8, freeLink: "https://otexts.com/fpp3" },
+  { key: "b31", number: 31, title: "Modeling Infectious Diseases in Humans and Animals", author: "Matt J. Keeling & Pejman Rohani", publisher: "Princeton University Press, 2008", category: "modelling", rating: 4.6, isbn: "9780691116174", buyLink: "https://www.amazon.com/dp/0691116172" },
+  { key: "b32", number: 32, title: "Modern Epidemiology (4th ed.)", author: "Kenneth J. Rothman et al.", publisher: "Wolters Kluwer, 2021", category: "epidemiology", rating: 4.7, isbn: "9781451193282", buyLink: "https://www.lww.com/Product/9781451193282" },
+  { key: "b33", number: 33, title: "Causal Inference: What If", author: "Miguel A. Hernán & James M. Robins", publisher: "Chapman & Hall/CRC, 2020", category: "epidemiology", rating: 4.9, freeLink: "https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book" },
+  { key: "b34", number: 34, title: "Essential Medical Statistics (2nd ed.)", author: "Betty R. Kirkwood & Jonathan A. C. Sterne", publisher: "Wiley-Blackwell, 2003", category: "epidemiology", rating: 4.6, isbn: "9780865428713", buyLink: "https://www.wiley.com/en-us/Essential+Medical+Statistics" },
+  { key: "b35", number: 35, title: "R Markdown: The Definitive Guide", author: "Yihui Xie et al.", publisher: "Chapman & Hall/CRC, 2018", category: "training", rating: 4.7, isbn: "9781138359338", freeLink: "https://bookdown.org/yihui/rmarkdown" },
+  { key: "b36", number: 36, title: "The Visual Display of Quantitative Information (2nd ed.)", author: "Edward R. Tufte", publisher: "Graphics Press, 2001", category: "training", rating: 4.8, isbn: "9780961392147", buyLink: "https://www.edwardtufte.com/tufte/books_vdqi" },
+  { key: "b37", number: 37, title: "Fundamentals of Data Visualization", author: "Claus O. Wilke", publisher: "O'Reilly, 2019", category: "training", rating: 4.7, isbn: "9781492031086", freeLink: "https://clauswilke.com/dataviz" },
 ];
 
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
@@ -88,7 +89,8 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-function BookCard({ book, catMeta }: { book: Book; catMeta: typeof categories[0] }) {
+function BookCard({ book, catMeta }: { book: Book; catMeta: typeof categoryMeta[0] }) {
+  const { t } = useTranslation();
   const Icon = catMeta.icon;
   const [imgError, setImgError] = useState(false);
   const coverUrl = book.isbn ? `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg` : null;
@@ -118,7 +120,7 @@ function BookCard({ book, catMeta }: { book: Book; catMeta: typeof categories[0]
           <div className="mt-2"><StarRating rating={book.rating} /></div>
         </div>
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <p className="text-white/80 text-xs leading-relaxed line-clamp-3">{book.desc}</p>
+          <p className="text-white/80 text-xs leading-relaxed line-clamp-3">{t(`books.items.${book.key}`)}</p>
         </div>
         <div className="flex flex-col gap-2">
           <p className="text-white/40 text-xs">{book.publisher}</p>
@@ -127,14 +129,14 @@ function BookCard({ book, catMeta }: { book: Book; catMeta: typeof categories[0]
               <a href={book.freeLink} target="_blank" rel="noopener noreferrer"
                 className="text-xs px-3 py-1.5 rounded-full backdrop-blur-md bg-teal-500/30 border border-teal-400/40 text-teal-200 hover:bg-teal-500/50 transition-all"
                 onClick={(e) => e.stopPropagation()}>
-                Free Online ↗
+                {t("books.freeOnline")}
               </a>
             )}
             {book.buyLink && (
               <a href={book.buyLink} target="_blank" rel="noopener noreferrer"
                 className="text-xs px-3 py-1.5 rounded-full backdrop-blur-md bg-white/10 border border-white/20 text-white/80 hover:bg-white/20 transition-all"
                 onClick={(e) => e.stopPropagation()}>
-                Buy Now ↗
+                {t("books.buyNow")}
               </a>
             )}
           </div>
@@ -144,7 +146,8 @@ function BookCard({ book, catMeta }: { book: Book; catMeta: typeof categories[0]
   );
 }
 
-function CategoryCarousel({ category }: { category: typeof categories[0] }) {
+function CategoryCarousel({ category }: { category: typeof categoryMeta[0] }) {
+  const { t } = useTranslation();
   const catBooks = books.filter((b) => b.category === category.id);
   if (catBooks.length === 0) return null;
   const doubled = [...catBooks, ...catBooks, ...catBooks];
@@ -156,9 +159,9 @@ function CategoryCarousel({ category }: { category: typeof categories[0] }) {
         <div className={`w-9 h-9 rounded-xl bg-gradient-to-br ${category.bg} flex items-center justify-center shadow-lg`}>
           <Icon className={`w-4 h-4 ${category.color}`} />
         </div>
-        <h2 className="text-xl font-bold text-foreground">{category.label}</h2>
+        <h2 className="text-xl font-bold text-foreground">{t(`books.categories.${category.id}`)}</h2>
         <span className="text-xs text-muted-foreground bg-muted-foreground/10 px-2 py-0.5 rounded-full">
-          {catBooks.length} books
+          {catBooks.length} {t("books.booksCountSuffix")}
         </span>
       </div>
       <div className="relative overflow-hidden">
@@ -178,6 +181,8 @@ function CategoryCarousel({ category }: { category: typeof categories[0] }) {
 }
 
 const Books = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="pt-16">
 
@@ -193,22 +198,22 @@ const Books = () => {
         <div className="absolute inset-0 flex flex-col items-start justify-center px-8 md:px-20">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
             <BookOpen className="w-3 h-3 text-teal-300" />
-            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">Curated Library</span>
+            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">{t("books.hero.badge")}</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 max-w-2xl leading-tight">
-            Essential Resources for <span className="text-teal-300">Data Professionals</span>
+            {t("books.hero.titleMain")} <span className="text-teal-300">{t("books.hero.titleHighlight")}</span>
           </h1>
           <p className="text-white/70 max-w-lg mb-8 text-sm md:text-base leading-relaxed">
-            37 hand-picked resources across data science, statistics, clinical research, and more — curated by our expert team.
+            {t("books.hero.subtitle")}
           </p>
           <div className="flex gap-3 flex-wrap">
             <a href="#books"
               className="px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all text-sm shadow-lg shadow-teal-500/30">
-              Browse Collection →
+              {t("books.hero.browseButton")}
             </a>
             <Link to="/contact"
               className="px-6 py-3 bg-white/10 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 transition-all text-sm backdrop-blur-sm">
-              Suggest a Book
+              {t("books.hero.suggestButton")}
             </Link>
           </div>
         </div>
@@ -218,14 +223,14 @@ const Books = () => {
       <div className="py-5 text-white" style={{ background: STATS_GRADIENT }}>
         <div className="container flex flex-wrap justify-center gap-12 text-center">
           {[
-            { num: "37", label: "Curated Resources" },
-            { num: "11", label: "Categories" },
-            { num: "20+", label: "Free Online" },
-            { num: "100%", label: "Expert Picks" },
+            { num: "37", key: "curatedResources" },
+            { num: "11", key: "categories" },
+            { num: "20+", key: "freeOnlineStat" },
+            { num: "100%", key: "expertPicks" },
           ].map((s) => (
-            <div key={s.label}>
+            <div key={s.key}>
               <span className="font-bold text-2xl text-white">{s.num}</span>
-              <p className="text-xs text-white/60 mt-0.5">{s.label}</p>
+              <p className="text-xs text-white/60 mt-0.5">{t(`books.stats.${s.key}`)}</p>
             </div>
           ))}
         </div>
@@ -235,30 +240,30 @@ const Books = () => {
       <section id="books" className="py-20 bg-muted">
         <div className="container">
           <div className="text-center mb-14">
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">Our Library</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3">Browse by Category</h2>
-            <p className="text-muted-foreground max-w-lg mx-auto">Hover over any book card to reveal its description and access links. Hover over a row to pause it.</p>
+            <span className="text-primary text-xs font-semibold uppercase tracking-widest">{t("books.section.eyebrow")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3">{t("books.section.title")}</h2>
+            <p className="text-muted-foreground max-w-lg mx-auto">{t("books.section.subtitle")}</p>
           </div>
 
-          {categories.map((cat) => (
+          {categoryMeta.map((cat) => (
             <CategoryCarousel key={cat.id} category={cat} />
           ))}
 
           <p className="text-center text-xs text-muted-foreground mt-4 opacity-50">
-            Book covers and information are provided for reference purposes only. All rights belong to their respective authors and publishers.
+            {t("books.disclaimer")}
           </p>
 
           {/* Suggest CTA */}
           <div className="mt-12 rounded-2xl overflow-hidden shadow-xl">
             <div className="p-10 text-center" style={{ background: HERO_GRADIENT }}>
               <BookOpen className="w-10 h-10 text-teal-300 mx-auto mb-4 opacity-80" />
-              <h3 className="text-2xl font-bold text-white mb-3">Suggest a Title</h3>
+              <h3 className="text-2xl font-bold text-white mb-3">{t("books.suggestCta.title")}</h3>
               <p className="text-white/60 mb-6 max-w-xl mx-auto">
-                This list grows. If there is a book that has shaped how you work — tell us and we will consider it for the collection.
+                {t("books.suggestCta.subtitle")}
               </p>
               <Link to="/contact"
                 className="inline-block px-8 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30">
-                Suggest a Book →
+                {t("books.suggestCta.button")}
               </Link>
             </div>
           </div>
