@@ -47,17 +47,50 @@
       "readMore": "Read More →",
       "viewAll": "View All Services",
       "items": {
-        "surveyMethodology": { "title": "Survey Methodology", "desc": "Designing surveys that produce defensible estimates and clean field data." },
-        "statisticalConsultancy": { "title": "Statistical Consultancy", "desc": "A senior statistician on call for design, analysis and reviewer questions." },
-        "clinicalTrialSupport": { "title": "Clinical Trial Support", "desc": "End-to-end biostatistics aligned to ICH-GCP for interventional studies." },
-        "dsmbSupport": { "title": "DSMB Support", "desc": "Independent statistical membership and unblinded analytics for trials." },
-        "scientificWriting": { "title": "Scientific Writing", "desc": "Submission-ready scientific text written to report what the data show." },
-        "grantsProposals": { "title": "Grants & Proposals", "desc": "Strengthening the quantitative spine of competitive applications." },
-        "dataManagement": { "title": "Data Management", "desc": "Clean, well-governed data with an audit trail — the foundation of everything." },
-        "statisticalProgramming": { "title": "Statistical Programming", "desc": "Production-quality R, Python, Stata and SAS code, documented and reproducible." },
-        "mathematicalModelling": { "title": "Mathematical Modelling", "desc": "Models that explain mechanisms, project forward and quantify uncertainty." },
-        "researchAnalytics": { "title": "Research & Analytics", "desc": "Full-cycle research support and applied data science for decisions." },
-        "trainingCapacity": { "title": "Training & Capacity", "desc": "Leaving teams able to do the work themselves — not dependent on us." }
+        "surveyMethodology": {
+          "title": "Survey Methodology",
+          "desc": "Designing surveys that produce defensible estimates and clean field data."
+        },
+        "statisticalConsultancy": {
+          "title": "Statistical Consultancy",
+          "desc": "A senior statistician on call for design, analysis and reviewer questions."
+        },
+        "clinicalTrialSupport": {
+          "title": "Clinical Trial Support",
+          "desc": "End-to-end biostatistics aligned to ICH-GCP for interventional studies."
+        },
+        "dsmbSupport": {
+          "title": "DSMB Support",
+          "desc": "Independent statistical membership and unblinded analytics for trials."
+        },
+        "scientificWriting": {
+          "title": "Scientific Writing",
+          "desc": "Submission-ready scientific text written to report what the data show."
+        },
+        "grantsProposals": {
+          "title": "Grants & Proposals",
+          "desc": "Strengthening the quantitative spine of competitive applications."
+        },
+        "dataManagement": {
+          "title": "Data Management",
+          "desc": "Clean, well-governed data with an audit trail — the foundation of everything."
+        },
+        "statisticalProgramming": {
+          "title": "Statistical Programming",
+          "desc": "Production-quality R, Python, Stata and SAS code, documented and reproducible."
+        },
+        "mathematicalModelling": {
+          "title": "Mathematical Modelling",
+          "desc": "Models that explain mechanisms, project forward and quantify uncertainty."
+        },
+        "researchAnalytics": {
+          "title": "Research & Analytics",
+          "desc": "Full-cycle research support and applied data science for decisions."
+        },
+        "trainingCapacity": {
+          "title": "Training & Capacity",
+          "desc": "Leaving teams able to do the work themselves — not dependent on us."
+        }
       }
     },
     "books": {
@@ -100,6 +133,48 @@
       "clients": "Happy Clients",
       "team": "Team Members",
       "years": "Years Experience"
+    }
+  },
+  "contact": {
+    "badge": "We'd love to hear from you",
+    "titlePrefix": "Contact",
+    "titleHighlight": "Us",
+    "subtitle": "Ready to transform your business with data science? Let's discuss your project and explore how we can help.",
+    "getInTouch": "Get in touch",
+    "getInTouchDesc": "Fill in the form to start a conversation. Our team typically responds within 24 hours on business days.",
+    "headOffice": "Head Office",
+    "headOfficeLocation": "Nairobi, Kenya",
+    "headOfficeHours": "Mon - Fri: 9:00 AM - 6:00 PM",
+    "branches": "Branches",
+    "branchesLocation": "Hanoi, Vietnam (Coming Soon)",
+    "branchesNote": "Registration in progress",
+    "emailUs": "Email Us",
+    "responseTime": "Response Time",
+    "responseTimeValue": "Within 24 hours",
+    "responseTimeNote": "Business days only",
+    "followUs": "Follow us",
+    "sendMessage": "Send us a message",
+    "sendMessageDesc": "We'd love to learn more about your project. Fill in the details below.",
+    "toastSuccess": "Message sent successfully!",
+    "toastError": "Failed to send message. Please try again.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "company": "Company",
+      "serviceInterest": "Service Interest",
+      "selectService": "Select a service",
+      "services": {
+        "dataAnalytics": "Data Analytics & Visualization",
+        "machineLearning": "Machine Learning Solutions",
+        "dataEngineering": "Data Engineering & Infrastructure",
+        "consulting": "Training & Consulting",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "sending": "Sending...",
+      "send": "Send Message →"
     }
   }
 }
