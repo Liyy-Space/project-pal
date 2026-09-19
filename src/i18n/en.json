@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "events": "Events",
+    "library": "Library",
+    "contact": "Contact"
+  },
+  "footer": {
+    "tagline": "Transforming businesses with data science and AI solutions.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "location": "Nairobi, Kenya — soon expanding to Vietnam",
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "title1": "Transform Your Business with",
+      "titleHighlight": "Data Science",
+      "subtitle": "Unlock the power of your data with our expert consulting services. We help businesses make data-driven decisions, optimize operations, and drive growth through advanced analytics and machine learning solutions.",
+      "exploreServices": "Explore Services",
+      "getStarted": "Get Started"
+    },
+    "event": {
+      "eyebrow": "Don't Miss Out",
+      "heading": "Featured Event",
+      "subheading": "Join our upcoming professional short course and level up your data skills.",
+      "badge": "Professional Short Course",
+      "courseTitle": "Clinical Data Analysis in R",
+      "coursePhase": "Phase I — Introductory Training",
+      "courseDesc": "A five-session evening course for Doctors, Nurses, Medical Researchers and Allied Health Professionals. No prior programming experience required.",
+      "scheduleTitle": "Every Tuesday",
+      "scheduleDates": "8 September – 6 October 2026",
+      "timeTitle": "8:00 PM Start",
+      "timeDesc": "90 minutes per session • 5 sessions total",
+      "audienceTitle": "For Healthcare Professionals",
+      "audienceDesc": "Doctors, Nurses, Researchers, Allied Health",
+      "contactTitle": "Contact to Register",
+      "registerNow": "Register Now",
+      "learnMore": "Learn More"
+    },
+    "services": {
+      "eyebrow": "What We Offer",
+      "heading": "A wide range of data science services",
+      "subheading": "From survey methodology to clinical trials, statistical modelling to scientific writing — we cover the full spectrum of quantitative research support.",
+      "readMore": "Read More →",
+      "viewAll": "View All Services",
+      "items": {
+        "surveyMethodology": { "title": "Survey Methodology", "desc": "Designing surveys that produce defensible estimates and clean field data." },
+        "statisticalConsultancy": { "title": "Statistical Consultancy", "desc": "A senior statistician on call for design, analysis and reviewer questions." },
+        "clinicalTrialSupport": { "title": "Clinical Trial Support", "desc": "End-to-end biostatistics aligned to ICH-GCP for interventional studies." },
+        "dsmbSupport": { "title": "DSMB Support", "desc": "Independent statistical membership and unblinded analytics for trials." },
+        "scientificWriting": { "title": "Scientific Writing", "desc": "Submission-ready scientific text written to report what the data show." },
+        "grantsProposals": { "title": "Grants & Proposals", "desc": "Strengthening the quantitative spine of competitive applications." },
+        "dataManagement": { "title": "Data Management", "desc": "Clean, well-governed data with an audit trail — the foundation of everything." },
+        "statisticalProgramming": { "title": "Statistical Programming", "desc": "Production-quality R, Python, Stata and SAS code, documented and reproducible." },
+        "mathematicalModelling": { "title": "Mathematical Modelling", "desc": "Models that explain mechanisms, project forward and quantify uncertainty." },
+        "researchAnalytics": { "title": "Research & Analytics", "desc": "Full-cycle research support and applied data science for decisions." },
+        "trainingCapacity": { "title": "Training & Capacity", "desc": "Leaving teams able to do the work themselves — not dependent on us." }
+      }
+    },
+    "books": {
+      "eyebrow": "Curated Reading List",
+      "heading1": "Some books entertain.",
+      "heading2": "Others change how we see data.",
+      "subheading": "Our team has curated 37 essential books across data science, statistics, clinical research, machine learning, and more.",
+      "browse": "Browse the Collection",
+      "suggest": "Suggest a Book",
+      "stats": {
+        "curated": "Curated Books",
+        "categories": "Categories",
+        "freeOnline": "Free Online"
+      },
+      "readFree": "Read Free Online ↗",
+      "buyNow": "Buy Now ↗"
+    },
+    "cta": {
+      "heading": "Ready to Transform Your Data?",
+      "subheading": "Join hundreds of companies that have already revolutionized their business with our data science expertise. Let's discuss how we can help you achieve your goals.",
+      "button": "Start Your Project"
+    }
+  },
+  "about": {
+    "badge": "Who We Are",
+    "heroTitlePrefix": "About",
+    "heroDescription": "We are a team of passionate data scientists, engineers, and consultants dedicated to helping businesses unlock the full potential of their data.",
+    "missionTitle": "Our Mission",
+    "missionP1": "At Neudata, we believe that data is the key to unlocking business success in the digital age. Our mission is to democratize data science by making advanced analytics accessible to organizations of all sizes.",
+    "missionP2": "We combine cutting-edge technology with deep industry expertise to deliver solutions that not only solve today's challenges but also prepare our clients for tomorrow's opportunities.",
+    "values": {
+      "excellence": "Excellence in Delivery",
+      "innovation": "Innovation First",
+      "partnership": "Client Partnership",
+      "learning": "Continuous Learning"
+    },
+    "getInTouch": "Get In Touch",
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "team": "Team Members",
+      "years": "Years Experience"
+    }
+  }
+}
