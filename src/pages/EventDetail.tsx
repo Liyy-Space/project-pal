@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Calendar, Clock, MapPin, ArrowLeft, Users } from "lucide-react";
+import { Calendar, Clock, MapPin, ArrowLeft, Users, BarChart3 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
@@ -64,10 +64,14 @@ const EventDetail = () => {
     <div className="pt-16">
       {/* Hero */}
       <div className="relative h-72 md:h-96 overflow-hidden">
-        {event.image_url
-          ? <img src={event.image_url} alt={event.title} className="w-full h-full object-cover" />
-          : <div className="w-full h-full" style={{ background: HERO_GRADIENT }} />
-        }
+        {event.image_url ? (
+          <img src={event.image_url} alt={event.title} className="w-full h-full object-cover" />
+        ) : (
+          <div className="relative w-full h-full" style={{ background: HERO_GRADIENT }}>
+            <div className="absolute inset-0 grid-pattern opacity-20" />
+            <BarChart3 className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 w-40 h-40 md:w-56 md:h-56 text-white/10" />
+          </div>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
         <div className="absolute bottom-6 left-0 right-0 px-6 md:px-12">
           <Link to="/events" className="inline-flex items-center gap-1 text-white/70 hover:text-white text-sm mb-3 transition-colors">
