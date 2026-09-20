@@ -359,7 +359,8 @@
     "viewRegister": "View Event & Register →",
     "ongoingBadge": "🟢 Ongoing",
     "pastBadge": "Past Event",
-    "defaultCategory": "Event"
+    "defaultCategory": "Event",
+    "free": "Free"
   },
   "eventDetail": {
     "notFound": "Event not found",
