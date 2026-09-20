@@ -359,6 +359,104 @@
     "viewRegister": "Xem sự kiện & Đăng ký →",
     "ongoingBadge": "🟢 Đang diễn ra",
     "pastBadge": "Đã kết thúc",
-    "defaultCategory": "Sự kiện"
+    "defaultCategory": "Sự kiện",
+    "free": "Miễn phí"
+  },
+  "eventDetail": {
+    "notFound": "Không tìm thấy sự kiện",
+    "backToEvents": "Quay lại Sự kiện",
+    "dateLabel": "Ngày",
+    "timeLabel": "Thời gian",
+    "locationLabel": "Địa điểm",
+    "capacityLabel": "Sức chứa",
+    "attendees": "người tham dự",
+    "aboutEvent": "Về sự kiện này",
+    "speakersGuests": "Diễn giả & Khách mời",
+    "registerButton": "Đăng ký sự kiện này ↗",
+    "registrationComingSoon": "Liên kết đăng ký sẽ sớm được cập nhật.",
+    "viewPoster": "Xem toàn bộ áp phích ↗",
+    "noPaymentRequired": "Chưa yêu cầu thanh toán ở giai đoạn này"
+  },
+  "books": {
+    "hero": {
+      "badge": "Thư Viện Được Tuyển Chọn",
+      "titleMain": "Tài Nguyên Thiết Yếu Cho",
+      "titleHighlight": "Chuyên Gia Dữ Liệu",
+      "subtitle": "37 tài liệu được tuyển chọn kỹ lưỡng thuộc các lĩnh vực khoa học dữ liệu, thống kê, nghiên cứu lâm sàng và nhiều hơn nữa — do đội ngũ chuyên gia của chúng tôi tuyển chọn.",
+      "browseButton": "Khám Phá Bộ Sưu Tập →",
+      "suggestButton": "Đề Xuất Một Cuốn Sách"
+    },
+    "stats": {
+      "curatedResources": "Tài Liệu Được Tuyển Chọn",
+      "categories": "Danh Mục",
+      "freeOnlineStat": "Miễn Phí Trực Tuyến",
+      "expertPicks": "Lựa Chọn Chuyên Gia"
+    },
+    "section": {
+      "eyebrow": "Thư Viện Của Chúng Tôi",
+      "title": "Duyệt Theo Danh Mục",
+      "subtitle": "Di chuột qua thẻ sách bất kỳ để xem mô tả và liên kết truy cập. Di chuột qua một hàng để tạm dừng cuộn."
+    },
+    "categories": {
+      "foundations": "Nền Tảng & Khoa Học Dữ Liệu",
+      "survey": "Phương Pháp Khảo Sát",
+      "statistical": "Tư Vấn Thống Kê",
+      "clinical": "Thử Nghiệm Lâm Sàng",
+      "writing": "Viết Khoa Học",
+      "grants": "Tài Trợ & Đề Xuất Dự Án",
+      "programming": "Lập Trình & Phần Mềm",
+      "engineering": "Kỹ Thuật Dữ Liệu",
+      "modelling": "Mô Hình Hóa Toán Học",
+      "epidemiology": "Dịch Tễ Học",
+      "training": "Đào Tạo & Khả Năng Tái Lập"
+    },
+    "booksCountSuffix": "cuốn sách",
+    "freeOnline": "Miễn Phí Trực Tuyến ↗",
+    "buyNow": "Mua Ngay ↗",
+    "disclaimer": "Ảnh bìa và thông tin sách chỉ mang tính chất tham khảo. Mọi quyền thuộc về tác giả và nhà xuất bản tương ứng.",
+    "suggestCta": {
+      "title": "Đề Xuất Một Tựa Sách",
+      "subtitle": "Danh sách này sẽ tiếp tục mở rộng. Nếu có cuốn sách nào đã định hình cách bạn làm việc — hãy cho chúng tôi biết, chúng tôi sẽ cân nhắc đưa vào bộ sưu tập.",
+      "button": "Đề Xuất Một Cuốn Sách →"
+    },
+    "items": {
+      "b01": "Điểm khởi đầu chuẩn cho tidyverse: nhập, làm sạch, biến đổi, trực quan hóa và mô hình hóa dữ liệu trong R.",
+      "b02": "Xử lý và làm sạch dữ liệu với pandas và NumPy, do chính người tạo ra pandas biên soạn.",
+      "b03": "NumPy, pandas, Matplotlib và scikit-learn dành cho nhà khoa học dữ liệu thực hành.",
+      "b04": "Tư duy thống kê dành cho độc giả phổ thông và chuyên môn — rất phù hợp với các bên liên quan không chuyên.",
+      "b05": "Một cách trình bày rõ ràng, hiện đại về lý thuyết và thực hành lấy mẫu khảo sát.",
+      "b06": "Cuốn sách nền tảng về tổng sai số khảo sát, thiết kế bảng hỏi và vận hành khảo sát.",
+      "b07": "Tài liệu tham khảo về suy luận dựa trên thiết kế và ước lượng hiệu chỉnh trong khảo sát phức tạp.",
+      "b08": "Con đường dễ tiếp cận nhất để bước vào học máy thống kê hiện đại; có bản PDF miễn phí được Springer cho phép.",
+      "b09": "Tài liệu nâng cao đồng hành cùng ISL — lý thuyết chuyên sâu hơn đằng sau các phương pháp.",
+      "b10": "Không thể thiếu cho hồi quy ứng dụng, splines, kiểm định và mô hình dự đoán.",
+      "b11": "Tài liệu tham khảo chuẩn cho hồi quy logistic, bảng tương liên và mô hình cho biến kết quả phân loại.",
+      "b12": "Giáo trình cốt lõi về thiết kế, triển khai, giám sát và phân tích thử nghiệm lâm sàng.",
+      "b13": "Hướng dẫn thực tế về câu hỏi nghiên cứu, thiết kế nghiên cứu và cỡ mẫu.",
+      "b14": "Các phương pháp tuần tự nhóm và giám sát giữa kỳ — liên quan trực tiếp đến công việc thống kê của DSMB.",
+      "b15": "Hướng dẫn thực hành toàn diện nhất về vận hành và đóng góp cho DSMB.",
+      "b16": "Hướng dẫn thực tế để viết và xuất bản trong lĩnh vực khoa học sinh học và sức khỏe.",
+      "b17": "Một chuẩn mực lâu đời về cách xây dựng và nộp bản thảo khoa học.",
+      "b18": "Các danh mục kiểm tra thiết yếu mà mọi bản thảo và đề cương nên tuân theo.",
+      "b19": "Sổ tay có cấu trúc, được sử dụng rộng rãi để xây dựng hồ sơ đề xuất cạnh tranh.",
+      "b20": "Về cách kể chuyện và cấu trúc trong cả bài báo lẫn đề xuất tài trợ.",
+      "b21": "Cách R thực sự hoạt động — thiết yếu để viết mã và gói R vững chắc, hiệu quả.",
+      "b22": "Tài liệu tham khảo để xây dựng, kiểm thử và phát hành các gói R.",
+      "b23": "Viết Python theo phong cách chuẩn mực, chất lượng cao — vượt xa các giáo trình nhập môn.",
+      "b24": "Các nguyên tắc viết mã dễ đọc, dễ bảo trì, áp dụng được cho mọi ngôn ngữ.",
+      "b25": "Bản đồ trung lập về nền tảng công nghệ, bao quát toàn bộ vòng đời dữ liệu hiện đại.",
+      "b26": "Tài liệu tham khảo về các hệ thống đằng sau hạ tầng dữ liệu đáng tin cậy, có khả năng mở rộng.",
+      "b27": "Bài báo nền tảng ngắn gọn về cách cấu trúc dữ liệu để phân tích — miễn phí.",
+      "b28": "Giáo trình nhập môn hiện đại tốt nhất về mô hình hóa Bayes ứng dụng.",
+      "b29": "Tài liệu tham khảo toàn diện về Bayes; các tác giả cung cấp bản PDF miễn phí.",
+      "b30": "Giáo trình chuẩn, hoàn toàn miễn phí về dự báo chuỗi thời gian.",
+      "b31": "Tài liệu tham khảo về mô hình ngăn và động lực lây truyền.",
+      "b32": "Tài liệu tham khảo dịch tễ học sau đại học mang tính quyết định.",
+      "b33": "Giáo trình hiện đại hàng đầu về suy luận nhân quả từ dữ liệu quan sát.",
+      "b34": "Một giáo trình thống kê y khoa ứng dụng, rõ ràng, được sử dụng rộng rãi trong đào tạo y tế công cộng.",
+      "b35": "Báo cáo có thể tái lập và tài liệu tự động trong R.",
+      "b36": "Tác phẩm kinh điển về trực quan hóa dữ liệu và đạo đức trình bày dữ liệu.",
+      "b37": "Hướng dẫn thực tế, miễn phí để tạo ra các biểu đồ rõ ràng, trung thực."
+    }
   }
 }

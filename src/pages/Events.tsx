@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import { Calendar, Clock, MapPin, Search } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { motion } from "framer-motion";
@@ -28,14 +29,16 @@ function EventCard({
   event: Event;
   past?: boolean;
 }) {
+  const { t, i18n } = useTranslation();
+  const dateLocale = i18n.language === "vi" ? "vi-VN" : "en-US";
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 group ${
-        past ? "opacity-70" : ""
-      }`}
+      className={`bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 group ${past ? "opacity-70" : ""
+        }`}
     >
       <div className="relative h-48 overflow-hidden bg-gray-100">
         {event.image_url ? (
@@ -57,7 +60,7 @@ function EventCard({
         {/* Category badge */}
         <div className="absolute top-3 left-3">
           <span className="bg-white/90 backdrop-blur-sm text-primary text-xs font-semibold px-3 py-1 rounded-full">
-            {event.category || "Event"}
+            {event.category || t("events.defaultCategory")}
           </span>
         </div>
 
@@ -65,7 +68,7 @@ function EventCard({
         {event.status === "ongoing" && (
           <div className="absolute top-3 right-3">
             <span className="bg-teal-500 text-white text-xs font-semibold px-3 py-1 rounded-full animate-pulse">
-              🟢 Ongoing
+              {t("events.ongoingBadge")}
             </span>
           </div>
         )}
@@ -74,7 +77,7 @@ function EventCard({
         {past && event.status !== "ongoing" && (
           <div className="absolute top-3 right-3">
             <span className="bg-gray-800/80 text-white text-xs font-semibold px-3 py-1 rounded-full">
-              Past Event
+              {t("events.pastBadge")}
             </span>
           </div>
         )}
@@ -83,7 +86,7 @@ function EventCard({
         {event.price && (
           <div className="absolute bottom-3 right-3">
             <span className="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-              {event.price}
+              {event.price.toLowerCase() === "free" ? t("events.free") : event.price}
             </span>
           </div>
         )}
@@ -98,7 +101,7 @@ function EventCard({
           <div className="flex items-center gap-2 text-gray-500 text-sm">
             <Calendar className="w-4 h-4 text-primary shrink-0" />
             <span>
-              {new Date(event.date).toLocaleDateString("en-US", {
+              {new Date(event.date).toLocaleDateString(dateLocale, {
                 weekday: "long",
                 year: "numeric",
                 month: "long",
@@ -131,7 +134,7 @@ function EventCard({
             className="inline-flex items-center gap-2 px-5 py-2.5 text-white rounded-xl text-sm font-semibold hover:opacity-90 transition-all"
             style={{ background: HERO_GRADIENT }}
           >
-            View Event & Register →
+            {t("events.viewRegister")}
           </Link>
         )}
       </div>
@@ -140,6 +143,7 @@ function EventCard({
 }
 
 const Events = () => {
+  const { t } = useTranslation();
   const [events, setEvents] = useState<Event[]>([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
@@ -201,17 +205,16 @@ const Events = () => {
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
             <Calendar className="w-3 h-3 text-teal-300" />
             <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">
-              What's Happening
+              {t("events.badge")}
             </span>
           </div>
 
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-3">
-            Our <span className="text-teal-300">Events</span>
+            {t("events.title1")} <span className="text-teal-300">{t("events.titleHighlight")}</span>
           </h1>
 
           <p className="text-white/70 max-w-lg text-sm md:text-base">
-            Discover ongoing, upcoming events, workshops, and training
-            sessions from Neudata.
+            {t("events.subtitle")}
           </p>
         </div>
       </div>
@@ -225,7 +228,7 @@ const Events = () => {
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              placeholder="Search events by title, category or location..."
+              placeholder={t("events.searchPlaceholder")}
               className="w-full pl-10 pr-4 py-3 rounded-xl border border-gray-200 text-sm outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             />
           </div>
@@ -237,7 +240,7 @@ const Events = () => {
           {loading ? (
             <div className="text-center py-20">
               <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin mx-auto mb-4" />
-              <p className="text-muted-foreground">Loading events...</p>
+              <p className="text-muted-foreground">{t("events.loading")}</p>
             </div>
           ) : (
             <>
@@ -248,7 +251,7 @@ const Events = () => {
                     <div className="w-3 h-3 rounded-full bg-teal-500 animate-pulse" />
 
                     <h2 className="text-2xl font-bold text-gray-900">
-                      Ongoing Events
+                      {t("events.ongoingHeading")}
                     </h2>
 
                     <span className="text-sm text-muted-foreground bg-gray-100 px-2 py-0.5 rounded-full">
@@ -270,7 +273,7 @@ const Events = () => {
                   <div className="w-3 h-3 rounded-full bg-blue-500" />
 
                   <h2 className="text-2xl font-bold text-gray-900">
-                    Upcoming Events
+                    {t("events.upcomingHeading")}
                   </h2>
 
                   <span className="text-sm text-muted-foreground bg-gray-100 px-2 py-0.5 rounded-full">
@@ -283,11 +286,11 @@ const Events = () => {
                     <Calendar className="w-12 h-12 text-gray-300 mx-auto mb-4" />
 
                     <h3 className="text-lg font-semibold text-gray-500 mb-2">
-                      No upcoming events
+                      {t("events.noUpcoming")}
                     </h3>
 
                     <p className="text-gray-400 text-sm">
-                      Check back soon for new events!
+                      {t("events.checkBackSoon")}
                     </p>
                   </div>
                 ) : (
@@ -306,7 +309,7 @@ const Events = () => {
                     <div className="w-3 h-3 rounded-full bg-gray-400" />
 
                     <h2 className="text-2xl font-bold text-gray-900">
-                      Past Events
+                      {t("events.pastHeading")}
                     </h2>
 
                     <span className="text-sm text-muted-foreground bg-gray-100 px-2 py-0.5 rounded-full">
