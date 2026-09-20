@@ -35,7 +35,7 @@ const Home = () => {
     <div className="pt-16">
 
       {/* Hero */}
-      <section className="gradient-hero text-primary-foreground relative overflow-hidden min-h-[90vh] flex items-center">
+      <section className="gradient-hero text-primary-foreground relative overflow-hidden min-h-[75vh] flex items-center">
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="container relative z-10 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -65,9 +65,9 @@ const Home = () => {
       </section>
 
       {/* Featured Event Section */}
-      <section className="py-20 bg-white">
+      <section className="py-16 bg-white">
         <div className="container">
-          <div className="text-center mb-10">
+          <div className="text-center mb-8">
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">{t("home.event.eyebrow")}</span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3">{t("home.event.heading")}</h2>
             <p className="text-muted-foreground max-w-xl mx-auto text-sm">{t("home.event.subheading")}</p>
@@ -170,7 +170,7 @@ const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="text-center mb-12">
             <span className="text-primary text-xs font-semibold uppercase tracking-widest">{t("home.services.eyebrow")}</span>
@@ -182,7 +182,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
             {serviceIcons.map((s, i) => (
               <motion.div
                 key={s.key}
@@ -217,7 +217,7 @@ const Home = () => {
       </section>
 
       {/* Books Section */}
-      <section className="py-20 overflow-hidden relative" style={{ background: HERO_GRADIENT }}>
+      <section className="py-16 overflow-hidden relative" style={{ background: HERO_GRADIENT }}>
         <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />
         <div className="container relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -290,7 +290,7 @@ const Home = () => {
       </section>
 
       {/* CTA */}
-      <section className="gradient-cta py-20">
+      <section className="gradient-cta py-16">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <img src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Team Collaboration" className="rounded-lg shadow-card w-full" loading="lazy" />
