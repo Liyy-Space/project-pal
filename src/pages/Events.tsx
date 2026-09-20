@@ -37,9 +37,8 @@ function EventCard({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 group ${
-        past ? "opacity-70" : ""
-      }`}
+      className={`bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 group ${past ? "opacity-70" : ""
+        }`}
     >
       <div className="relative h-48 overflow-hidden bg-gray-100">
         {event.image_url ? (
@@ -87,7 +86,7 @@ function EventCard({
         {event.price && (
           <div className="absolute bottom-3 right-3">
             <span className="bg-teal-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-              {event.price}
+              {event.price.toLowerCase() === "free" ? t("events.free") : event.price}
             </span>
           </div>
         )}
