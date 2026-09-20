@@ -157,13 +157,15 @@ const EventDetail = () => {
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 text-center space-y-3">
                 {event.price && (
                   <div className="mb-2">
-                    <span className="text-3xl font-bold text-gray-900">{event.price}</span>
+                    <span className="text-3xl font-bold text-gray-900">
+                      {event.price.toLowerCase() === "free" ? t("events.free") : event.price}
+                    </span>
                   </div>
                 )}
 
                 {isClinicREvent ? (
-                  
-                    <a href={GOOGLE_FORM}
+
+                  <a href={GOOGLE_FORM}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full py-3.5 text-white rounded-xl font-semibold hover:opacity-90 transition-all shadow-lg"
@@ -176,8 +178,8 @@ const EventDetail = () => {
                 )}
 
                 {isClinicREvent && (
-                  
-                   <a href="/posters/Poster.png"
+
+                  <a href="/posters/Poster.png"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-primary text-sm hover:underline"
