@@ -359,7 +359,8 @@
     "viewRegister": "Xem sự kiện & Đăng ký →",
     "ongoingBadge": "🟢 Đang diễn ra",
     "pastBadge": "Đã kết thúc",
-    "defaultCategory": "Sự kiện"
+    "defaultCategory": "Sự kiện",
+    "free": "Miễn phí"
   },
   "eventDetail": {
     "notFound": "Không tìm thấy sự kiện",
