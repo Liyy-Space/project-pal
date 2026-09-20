@@ -3,6 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import logo from "@/assets/logo.png";
+import flagEn from "@/assets/flag-en.png";
+import flagVn from "@/assets/flag-vn.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -41,50 +43,54 @@ const Navbar = () => {
           ))}
 
           {/* Language Switcher */}
-<div className="ml-2 flex items-center border border-border rounded-md overflow-hidden">
-  <button
-    onClick={() => i18n.changeLanguage("en")}
-    className={`px-3 py-2 text-sm font-medium transition-colors ${
-      i18n.language === "en"
-        ? "bg-accent text-accent-foreground"
-        : "text-muted-foreground hover:bg-accent/50"
-    }`}
-  >
-    EN
-  </button>
-  <button
-    onClick={() => i18n.changeLanguage("vi")}
-    className={`px-3 py-2 text-sm font-medium transition-colors ${
-      i18n.language === "vi"
-        ? "bg-accent text-accent-foreground"
-        : "text-muted-foreground hover:bg-accent/50"
-    }`}
-  >
-    VN
-  </button>
-</div>
+          <div className="ml-2 flex items-center gap-1 border border-border rounded-md overflow-hidden p-1">
+            <button
+              onClick={() => i18n.changeLanguage("en")}
+              aria-label="Switch to English"
+              className={`p-1 rounded transition-colors ${
+                i18n.language === "en"
+                  ? "bg-accent ring-2 ring-primary"
+                  : "hover:bg-accent/50 opacity-60 hover:opacity-100"
+              }`}
+            >
+              <img src={flagEn} alt="English" className="w-6 h-6 rounded-full object-cover" />
+            </button>
+            <button
+              onClick={() => i18n.changeLanguage("vi")}
+              aria-label="Chuyển sang Tiếng Việt"
+              className={`p-1 rounded transition-colors ${
+                i18n.language === "vi"
+                  ? "bg-accent ring-2 ring-primary"
+                  : "hover:bg-accent/50 opacity-60 hover:opacity-100"
+              }`}
+            >
+              <img src={flagVn} alt="Tiếng Việt" className="w-6 h-6 rounded-full object-cover" />
+            </button>
+          </div>
         </div>
 
         {/* Mobile toggle */}
         <div className="md:hidden flex items-center gap-2">
-           <div className="flex items-center border border-border rounded-md overflow-hidden">
-  <button
-    onClick={() => i18n.changeLanguage("en")}
-    className={`px-2.5 py-1.5 text-sm font-medium transition-colors ${
-      i18n.language === "en" ? "bg-accent text-accent-foreground" : "text-muted-foreground"
-    }`}
-  >
-    EN
-  </button>
-  <button
-    onClick={() => i18n.changeLanguage("vi")}
-    className={`px-2.5 py-1.5 text-sm font-medium transition-colors ${
-      i18n.language === "vi" ? "bg-accent text-accent-foreground" : "text-muted-foreground"
-    }`}
-  >
-    VN
-  </button>
-</div>
+          <div className="flex items-center gap-1 border border-border rounded-md overflow-hidden p-1">
+            <button
+              onClick={() => i18n.changeLanguage("en")}
+              aria-label="Switch to English"
+              className={`p-1 rounded transition-colors ${
+                i18n.language === "en" ? "bg-accent ring-2 ring-primary" : "opacity-60"
+              }`}
+            >
+              <img src={flagEn} alt="English" className="w-5 h-5 rounded-full object-cover" />
+            </button>
+            <button
+              onClick={() => i18n.changeLanguage("vi")}
+              aria-label="Chuyển sang Tiếng Việt"
+              className={`p-1 rounded transition-colors ${
+                i18n.language === "vi" ? "bg-accent ring-2 ring-primary" : "opacity-60"
+              }`}
+            >
+              <img src={flagVn} alt="Tiếng Việt" className="w-5 h-5 rounded-full object-cover" />
+            </button>
+          </div>
           <button className="p-2" onClick={() => setOpen(!open)}>
             {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
