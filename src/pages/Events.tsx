@@ -11,15 +11,24 @@ const HERO_GRADIENT =
 interface Event {
   id: string;
   title: string;
+  title_vi?: string;
   category: string;
+  category_vi?: string;
   image_url: string;
   date: string;
   start_time: string;
   end_time: string;
   location: string;
+  location_vi?: string;
   short_desc: string;
+  short_desc_vi?: string;
   price: string;
   status: string;
+}
+
+function localized(event: any, field: string, lang: string): string {
+  const viValue = event[`${field}_vi`];
+  return lang === "vi" && viValue ? viValue : event[field];
 }
 
 function EventCard({
@@ -45,7 +54,7 @@ function EventCard({
           <img
             loading="lazy"
             src={event.image_url}
-            alt={event.title}
+            alt={localized(event, "title", i18n.language)}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
@@ -60,7 +69,7 @@ function EventCard({
         {/* Category badge */}
         <div className="absolute top-3 left-3">
           <span className="bg-white/90 backdrop-blur-sm text-primary text-xs font-semibold px-3 py-1 rounded-full">
-            {event.category || t("events.defaultCategory")}
+            {localized(event, "category", i18n.language) || t("events.defaultCategory")}
           </span>
         </div>
 
@@ -94,7 +103,7 @@ function EventCard({
 
       <div className="p-5">
         <h3 className="font-bold text-gray-900 text-lg mb-3 leading-snug group-hover:text-primary transition-colors">
-          {event.title}
+          {localized(event, "title", i18n.language)}
         </h3>
 
         <div className="space-y-2 mb-4">
@@ -120,12 +129,12 @@ function EventCard({
 
           <div className="flex items-center gap-2 text-gray-500 text-sm">
             <MapPin className="w-4 h-4 text-primary shrink-0" />
-            <span>{event.location}</span>
+            <span>{localized(event, "location", i18n.language)}</span>
           </div>
         </div>
 
         <p className="text-gray-500 text-sm leading-relaxed mb-4 line-clamp-2">
-          {event.short_desc}
+          {localized(event, "short_desc", i18n.language)}
         </p>
 
         {!past && (
