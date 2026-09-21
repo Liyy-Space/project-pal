@@ -10,17 +10,28 @@ const GOOGLE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQ
 interface Event {
   id: string;
   title: string;
+  title_vi?: string;
   category: string;
+  category_vi?: string;
   image_url: string;
   date: string;
   start_time: string;
   end_time: string;
   location: string;
+  location_vi?: string;
   short_desc: string;
+  short_desc_vi?: string;
   full_desc: string;
+  full_desc_vi?: string;
   speakers: string;
+  speakers_vi?: string;
   price: string;
   max_attendees: number;
+}
+
+function localized(event: any, field: string, lang: string): string {
+  const viValue = event[`${field}_vi`];
+  return lang === "vi" && viValue ? viValue : event[field];
 }
 
 const EventDetail = () => {
@@ -65,7 +76,7 @@ const EventDetail = () => {
       {/* Hero */}
       <div className="relative h-72 md:h-96 overflow-hidden">
         {event.image_url ? (
-          <img src={event.image_url} alt={event.title} className="w-full h-full object-cover" />
+          <img src={event.image_url} alt={localized(event, "title", i18n.language)} className="w-full h-full object-cover" />
         ) : (
           <div className="relative w-full h-full" style={{ background: HERO_GRADIENT }}>
             <div className="absolute inset-0 grid-pattern opacity-20" />
@@ -79,10 +90,10 @@ const EventDetail = () => {
           </Link>
           {event.category && (
             <div className="mb-2">
-              <span className="bg-teal-500 text-white text-xs font-semibold px-3 py-1 rounded-full">{event.category}</span>
+              <span className="bg-teal-500 text-white text-xs font-semibold px-3 py-1 rounded-full">{localized(event, "category", i18n.language)}</span>
             </div>
           )}
-          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">{event.title}</h1>
+          <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight">{localized(event, "title", i18n.language)}</h1>
         </div>
       </div>
 
@@ -119,7 +130,7 @@ const EventDetail = () => {
                   </div>
                   <div>
                     <p className="text-xs text-gray-400 uppercase font-semibold tracking-wide">{t("eventDetail.locationLabel")}</p>
-                    <p className="text-gray-900 font-semibold">{event.location}</p>
+                    <p className="text-gray-900 font-semibold">{localized(event, "location", i18n.language)}</p>
                   </div>
                 </div>
                 {event.max_attendees && (
@@ -139,14 +150,14 @@ const EventDetail = () => {
             {event.full_desc && (
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">{t("eventDetail.aboutEvent")}</h2>
-                <p className="text-gray-600 leading-relaxed whitespace-pre-line">{event.full_desc}</p>
+                <p className="text-gray-600 leading-relaxed whitespace-pre-line">{localized(event, "full_desc", i18n.language)}</p>
               </div>
             )}
 
             {event.speakers && (
               <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
                 <h2 className="text-xl font-bold text-gray-900 mb-4">{t("eventDetail.speakersGuests")}</h2>
-                <p className="text-gray-600 leading-relaxed whitespace-pre-line">{event.speakers}</p>
+                <p className="text-gray-600 leading-relaxed whitespace-pre-line">{localized(event, "speakers", i18n.language)}</p>
               </div>
             )}
           </div>
