@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { ArrowRight, BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText, Database, Code2, BrainCircuit, Search, GraduationCap, MessageCircle, BookOpen, Star, Calendar, Clock, MapPin, Users } from "lucide-react";
 import heroImage from "@/assets/hero-data.jpg";
 import posterImage from "@/assets/Poster.png";
+import bachmaiLogo from "@/assets/clients/bachmai.png";
+import stFrancisLogo from "@/assets/clients/st-francis.png";
 
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
 
@@ -26,6 +28,11 @@ const featuredBooks = [
   { title: "An Introduction to Statistical Learning", author: "Gareth James et al.", rating: 4.9, isbn: "9781461471370", freeLink: "https://www.statlearning.com" },
   { title: "Designing Data-Intensive Applications", author: "Martin Kleppmann", rating: 4.9, isbn: "9781449373320", buyLink: "https://www.amazon.com/dp/1449373321" },
   { title: "Statistical Rethinking (2nd ed.)", author: "Richard McElreath", rating: 4.9, isbn: "9780367139919", freeLink: "https://xcelab.net/rm/statistical-rethinking" },
+];
+
+const clients = [
+  { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
+  { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
 ];
 
 const Home = () => {
@@ -148,8 +155,7 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform?usp=dialog"
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform?usp=dialog"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30 text-sm"
@@ -166,6 +172,32 @@ const Home = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Our Clients Section */}
+      <section className="py-14 bg-white border-y border-gray-100">
+        <div className="container">
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">
+            {t("home.clients.heading")}
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
+            {clients.map((c) => (
+              
+                key={c.name}
+                href={c.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="opacity-70 hover:opacity-100 transition-opacity duration-300"
+              >
+                <img
+                  src={c.logo}
+                  alt={c.name}
+                  className="h-12 md:h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                />
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
