@@ -155,7 +155,8 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform?usp=dialog"
+                  <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform?usp=dialog"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30 text-sm"
@@ -183,7 +184,7 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
             {clients.map((c) => (
-              
+              <a
                 key={c.name}
                 href={c.url}
                 target="_blank"
