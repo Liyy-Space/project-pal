@@ -74,7 +74,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-muted-foreground/20 pt-6 text-center text-sm opacity-60">
-          <p>&copy; {new Date().getFullYear()} Neudata. {t("footer.rights")}</p>
+          <p>&copy; {new Date().getFullYear()} neu-data. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>
