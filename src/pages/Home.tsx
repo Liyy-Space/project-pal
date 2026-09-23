@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText, Database, Code2, BrainCircuit, Search, GraduationCap, MessageCircle, BookOpen, Star, Calendar, Clock, MapPin, Users } from "lucide-react";
 import heroImage from "@/assets/hero-data.jpg";
 import posterImage from "@/assets/Poster.png";
@@ -40,6 +41,10 @@ const Home = () => {
 
   return (
     <div className="pt-16">
+      <Helmet>
+        <title>Neudata | Biostatistics & Data Science Consultancy in Kenya</title>
+        <meta name="description" content="Expert biostatistics, clinical trial support and data science consulting for research institutions and healthcare organisations across Africa and Asia." />
+      </Helmet>
 
       {/* Hero */}
       <section className="gradient-hero text-primary-foreground relative overflow-hidden min-h-[75vh] flex items-center">
