@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet-async";
 import { ArrowRight, BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText, Database, Code2, BrainCircuit, Search, GraduationCap, MessageCircle, BookOpen, Star, Calendar, Clock, MapPin, Users } from "lucide-react";
 import heroImage from "@/assets/hero-data.jpg";
 import posterImage from "@/assets/Poster.png";
@@ -40,6 +41,10 @@ const Home = () => {
 
   return (
     <div className="pt-16">
+      <Helmet>
+        <title>Neudata | Biostatistics & Data Science Consultancy in Kenya</title>
+        <meta name="description" content="Expert biostatistics, clinical trial support and data science consulting for research institutions and healthcare organisations across Africa and Asia." />
+      </Helmet>
 
       {/* Hero */}
       <section className="gradient-hero text-primary-foreground relative overflow-hidden min-h-[75vh] flex items-center">
@@ -67,6 +72,22 @@ const Home = () => {
               <div className="absolute inset-0 bg-primary/20 rounded-xl rotate-3" />
               <img src={heroImage} alt="Data Analytics Dashboard" className="relative rounded-xl shadow-hero-img w-full hover:scale-[1.02] transition-transform duration-300" />
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Clients Section */}
+      <section className="py-14 bg-gray-50 border-y border-gray-100">
+        <div className="container">
+          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">
+            {t("home.clients.heading")}
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+            {clients.map((c) => (
+              <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8 py-6 flex items-center justify-center hover:shadow-md transition-all duration-300">
+                <img src={c.logo} alt={c.name} className="h-14 md:h-16 w-auto object-contain" />
+              </a>
+            ))}
           </div>
         </div>
       </section>
@@ -155,49 +176,16 @@ const Home = () => {
                 </div>
 
                 <div className="flex flex-wrap gap-3">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform?usp=dialog"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30 text-sm"
-                  >
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30 text-sm">
                     {t("home.event.registerNow")} <ArrowRight className="w-4 h-4" />
                   </a>
-                  <a
-                    href="https://www.neu-data.com"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 transition-all text-sm"
-                  >
+                  <a href="https://www.neu-data.com" className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 transition-all text-sm">
                     {t("home.event.learnMore")}
                   </a>
                 </div>
               </div>
             </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Our Clients Section */}
-      <section className="py-14 bg-white border-y border-gray-100">
-        <div className="container">
-          <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">
-            {t("home.clients.heading")}
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-12 md:gap-16">
-            {clients.map((c) => (
-              
-                key={c.name}
-                href={c.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="opacity-70 hover:opacity-100 transition-opacity duration-300"
-              >
-                <img
-                  src={c.logo}
-                  alt={c.name}
-                  className="h-12 md:h-14 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                />
-              </a>
-            ))}
-          </div>
         </div>
       </section>
 

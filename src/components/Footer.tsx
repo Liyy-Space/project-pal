@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 import { Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import bachmaiLogo from "@/assets/clients/bachmai.png";
+import stFrancisLogo from "@/assets/clients/st-francis.png";
+
+const clients = [
+  { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
+  { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
+];
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -55,8 +62,19 @@ const Footer = () => {
           </div>
         </div>
 
+        <div className="border-t border-muted-foreground/20 pt-6 pb-6">
+          <p className="text-center text-xs uppercase tracking-widest opacity-50 mb-4">{t("home.clients.heading")}</p>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            {clients.map((c) => (
+              <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg px-4 py-2 flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
+                <img src={c.logo} alt={c.name} className="h-8 w-auto object-contain" />
+              </a>
+            ))}
+          </div>
+        </div>
+
         <div className="border-t border-muted-foreground/20 pt-6 text-center text-sm opacity-60">
-          <p>&copy; {new Date().getFullYear()} Neudata. {t("footer.rights")}</p>
+          <p>&copy; {new Date().getFullYear()} neu-data. {t("footer.rights")}</p>
         </div>
       </div>
     </footer>
