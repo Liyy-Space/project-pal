@@ -3,6 +3,7 @@ import { Users, CheckCircle, Zap, UserPlus, Lightbulb } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import SEO from "@/components/SEO";
 
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
 
@@ -21,6 +22,10 @@ const About = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="About Us"
+        description="Learn about Neudata's mission, team, and expertise in biostatistics, data science consulting, and clinical trial support across Africa and Asia."
+      />
 
       {/* Hero Banner */}
       <div className="relative h-72 md:h-96 overflow-hidden">

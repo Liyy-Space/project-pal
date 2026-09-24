@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Calendar, Clock, MapPin, Search } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import { motion } from "framer-motion";
+import SEO from "@/components/SEO";
 
 const HERO_GRADIENT =
   "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
@@ -49,6 +50,10 @@ function EventCard({
       className={`bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 group ${past ? "opacity-70" : ""
         }`}
     >
+      <SEO
+        title="Events & Workshops"
+        description="Discover Neudata's upcoming and ongoing events, training courses, and workshops in data science and biostatistics."
+      />
       <div className="relative h-48 overflow-hidden bg-gray-100">
         {event.image_url ? (
           <img

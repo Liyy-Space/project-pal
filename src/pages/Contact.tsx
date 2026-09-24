@@ -3,6 +3,7 @@ import { MessageCircle, MapPin, Mail, Phone, Twitter, Linkedin, Github, Facebook
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import SEO from "@/components/SEO";
 
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
 
@@ -33,6 +34,10 @@ const Contact = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title="Contact Us"
+        description="Get in touch with Neudata to discuss your data science, biostatistics, or clinical trial support needs. We respond within 24 hours on business days."
+      />
 
       {/* Hero Banner */}
       <div className="relative h-64 md:h-80 overflow-hidden">
