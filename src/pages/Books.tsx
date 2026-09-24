@@ -3,6 +3,7 @@ import booksBanner from "@/assets/books-banner.jpg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
+import SEO from "@/components/SEO";
   BookOpen, BarChart2, ClipboardList, TrendingUp,
   FlaskConical, PenLine, FileText, Code2, Database, BrainCircuit,
   Microscope, GraduationCap, Star,
@@ -81,6 +82,10 @@ const STATS_GRADIENT = "linear-gradient(135deg, hsl(176 69% 22%) 0%, hsl(142 64%
 function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex items-center gap-1">
+      <SEO
+        title="Curated Book Library"
+        description="Browse Neudata's curated collection of essential books on data science, statistics, clinical research, and machine learning."
+      />
       {[1, 2, 3, 4, 5].map((s) => (
         <Star key={s} className={`w-3 h-3 ${s <= Math.round(rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-500"}`} />
       ))}

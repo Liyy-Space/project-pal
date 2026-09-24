@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet-async";
 import { ArrowRight, BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText, Database, Code2, BrainCircuit, Search, GraduationCap, MessageCircle, BookOpen, Star, Calendar, Clock, MapPin, Users } from "lucide-react";
 import heroImage from "@/assets/hero-data.jpg";
 import posterImage from "@/assets/Poster.png";
 import bachmaiLogo from "@/assets/clients/bachmai.png";
 import stFrancisLogo from "@/assets/clients/st-francis.png";
-
+import SEO from "@/components/SEO";
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
 
 const serviceIcons = [
@@ -41,11 +40,10 @@ const Home = () => {
 
   return (
     <div className="pt-16">
-      <Helmet>
-        <title>Neudata | Biostatistics & Data Science Consultancy in Kenya</title>
-        <meta name="description" content="Expert biostatistics, clinical trial support and data science consulting for research institutions and healthcare organisations across Africa and Asia." />
-      </Helmet>
-
+      <SEO
+        title="Biostatistics & Data Science Consultancy in Kenya"
+        description="Expert biostatistics, clinical trial support and data science consulting for research institutions and healthcare organisations across Africa and Asia."
+      />
       {/* Hero */}
       <section className="gradient-hero text-primary-foreground relative overflow-hidden min-h-[75vh] flex items-center">
         <div className="absolute inset-0 grid-pattern opacity-30" />

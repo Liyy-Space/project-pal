@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Calendar, Clock, MapPin, ArrowLeft, Users, BarChart3 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+import SEO from "@/components/SEO";
 
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
 const GOOGLE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform?usp=dialog";
@@ -73,6 +74,27 @@ const EventDetail = () => {
 
   return (
     <div className="pt-16">
+      <SEO
+        title={event.title}
+        description={event.short_desc || `Join us for ${event.title}, hosted by Neudata.`}
+        path={`/events/${event.id}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": event.title,
+          "startDate": event.date,
+          "location": {
+            "@type": "Place",
+            "name": event.location || "Neudata",
+          },
+          "description": event.short_desc || event.title,
+          "organizer": {
+            "@type": "Organization",
+            "name": "Neudata",
+            "url": "https://www.neu-data.com",
+          },
+        }}
+      />
       {/* Hero */}
       <div className="relative h-72 md:h-96 overflow-hidden">
         {event.image_url ? (

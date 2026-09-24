@@ -3,6 +3,7 @@ import servicesBanner from "@/assets/services-banner.jpg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
+import SEO from "@/components/SEO";
   BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText,
   Database, Code2, BrainCircuit, Search, GraduationCap, ArrowRight,
   Compass, ShieldCheck, GitBranch,
@@ -38,6 +39,10 @@ function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
 
   return (
     <div className={`bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 p-6 flex flex-col group ${expanded ? "ring-2 " + meta.borderColor : ""}`}>
+      <SEO
+        title="Our Services"
+        description="Explore Neudata's full range of data science services: survey methodology, statistical consultancy, clinical trial support, data management, and more."
+      />
       {/* Icon circle */}
       <div className={`w-14 h-14 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
         <Icon className={`w-6 h-6 ${meta.textColor}`} />
