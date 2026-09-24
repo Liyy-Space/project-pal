@@ -78,6 +78,22 @@ const EventDetail = () => {
         title={event.title}
         description={event.short_desc || `Join us for ${event.title}, hosted by Neudata.`}
         path={`/events/${event.id}`}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": event.title,
+          "startDate": event.date,
+          "location": {
+            "@type": "Place",
+            "name": event.location || "Neudata",
+          },
+          "description": event.short_desc || event.title,
+          "organizer": {
+            "@type": "Organization",
+            "name": "Neudata",
+            "url": "https://www.neu-data.com",
+          },
+        }}
       />
       {/* Hero */}
       <div className="relative h-72 md:h-96 overflow-hidden">
