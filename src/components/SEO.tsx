@@ -6,12 +6,13 @@ interface SEOProps {
   description: string;
   path?: string; // e.g. "/about" — omit for homepage
   image?: string; // defaults to the site OG image
+  noIndex?: boolean; // set true for pages that should not appear in search results (e.g. 404)
 }
 
 const SITE_URL = "https://www.neu-data.com";
 const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 
-const SEO = ({ title, description, path = "", image = DEFAULT_IMAGE }: SEOProps) => {
+const SEO = ({ title, description, path = "", image = DEFAULT_IMAGE, noIndex = false }: SEOProps) => {
   const { i18n } = useTranslation();
   const url = `${SITE_URL}${path}`;
   const fullTitle = `${title} | Neudata`;
@@ -21,6 +22,7 @@ const SEO = ({ title, description, path = "", image = DEFAULT_IMAGE }: SEOProps)
       <html lang={i18n.language} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      {noIndex && <meta name="robots" content="noindex, nofollow" />}
       <link rel="canonical" href={url} />
 
       <meta property="og:title" content={fullTitle} />
