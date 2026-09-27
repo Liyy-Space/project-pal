@@ -178,7 +178,19 @@
       "message": "Message",
       "messagePlaceholder": "Tell us about your project...",
       "sending": "Sending...",
-      "send": "Send Message →"
+      "send": "Send Message →",
+      "mobilePhone": "Mobile Phone Number",
+      "estimatedStartDate": "Estimated Start Date",
+      "howDidYouHear": "How Did You Hear About Neudata",
+      "selectOption": "Select an option",
+      "hearOptions": {
+        "googleSearch": "Google Search",
+        "socialMedia": "Social Media",
+        "referral": "Referral",
+        "event": "Event or Training",
+        "linkedin": "LinkedIn",
+        "other": "Other"
+      }
     }
   },
   "servicesPage": {
@@ -484,46 +496,43 @@
     "subtitle": "Structured courses and hands-on workshops for healthcare professionals, researchers and institutions.",
     "coursesEyebrow": "Our Courses",
     "coursesHeading": "Learn from people who do this work",
-    "coursesSubheading": "Courses run as live cohorts or in-house workshops. More titles are added as new courses are developed.",
+    "coursesSubheading": "More titles are added as new courses are developed.",
     "enquireButton": "Enquire →",
     "courses": {
       "foundations": {
         "level": "Level 1",
         "title": "Foundations of Clinical Research",
-        "desc": "An entry-level course covering the core concepts behind well-run clinical and public-health research.",
+        "desc": "Core concepts behind well-run clinical and public-health research.",
         "topics": [
           "Study design and types of clinical research",
           "Research ethics and informed consent",
-          "Basic biostatistics and data interpretation",
           "Good Clinical Practice (GCP) essentials"
         ]
       },
       "dataToPublication": {
         "level": "Level 2",
         "title": "From Data to Publication",
-        "desc": "A practical follow-on course for researchers ready to turn collected data into a submission-ready manuscript.",
+        "desc": "Turning collected data into a submission-ready manuscript.",
         "topics": [
           "Structuring an analysis plan around your research question",
           "Common statistical tests and how to report them",
-          "Writing clear methods and results sections",
-          "Navigating journal submission and peer review"
+          "Writing clear methods and results sections"
         ]
       },
       "clinicalDataR": {
         "level": "Free Course",
         "title": "Clinical Data Analysis in R",
-        "desc": "A five-session evening course introducing R for clinical and health data analysis. No prior programming experience required.",
+        "desc": "A five-session evening course introducing R for clinical data analysis.",
         "topics": [
           "Getting started with R and RStudio",
-          "Importing and cleaning clinical datasets",
-          "Descriptive statistics and visualisation",
+          "Importing, cleaning and visualising clinical data",
           "Basic regression and reporting results"
         ]
       }
     },
     "inHouseBadge": "For Institutions",
     "inHouseHeading": "Request in-house training for your department",
-    "inHouseDesc": "We tailor any of our courses — or design a new one — for your hospital, research institution or organisation, delivered on-site or remotely.",
+    "inHouseDesc": "We tailor any course — or design a new one — for your hospital, institution or organisation.",
     "inHouseButton": "Request In-House Training"
   }
 }
