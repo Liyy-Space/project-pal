@@ -149,12 +149,12 @@ const Contact = () => {
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.firstName")}</label>
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.firstName")} <span className="text-red-500">*</span></label>
                       <input name="firstName" required placeholder="John"
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.lastName")}</label>
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.lastName")} <span className="text-red-500">*</span></label>
                       <input name="lastName" required placeholder="Doe"
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
@@ -162,19 +162,32 @@ const Contact = () => {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.email")}</label>
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.email")} <span className="text-red-500">*</span></label>
                       <input name="email" type="email" required placeholder="john@company.com"
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.company")}</label>
-                      <input name="company" placeholder="Your Company"
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.company")} <span className="text-red-500">*</span></label>
+                      <input name="company" required placeholder="Your Company"
+                        className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
+                    </div>
+                  </div>
+
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.mobilePhone")} <span className="text-red-500">*</span></label>
+                      <input name="mobilePhone" type="tel" required placeholder="+254 700 000 000"
+                        className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.estimatedStartDate")} <span className="text-red-500">*</span></label>
+                      <input name="estimatedStartDate" type="date" required
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.serviceInterest")}</label>
+                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.serviceInterest")} <span className="text-red-500">*</span></label>
                     <select name="service" required
                       className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm">
                       <option value="">{t("contact.form.selectService")}</option>
@@ -187,7 +200,21 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.message")}</label>
+                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.howDidYouHear")}</label>
+                    <select name="howDidYouHear"
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm">
+                      <option value="">{t("contact.form.selectOption")}</option>
+                      <option value="google-search">{t("contact.form.hearOptions.googleSearch")}</option>
+                      <option value="social-media">{t("contact.form.hearOptions.socialMedia")}</option>
+                      <option value="referral">{t("contact.form.hearOptions.referral")}</option>
+                      <option value="event">{t("contact.form.hearOptions.event")}</option>
+                      <option value="linkedin">{t("contact.form.hearOptions.linkedin")}</option>
+                      <option value="other">{t("contact.form.hearOptions.other")}</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.message")} <span className="text-red-500">*</span></label>
                     <textarea name="message" rows={5} required placeholder={t("contact.form.messagePlaceholder")}
                       className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none text-sm" />
                   </div>
