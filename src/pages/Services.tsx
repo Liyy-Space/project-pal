@@ -3,11 +3,11 @@ import servicesBanner from "@/assets/services-banner.jpg";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
-import SEO from "@/components/SEO";
   BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText,
   Database, Code2, BrainCircuit, Search, GraduationCap, ArrowRight,
-  Compass, ShieldCheck, GitBranch,
+  Compass, ShieldCheck, GitBranch, Pill,
 } from "lucide-react";
+import SEO from "@/components/SEO";
 
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
 
@@ -23,6 +23,7 @@ const serviceMeta = [
   { number: "09", key: "mathematicalModelling", icon: BrainCircuit, textColor: "text-pink-500", borderColor: "border-pink-500" },
   { number: "10", key: "researchAnalytics", icon: Search, textColor: "text-rose-500", borderColor: "border-rose-500" },
   { number: "11", key: "trainingCapacity", icon: GraduationCap, textColor: "text-indigo-500", borderColor: "border-indigo-500" },
+  { number: "12", key: "pkpdModeling", icon: Pill, textColor: "text-violet-500", borderColor: "border-violet-500" },
 ];
 
 const pillarMeta = [
