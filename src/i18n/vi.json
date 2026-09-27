@@ -5,7 +5,8 @@
     "services": "Dịch vụ",
     "events": "Sự kiện",
     "library": "Thư viện",
-    "contact": "Liên hệ"
+    "contact": "Liên hệ",
+    "training": "Đào tạo"
   },
   "footer": {
     "tagline": "Khoa học dữ liệu, thống kê sinh học và đào tạo cho lĩnh vực y tế và nghiên cứu.",
@@ -475,5 +476,54 @@
       "b36": "Tác phẩm kinh điển về trực quan hóa dữ liệu và đạo đức trình bày dữ liệu.",
       "b37": "Hướng dẫn thực tế, miễn phí để tạo ra các biểu đồ rõ ràng, trung thực."
     }
+  },
+  "training": {
+    "badge": "Nâng cao kỹ năng",
+    "title1": "Đào tạo &",
+    "titleHighlight": "Nâng cao năng lực",
+    "subtitle": "Các khóa học có cấu trúc và hội thảo thực hành dành cho chuyên gia y tế, nhà nghiên cứu và tổ chức.",
+    "coursesEyebrow": "Khóa học của chúng tôi",
+    "coursesHeading": "Học từ những người trực tiếp làm công việc này",
+    "coursesSubheading": "Các khóa học được tổ chức theo nhóm trực tiếp hoặc hội thảo nội bộ. Thêm khóa học mới sẽ được cập nhật.",
+    "enquireButton": "Tìm hiểu →",
+    "courses": {
+      "foundations": {
+        "level": "Cấp độ 1",
+        "title": "Nền tảng Nghiên cứu Lâm sàng",
+        "desc": "Khóa học nhập môn bao quát các khái niệm cốt lõi đằng sau một nghiên cứu lâm sàng và y tế công cộng được thực hiện tốt.",
+        "topics": [
+          "Thiết kế nghiên cứu và các loại hình nghiên cứu lâm sàng",
+          "Đạo đức nghiên cứu và sự đồng thuận có hiểu biết",
+          "Thống kê sinh học cơ bản và diễn giải dữ liệu",
+          "Kiến thức cốt lõi về Thực hành Lâm sàng Tốt (GCP)"
+        ]
+      },
+      "dataToPublication": {
+        "level": "Cấp độ 2",
+        "title": "Từ Dữ liệu đến Xuất bản",
+        "desc": "Khóa học tiếp nối mang tính thực hành dành cho nhà nghiên cứu sẵn sàng chuyển hóa dữ liệu thu thập được thành bản thảo sẵn sàng nộp.",
+        "topics": [
+          "Xây dựng kế hoạch phân tích dựa trên câu hỏi nghiên cứu",
+          "Các phép kiểm định thống kê phổ biến và cách báo cáo",
+          "Viết phần phương pháp và kết quả rõ ràng",
+          "Quy trình nộp bài và phản biện tạp chí"
+        ]
+      },
+      "clinicalDataR": {
+        "level": "Khóa học miễn phí",
+        "title": "Phân tích Dữ liệu Lâm sàng bằng R",
+        "desc": "Khóa học buổi tối gồm năm buổi giới thiệu R cho phân tích dữ liệu lâm sàng và y tế. Không yêu cầu kinh nghiệm lập trình trước đó.",
+        "topics": [
+          "Bắt đầu với R và RStudio",
+          "Nhập và làm sạch dữ liệu lâm sàng",
+          "Thống kê mô tả và trực quan hóa",
+          "Hồi quy cơ bản và báo cáo kết quả"
+        ]
+      }
+    },
+    "inHouseBadge": "Dành cho tổ chức",
+    "inHouseHeading": "Yêu cầu đào tạo nội bộ cho đơn vị của bạn",
+    "inHouseDesc": "Chúng tôi tùy chỉnh bất kỳ khóa học nào — hoặc thiết kế khóa học mới — cho bệnh viện, viện nghiên cứu hoặc tổ chức của bạn, giảng dạy trực tiếp hoặc trực tuyến.",
+    "inHouseButton": "Yêu cầu Đào tạo Nội bộ"
   }
 }
