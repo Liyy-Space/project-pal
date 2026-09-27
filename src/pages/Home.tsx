@@ -80,14 +80,30 @@ const Home = () => {
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">
             {t("home.clients.heading")}
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-            {clients.map((c) => (
-              <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8 py-6 flex items-center justify-center hover:shadow-md transition-all duration-300">
-                <img src={c.logo} alt={c.name} className="h-14 md:h-16 w-auto object-contain" />
-              </a>
-            ))}
+          <div className="relative overflow-hidden">
+            <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
+            <div
+              className="flex items-center gap-6 md:gap-8 clients-track"
+              style={{ animation: `scroll-left ${clients.length * 8}s linear infinite`, width: "max-content" }}
+            >
+              {[...clients, ...clients, ...clients, ...clients].map((c, i) => (
+                <a key={`${c.name}-${i}`} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8 py-6 flex items-center justify-center hover:shadow-md transition-all duration-300 shrink-0">
+                  <img src={c.logo} alt={c.name} className="h-14 md:h-16 w-auto object-contain" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
+        <style>{`
+          @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-25%); }
+          }
+          .clients-track:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
       {/* Featured Event Section */}
