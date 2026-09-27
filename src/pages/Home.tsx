@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText, Database, Code2, BrainCircuit, Search, GraduationCap, MessageCircle, BookOpen, Star, Calendar, Clock, MapPin, Users } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { ArrowRight, BarChart3, TrendingUp, FlaskConical, Shield, PenLine, FileText, Database, Code2, BrainCircuit, Search, GraduationCap, MessageCircle, Calendar, Clock, MapPin, Users } from "lucide-react";
 import heroImage from "@/assets/hero-data.jpg";
 import posterImage from "@/assets/Poster.png";
 import bachmaiLogo from "@/assets/clients/bachmai.png";
@@ -23,13 +24,6 @@ const serviceIcons = [
   { key: "trainingCapacity", icon: GraduationCap, color: "text-indigo-500" },
 ];
 
-const featuredBooks = [
-  { title: "R for Data Science (2nd ed.)", author: "Hadley Wickham et al.", rating: 4.9, isbn: "9781492097402", freeLink: "https://r4ds.hadley.nz" },
-  { title: "An Introduction to Statistical Learning", author: "Gareth James et al.", rating: 4.9, isbn: "9781461471370", freeLink: "https://www.statlearning.com" },
-  { title: "Designing Data-Intensive Applications", author: "Martin Kleppmann", rating: 4.9, isbn: "9781449373320", buyLink: "https://www.amazon.com/dp/1449373321" },
-  { title: "Statistical Rethinking (2nd ed.)", author: "Richard McElreath", rating: 4.9, isbn: "9780367139919", freeLink: "https://xcelab.net/rm/statistical-rethinking" },
-];
-
 const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
@@ -39,11 +33,13 @@ const Home = () => {
   const { t } = useTranslation();
 
   return (
+    
     <div className="pt-16">
-      <SEO
-        title="Biostatistics & Data Science Consultancy in Kenya"
-        description="Expert biostatistics, clinical trial support and data science consulting for research institutions and healthcare organisations across Africa and Asia."
-      />
+      <Helmet>
+        <title>Neudata | Biostatistics & Data Science Consultancy in Kenya</title>
+        <meta name="description" content="Expert biostatistics, clinical trial support and data science consulting for research institutions and healthcare organisations across Africa and Asia." />
+      </Helmet>
+
       {/* Hero */}
       <section className="gradient-hero text-primary-foreground relative overflow-hidden min-h-[75vh] flex items-center">
         <div className="absolute inset-0 grid-pattern opacity-30" />
@@ -230,79 +226,6 @@ const Home = () => {
             >
               {t("home.services.viewAll")} <ArrowRight className="w-5 h-5" />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Books Section */}
-      <section className="py-16 overflow-hidden relative" style={{ background: HERO_GRADIENT }}>
-        <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />
-        <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }}>
-              <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
-                <BookOpen className="w-3 h-3 text-teal-300" />
-                <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">{t("home.books.eyebrow")}</span>
-              </div>
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 leading-tight">
-                {t("home.books.heading1")} <br />
-                <span className="text-teal-300">{t("home.books.heading2")}</span>
-              </h2>
-              <p className="text-white/70 mb-8 text-base leading-relaxed max-w-lg">
-                {t("home.books.subheading")}
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <Link to="/library" className="inline-flex items-center gap-2 px-6 py-3 bg-teal-500 text-white rounded-xl font-semibold hover:bg-teal-400 transition-all shadow-lg shadow-teal-500/30">
-                  {t("home.books.browse")} <ArrowRight className="w-4 h-4" />
-                </Link>
-                <Link to="/contact" className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/30 text-white rounded-xl font-semibold hover:bg-white/20 transition-all">
-                  {t("home.books.suggest")}
-                </Link>
-              </div>
-              <div className="flex gap-8 mt-10">
-                {[
-                  { num: "37", label: t("home.books.stats.curated") },
-                  { num: "11", label: t("home.books.stats.categories") },
-                  { num: "20+", label: t("home.books.stats.freeOnline") },
-                ].map((s) => (
-                  <div key={s.label}>
-                    <p className="text-2xl font-bold text-teal-300">{s.num}</p>
-                    <p className="text-xs text-white/50 mt-0.5">{s.label}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.7, delay: 0.2 }} className="grid grid-cols-2 gap-4">
-              {featuredBooks.map((book, i) => (
-                <motion.div key={book.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                  className="group relative rounded-2xl overflow-hidden shadow-xl cursor-pointer hover:scale-105 transition-all duration-300">
-                  <div className="relative h-48 bg-gradient-to-br from-teal-900 to-teal-700">
-                    <img src={`https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`} alt={book.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover opacity-50 group-hover:opacity-30 transition-opacity duration-300"
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }} />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <p className="text-white font-bold text-xs leading-snug line-clamp-2">{book.title}</p>
-                      <p className="text-teal-300 text-xs mt-0.5">{book.author}</p>
-                      <div className="flex items-center gap-1 mt-1">
-                        {[1, 2, 3, 4, 5].map((s) => (
-                          <Star key={s} className={`w-2.5 h-2.5 ${s <= Math.round(book.rating) ? "fill-yellow-400 text-yellow-400" : "text-gray-500"}`} />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="bg-black/40 backdrop-blur-sm px-3 py-2">
-                    {book.freeLink ? (
-                      <a href={book.freeLink} target="_blank" rel="noopener noreferrer" className="text-xs text-teal-300 hover:text-teal-200 font-medium">{t("home.books.readFree")}</a>
-                    ) : (
-                      <a href={(book as any).buyLink} target="_blank" rel="noopener noreferrer" className="text-xs text-white/70 hover:text-white font-medium">{t("home.books.buyNow")}</a>
-                    )}
-                  </div>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
         </div>
       </section>

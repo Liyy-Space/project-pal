@@ -29,3 +29,9 @@ eventdetail_fix.py
 events_fix.py
 free_key_fix.py
 src/assets/backup/
+add_marquee.py
+add_pkpd_meta.py
+add_pkpd_service.py
+remove_library_nav.py
+rename_pkpd_key.py
+update_hero_copy.py
