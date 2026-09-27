@@ -323,6 +323,20 @@
           "Ongoing methods support and analytical mentoring after handover"
         ],
         "outputs": "Course materials, hands-on workshops, mentoring plan, certificate-ready curricula."
+      },
+      "pkpdModeling": {
+        "title": "PK/PD Modeling and Simulation",
+        "desc": "Quantitative modeling to guide safe, effective dosing decisions across the drug development lifecycle.",
+        "details": [
+          "Population pharmacokinetics (PopPK) modeling",
+          "Longitudinal pharmacokinetic/pharmacodynamic (PK/PD) models",
+          "Translational modeling",
+          "Exposure-response modeling",
+          "Integrated efficacy-safety analysis",
+          "Bridging between populations (e.g., by region, race, and disease)",
+          "Clinical trial simulations"
+        ],
+        "outputs": "Population PK/PD models, exposure-response analyses, simulation reports supporting dose selection and trial design."
       }
     },
     "approachEyebrow": "Our Approach",
