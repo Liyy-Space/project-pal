@@ -190,7 +190,8 @@
         "event": "Event or Training",
         "linkedin": "LinkedIn",
         "other": "Other"
-      }
+      },
+      "captchaRequired": "Please confirm you're not a robot."
     }
   },
   "servicesPage": {

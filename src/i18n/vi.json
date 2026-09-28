@@ -190,7 +190,8 @@
         "event": "Sự kiện hoặc khóa đào tạo",
         "linkedin": "LinkedIn",
         "other": "Khác"
-      }
+      },
+      "captchaRequired": "Vui lòng xác nhận bạn không phải là robot."
     }
   },
   "servicesPage": {
