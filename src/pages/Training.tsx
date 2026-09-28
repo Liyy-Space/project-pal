@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { GraduationCap, CheckCircle2, ArrowRight, Building2 } from "lucide-react";
 import SEO from "@/components/SEO";
+import trainingHero from "@/assets/training-hero.jpg";
 
 const HERO_GRADIENT =
   "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
@@ -22,7 +23,12 @@ const Training = () => {
 
       {/* Hero */}
       <div className="relative h-64 md:h-80 overflow-hidden">
-        <div className="absolute inset-0" style={{ background: HERO_GRADIENT }} />
+        <img
+          src={trainingHero}
+          alt="Training"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.85 }} />
         <div className="absolute inset-0 grid-pattern opacity-20" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
