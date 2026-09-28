@@ -3,6 +3,7 @@ import { MessageCircle, MapPin, Mail, Phone, Twitter, Linkedin, Github, Facebook
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import ReCAPTCHA from "react-google-recaptcha";
 import SEO from "@/components/SEO";
 
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
@@ -10,11 +11,17 @@ const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 
 const Contact = () => {
   const { t } = useTranslation();
   const formRef = useRef<HTMLFormElement>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [sending, setSending] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
+    if (!captchaToken) {
+      toast.error(t("contact.form.captchaRequired"));
+      return;
+    }
     setSending(true);
     try {
       await emailjs.sendForm(
@@ -25,6 +32,8 @@ const Contact = () => {
       );
       toast.success(t("contact.toastSuccess"));
       formRef.current.reset();
+      recaptchaRef.current?.reset();
+      setCaptchaToken(null);
     } catch {
       toast.error(t("contact.toastError"));
     } finally {
@@ -219,7 +228,17 @@ const Contact = () => {
                       className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none text-sm" />
                   </div>
 
-                  <button type="submit" disabled={sending}
+                  <div>
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                      onChange={(token) => setCaptchaToken(token)}
+                      onExpired={() => setCaptchaToken(null)}
+                    />
+                    <input type="hidden" name="g-recaptcha-response" value={captchaToken ?? ""} />
+                  </div>
+
+                  <button type="submit" disabled={sending || !captchaToken}
                     className="w-full py-3.5 rounded-xl font-semibold text-white transition-all disabled:opacity-50 hover:opacity-90 shadow-lg"
                     style={{ background: HERO_GRADIENT }}>
                     {sending ? t("contact.form.sending") : t("contact.form.send")}
