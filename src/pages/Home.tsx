@@ -22,6 +22,7 @@ const serviceIcons = [
   { key: "mathematicalModelling", icon: BrainCircuit, color: "text-pink-500" },
   { key: "researchAnalytics", icon: Search, color: "text-rose-500" },
   { key: "trainingCapacity", icon: GraduationCap, color: "text-indigo-500" },
+  { key: "pkpdModeling", icon: FlaskConical, color: "text-emerald-500" },
 ];
 
 const clients = [
