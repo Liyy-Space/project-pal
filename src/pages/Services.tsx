@@ -35,24 +35,19 @@ const pillarMeta = [
 function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
-  const Icon = meta.icon;
   const details = t(`servicesPage.items.${meta.key}.details`, { returnObjects: true }) as string[];
 
   return (
-    <div className={`bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 p-6 flex flex-col group ${expanded ? "ring-2 " + meta.borderColor : ""}`}>
+    <div className={`rounded-lg border transition-all duration-200 p-6 flex flex-col group ${expanded ? "bg-white border-primary shadow-md" : "bg-teal-50 border-teal-100 hover:bg-white hover:border-primary hover:-translate-y-1 hover:shadow-lg"}`}>
       <SEO
         title="Our Services"
         description="Explore Neudata's full range of data science services: survey methodology, statistical consultancy, clinical trial support, data management, and more."
       />
-      {/* Icon circle */}
-      <div className={`w-14 h-14 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-        <Icon className={`w-6 h-6 ${meta.textColor}`} />
-      </div>
       {/* Title */}
-      <h3 className="text-base font-bold text-gray-900 mb-2 leading-snug">{t(`servicesPage.items.${meta.key}.title`)}</h3>
+      <h3 className="text-base font-semibold text-gray-900 group-hover:text-primary transition-colors duration-200 mb-2 leading-snug">{t(`servicesPage.items.${meta.key}.title`)}</h3>
 
       {/* Desc */}
-      <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-4">{t(`servicesPage.items.${meta.key}.desc`)}</p>
+      <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-4">{t(`servicesPage.items.${meta.key}.desc`)}</p>
 
       {/* Expanded details */}
       {expanded && (
@@ -60,13 +55,13 @@ function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
           <ul className="space-y-1.5">
             {details.map((d) => (
               <li key={d} className={`flex items-start gap-2 text-xs text-gray-500`}>
-                <span className={`font-bold mt-0.5 ${meta.textColor}`}>✓</span>
+                <span className={`font-bold mt-0.5 text-primary`}>✓</span>
                 {d}
               </li>
             ))}
           </ul>
-          <div className={`mt-3 p-3 rounded-lg bg-gray-50 border-l-2 ${meta.borderColor}`}>
-            <span className={`text-xs font-bold ${meta.textColor}`}>{t("servicesPage.outputsLabel")} </span>
+          <div className={`mt-3 p-3 rounded-lg bg-gray-50 border-l-2 border-primary`}>
+            <span className={`text-xs font-bold text-primary`}>{t("servicesPage.outputsLabel")} </span>
             <span className="text-xs text-gray-500">{t(`servicesPage.items.${meta.key}.outputs`)}</span>
           </div>
         </div>
@@ -75,7 +70,7 @@ function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
       {/* Read More */}
       <button
         onClick={() => setExpanded(!expanded)}
-        className={`inline-flex items-center gap-1 text-sm font-semibold ${meta.textColor} hover:gap-2 transition-all`}
+        className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 transition-all"
       >
         {expanded ? t("servicesPage.showLess") : t("servicesPage.readMore")}
       </button>

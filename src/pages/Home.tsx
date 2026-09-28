@@ -208,14 +208,11 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 p-6 group"
+                className="bg-teal-50 rounded-lg border border-teal-100 hover:bg-white hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-200 p-6 group"
               >
-                <div className="w-12 h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <s.icon className={`w-5 h-5 ${s.color}`} />
-                </div>
-                <h3 className="text-base font-bold text-gray-900 mb-2">{t(`home.services.items.${s.key}.title`)}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">{t(`home.services.items.${s.key}.desc`)}</p>
-                <Link to="/services" className={`inline-flex items-center gap-1 text-sm font-semibold ${s.color} hover:gap-2 transition-all`}>
+                <h3 className="text-base font-semibold text-gray-900 group-hover:text-primary transition-colors duration-200 mb-2">{t(`home.services.items.${s.key}.title`)}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">{t(`home.services.items.${s.key}.desc`)}</p>
+                <Link to="/services" className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-transform duration-200 group-hover:translate-x-1">
                   {t("home.services.readMore")}
                 </Link>
               </motion.div>
