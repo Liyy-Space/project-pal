@@ -27,6 +27,7 @@ const teamMembers: TeamMember[] = [
     id: "bernard-isekah-osangir",
     name: "Bernard Isekah Osang'ir",
     role: "Co-Founder",
+    photoPosition: "center 25%",
     degrees: "PhD Biostatistics & Bioinformatics, MSc Statistics & Data Science",
     specialties: ["Biostatistics", "Bioinformatics", "Clinical Trial Analysis", "Survey Design"],
     photo: bernardPhoto,
