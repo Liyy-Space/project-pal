@@ -3,6 +3,7 @@ import { Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import bachmaiLogo from "@/assets/clients/bachmai.png";
 import stFrancisLogo from "@/assets/clients/st-francis.png";
+import logo from "@/assets/logo.png";
 
 const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
@@ -26,8 +27,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-sm">N</div>
-              <span className="text-lg font-bold text-background">Neudata</span>
+              <img src={logo} alt="neu-data logo" className="w-9 h-9 object-contain" />
+              <span className="text-lg font-bold text-background">neu-data</span>
             </div>
             <p className="text-sm opacity-70 leading-relaxed">
               {t("footer.tagline")}
