@@ -3,11 +3,15 @@ import { Mail, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import bachmaiLogo from "@/assets/clients/bachmai.png";
 import stFrancisLogo from "@/assets/clients/st-francis.png";
+import kinshasaLogo from "@/assets/clients/kinshasa.jpg";
+import hospital2Logo from "@/assets/clients/hospital2.jpg";
 import logo from "@/assets/logo.png";
 
 const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
+  { name: "Kinshasa client name", logo: kinshasaLogo, url: "https://example.org/" },
+  { name: "Second hospital name", logo: hospital2Logo, url: "https://example.org/" },
 ];
 
 const Footer = () => {

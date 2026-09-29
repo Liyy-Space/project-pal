@@ -176,23 +176,16 @@ const Contact = () => {
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.company")} <span className="text-red-500">*</span></label>
-                      <input name="company" required placeholder="Your Company"
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.company")}</label>
+                      <input name="company" placeholder="Your Company"
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.mobilePhone")} <span className="text-red-500">*</span></label>
-                      <input name="mobilePhone" type="tel" required placeholder="+254 700 000 000"
-                        className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.estimatedStartDate")} <span className="text-red-500">*</span></label>
-                      <input name="estimatedStartDate" type="date" required
-                        className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
-                    </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.estimatedStartDate")} <span className="text-red-500">*</span></label>
+                    <input name="estimatedStartDate" type="date" required
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                   </div>
 
                   <div>

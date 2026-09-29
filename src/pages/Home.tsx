@@ -7,6 +7,8 @@ import heroImage from "@/assets/hero-data.jpg";
 import posterImage from "@/assets/Poster.png";
 import bachmaiLogo from "@/assets/clients/bachmai.png";
 import stFrancisLogo from "@/assets/clients/st-francis.png";
+import kinshasaLogo from "@/assets/clients/kinshasa.jpg";
+import hospital2Logo from "@/assets/clients/hospital2.jpg";
 import SEO from "@/components/SEO";
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
@@ -28,6 +30,8 @@ const serviceIcons = [
 const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
+  { name: "Kinshasa client name", logo: kinshasaLogo, url: "https://example.org/" },
+  { name: "Second hospital name", logo: hospital2Logo, url: "https://example.org/" },
 ];
 
 const Home = () => {
@@ -82,7 +86,7 @@ const Home = () => {
           <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 z-10 bg-gradient-to-r from-gray-50 to-transparent" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 z-10 bg-gradient-to-l from-gray-50 to-transparent" />
           <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] gap-6 md:gap-8">
-            {[...clients, ...clients].map((c, i) => (
+            {[...clients, ...clients, ...clients, ...clients, ...clients, ...clients].map((c, i) => (
               <a key={`${c.name}-${i}`} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8 py-6 flex items-center justify-center hover:shadow-md transition-all duration-300 shrink-0">
                 <img src={c.logo} alt={c.name} className="h-14 md:h-16 w-auto object-contain" />
               </a>

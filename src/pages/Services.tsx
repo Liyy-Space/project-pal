@@ -12,18 +12,18 @@ import SEO from "@/components/SEO";
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
 const serviceMeta = [
-  { number: "01", key: "surveyMethodology", icon: BarChart3, textColor: "text-teal-500", borderColor: "border-teal-500" },
-  { number: "02", key: "statisticalConsultancy", icon: TrendingUp, textColor: "text-blue-500", borderColor: "border-blue-500" },
-  { number: "03", key: "clinicalTrialSupport", icon: FlaskConical, textColor: "text-red-500", borderColor: "border-red-500" },
-  { number: "04", key: "dsmbSupport", icon: Shield, textColor: "text-orange-500", borderColor: "border-orange-500" },
-  { number: "05", key: "medicalWriting", icon: PenLine, textColor: "text-yellow-600", borderColor: "border-yellow-500" },
-  { number: "06", key: "grantsProposals", icon: FileText, textColor: "text-purple-500", borderColor: "border-purple-500" },
-  { number: "07", key: "dataManagement", icon: Database, textColor: "text-cyan-500", borderColor: "border-cyan-500" },
-  { number: "08", key: "statisticalProgramming", icon: Code2, textColor: "text-green-500", borderColor: "border-green-500" },
-  { number: "09", key: "mathematicalModelling", icon: BrainCircuit, textColor: "text-pink-500", borderColor: "border-pink-500" },
-  { number: "10", key: "researchAnalytics", icon: Search, textColor: "text-rose-500", borderColor: "border-rose-500" },
-  { number: "11", key: "trainingCapacity", icon: GraduationCap, textColor: "text-indigo-500", borderColor: "border-indigo-500" },
-  { number: "12", key: "pkpdModeling", icon: Pill, textColor: "text-violet-500", borderColor: "border-violet-500" },
+  { number: "01", key: "surveyMethodology", icon: BarChart3, textColor: "text-teal-600", borderColor: "border-teal-600" },
+  { number: "02", key: "statisticalConsultancy", icon: TrendingUp, textColor: "text-blue-600", borderColor: "border-blue-600" },
+  { number: "03", key: "clinicalTrialSupport", icon: FlaskConical, textColor: "text-red-600", borderColor: "border-red-600" },
+  { number: "04", key: "dsmbSupport", icon: Shield, textColor: "text-orange-600", borderColor: "border-orange-600" },
+  { number: "05", key: "medicalWriting", icon: PenLine, textColor: "text-amber-700", borderColor: "border-amber-700" },
+  { number: "06", key: "grantsProposals", icon: FileText, textColor: "text-purple-600", borderColor: "border-purple-600" },
+  { number: "07", key: "dataManagement", icon: Database, textColor: "text-cyan-600", borderColor: "border-cyan-600" },
+  { number: "08", key: "statisticalProgramming", icon: Code2, textColor: "text-emerald-700", borderColor: "border-emerald-700" },
+  { number: "09", key: "mathematicalModelling", icon: BrainCircuit, textColor: "text-pink-600", borderColor: "border-pink-600" },
+  { number: "10", key: "researchAnalytics", icon: Search, textColor: "text-rose-600", borderColor: "border-rose-600" },
+  { number: "11", key: "trainingCapacity", icon: GraduationCap, textColor: "text-indigo-600", borderColor: "border-indigo-600" },
+  { number: "12", key: "pkpdModeling", icon: Pill, textColor: "text-violet-600", borderColor: "border-violet-600" },
 ];
 
 const pillarMeta = [
