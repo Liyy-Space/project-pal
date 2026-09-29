@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 import trainingHero from "@/assets/training-hero.jpg";
 
 const HERO_GRADIENT =
-  "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
+  "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
 const courseKeys = ["foundations", "dataToPublication", "clinicalDataR"] as const;
 

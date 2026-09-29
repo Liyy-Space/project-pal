@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import SEO from "@/components/SEO";
 
-const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
+const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
 const serviceMeta = [
   { number: "01", key: "surveyMethodology", icon: BarChart3, textColor: "text-teal-500", borderColor: "border-teal-500" },
