@@ -211,8 +211,9 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="bg-white rounded-lg border border-slate-200 hover:bg-white hover:border-teal-600 hover:-translate-y-1 hover:shadow-lg transition-all duration-200 p-6 group flex flex-col"
+                className="relative overflow-hidden bg-white rounded-xl border border-slate-200 hover:border-teal-600 hover:-translate-y-1 hover:shadow-lg transition-all duration-200 px-6 pt-7 pb-6 group flex flex-col"
               >
+                <div className="absolute inset-x-0 top-0 h-1 bg-teal-600 group-hover:h-1.5 transition-all duration-200" />
                 <h3 className="text-base font-semibold text-slate-900 group-hover:text-teal-700 transition-colors duration-200 mb-2">{t(`home.services.items.${s.key}.title`)}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed mb-4">{t(`home.services.items.${s.key}.desc`)}</p>
                 <Link to="/services" className="mt-auto self-start inline-flex items-center gap-1 text-sm font-medium text-teal-700 transition-transform duration-200 group-hover:translate-x-1">
