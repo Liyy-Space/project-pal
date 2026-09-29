@@ -8,7 +8,6 @@ import posterImage from "@/assets/Poster.png";
 import bachmaiLogo from "@/assets/clients/bachmai.png";
 import stFrancisLogo from "@/assets/clients/st-francis.png";
 import kinshasaLogo from "@/assets/clients/kinshasa.jpg";
-import hospital2Logo from "@/assets/clients/hospital2.jpg";
 import SEO from "@/components/SEO";
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
@@ -31,7 +30,6 @@ const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
   { name: "Kinshasa client name", logo: kinshasaLogo, url: "https://example.org/" },
-  { name: "Second hospital name", logo: hospital2Logo, url: "https://example.org/" },
 ];
 
 const Home = () => {
