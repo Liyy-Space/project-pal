@@ -92,6 +92,10 @@
         "trainingCapacity": {
           "title": "Đào tạo & Nâng cao năng lực",
           "desc": "Giúp các nhóm có thể tự thực hiện công việc — không phụ thuộc vào chúng tôi."
+        },
+        "pkpdModeling": {
+          "title": "Mô hình hóa và mô phỏng PK/PD",
+          "desc": "Mô hình định lượng giúp định hướng các quyết định về liều dùng an toàn và hiệu quả trong toàn bộ vòng đời phát triển thuốc."
         }
       }
     },

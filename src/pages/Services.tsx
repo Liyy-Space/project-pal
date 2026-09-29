@@ -38,7 +38,7 @@ function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
   const details = t(`servicesPage.items.${meta.key}.details`, { returnObjects: true }) as string[];
 
   return (
-    <div className={`rounded-lg border transition-all duration-200 p-6 flex flex-col group ${expanded ? "bg-white border-primary shadow-md" : "bg-teal-50 border-teal-100 hover:bg-white hover:border-primary hover:-translate-y-1 hover:shadow-lg"}`}>
+    <div className={`rounded-lg border transition-all duration-200 p-6 flex flex-col group ${expanded ? "bg-white border-primary shadow-md" : "bg-white border-slate-200 hover:border-teal-600 hover:-translate-y-1 hover:shadow-lg"}`}>
       <SEO
         title="Our Services"
         description="Explore Neudata's full range of data science services: survey methodology, statistical consultancy, clinical trial support, data management, and more."

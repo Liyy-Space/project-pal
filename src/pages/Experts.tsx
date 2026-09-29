@@ -50,8 +50,8 @@ const teamMembers: TeamMember[] = [
     name: "My-Luong Vuong",
     role: "Co-Founder",
     photoPosition: "center 15%", // full-body shot — focus higher toward face
-    degrees: "PharmD (Hanoi University of Pharmacy), MSc Epidemiology (Antwerp), MSc Biostatistics (Hasselt), PhD Pharmacometrics (KU Leuven, in progress)",
-    specialties: ["Epidemiology", "Biostatistics", "Pharmacometrics", "Antimicrobial Dosing"],
+    degrees: "PharmD, MSc Epidemiology, MSc Biostatistics, PhD Pharmacometrics (in progress)",
+    specialties: ["Epidemiology", "Biostatistics", "Pharmacometrics", "Modelling and Simulation"],
     photo: luongPhoto,
     linkedin: "https://www.linkedin.com/in/my-luong-vuong/",
     scholar: "https://orcid.org/0000-0001-9203-6745",

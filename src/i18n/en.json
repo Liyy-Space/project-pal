@@ -92,6 +92,10 @@
         "trainingCapacity": {
           "title": "Training & Capacity",
           "desc": "Leaving teams able to do the work themselves — not dependent on us."
+        },
+        "pkpdModeling": {
+          "title": "PK/PD Modeling and Simulation",
+          "desc": "Quantitative modeling to guide safe, effective dosing decisions across the drug development lifecycle."
         }
       }
     },
