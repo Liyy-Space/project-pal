@@ -6,7 +6,8 @@
     "events": "Events",
     "library": "Library",
     "contact": "Contact",
-    "training": "Training"
+    "training": "Training",
+    "experts": "Experts"
   },
   "footer": {
     "tagline": "Data science, biostatistics and training for health and research.",
@@ -535,5 +536,11 @@
     "inHouseHeading": "Request in-house training for your department",
     "inHouseDesc": "We tailor any course — or design a new one — for your hospital, institution or organisation.",
     "inHouseButton": "Request In-House Training"
+  },
+  "experts": {
+    "badge": "Our People",
+    "titlePrefix": "Meet Our",
+    "titleHighlight": "Experts",
+    "subtitle": "The biostatisticians, epidemiologists and researchers behind our work."
   }
 }

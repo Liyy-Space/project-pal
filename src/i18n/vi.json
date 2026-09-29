@@ -6,7 +6,8 @@
     "events": "Sự kiện",
     "library": "Thư viện",
     "contact": "Liên hệ",
-    "training": "Đào tạo"
+    "training": "Đào tạo",
+    "experts": "Chuyên Gia"
   },
   "footer": {
     "tagline": "Khoa học dữ liệu, thống kê sinh học và đào tạo cho lĩnh vực y tế và nghiên cứu.",
@@ -535,5 +536,11 @@
     "inHouseHeading": "Yêu cầu đào tạo nội bộ cho đơn vị của bạn",
     "inHouseDesc": "Chúng tôi tùy chỉnh bất kỳ khóa học nào — hoặc thiết kế khóa học mới — cho tổ chức của bạn.",
     "inHouseButton": "Yêu cầu Đào tạo Nội bộ"
+  },
+  "experts": {
+    "badge": "Đội Ngũ Của Chúng Tôi",
+    "titlePrefix": "Gặp Gỡ",
+    "titleHighlight": "Chuyên Gia Của Chúng Tôi",
+    "subtitle": "Các nhà thống kê sinh học, dịch tễ học và nghiên cứu viên đứng sau công việc của chúng tôi."
   }
 }
