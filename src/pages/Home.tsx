@@ -29,7 +29,7 @@ const serviceIcons = [
 const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
-  { name: "Kinshasa client name", logo: kinshasaLogo, url: "https://example.org/" },
+  { name: "University of Kinshasa", logo: kinshasaLogo, url: "https://www.unikin.ac.cd/" },
 ];
 
 const Home = () => {
