@@ -46,6 +46,7 @@ const Contact = () => {
       <SEO
         title="Contact Us"
         description="Get in touch with Neudata to discuss your data science, biostatistics, or clinical trial support needs. We respond within 24 hours on business days."
+        path="/contact"
       />
 
       {/* Hero Banner */}

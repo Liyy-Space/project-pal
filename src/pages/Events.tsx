@@ -50,10 +50,6 @@ function EventCard({
       className={`bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300 group ${past ? "opacity-70" : ""
         }`}
     >
-      <SEO
-        title="Events & Workshops"
-        description="Discover Neudata's upcoming and ongoing events, training courses, and workshops in data science and biostatistics."
-      />
       <div className="relative h-48 overflow-hidden bg-gray-100">
         {event.image_url ? (
           <img
@@ -249,6 +245,11 @@ const Events = () => {
         </div>
       </div>
 
+      <SEO
+        title="Events & Workshops"
+        description="Discover Neudata's upcoming and ongoing events, training courses, and workshops in data science and biostatistics."
+        path="/events"
+      />
       <section className="py-16 bg-gray-50">
         <div className="container">
           {loading ? (

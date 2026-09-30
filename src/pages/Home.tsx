@@ -44,6 +44,10 @@ const Home = () => {
       </Helmet>
 
       {/* Hero */}
+      <SEO
+        title="Neudata: Biostatistics & Data Science Consultancy"
+        description="Neudata provides biostatistics, clinical trial support, PK/PD modelling, data science consulting and training for research and healthcare organisations."
+      />
       <section className="gradient-hero text-primary-foreground relative overflow-hidden min-h-[75vh] flex items-center">
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="container relative z-10 py-20">

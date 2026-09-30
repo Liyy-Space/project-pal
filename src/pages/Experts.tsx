@@ -127,7 +127,7 @@ const Experts = () => {
     <div className="pt-16">
       <SEO
         title="Our Experts"
-        description="Meet the biostatisticians, data scientists and researchers behind Neudata's clinical trial, public health and data science consulting work."
+        description="Meet Neudata's co-founders: biostatisticians, epidemiologists and pharmacometricians with expertise in clinical trials, public health and modelling."
         path="/experts"
       />
 

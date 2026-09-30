@@ -25,6 +25,7 @@ const About = () => {
       <SEO
         title="About Us"
         description="Learn about Neudata's mission, team, and expertise in biostatistics, data science consulting, and clinical trial support across Africa and Asia."
+        path="/about"
       />
 
       {/* Hero Banner */}
