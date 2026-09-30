@@ -144,15 +144,18 @@ const Experts = () => {
       />
 
       <div className="relative h-64 md:h-80 overflow-hidden">
-        <img src={expertsBanner} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.8 }} />
-        <div className="absolute inset-0 flex items-end">
-          <div className="container pb-10 md:pb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
-              {t("experts.titlePrefix")} {t("experts.titleHighlight")}
-            </h1>
-            <p className="text-white/80 max-w-xl text-base">{t("experts.subtitle")}</p>
+        <img src={expertsBanner} alt="Our Experts" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.85 }} />
+        <div className="absolute inset-0 grid-pattern opacity-20" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
+            <Users className="w-3 h-3 text-teal-300" />
+            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">{t("experts.badge")}</span>
           </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-3">
+            {t("experts.titlePrefix")} <span className="text-teal-300">{t("experts.titleHighlight")}</span>
+          </h1>
+          <p className="text-white/70 max-w-lg text-sm md:text-base">{t("experts.subtitle")}</p>
         </div>
       </div>
 
