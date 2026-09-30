@@ -35,42 +35,50 @@ const pillarMeta = [
 function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
-  const details = t(`servicesPage.items.${meta.key}.details`, { returnObjects: true }) as string[];
+  const raw = t(`servicesPage.items.${meta.key}.details`, { returnObjects: true });
+  const details = Array.isArray(raw) ? (raw as string[]) : [];
+  const Icon = meta.icon;
+  const toggle = () => setExpanded(!expanded);
 
   return (
-    <div className={`relative overflow-hidden rounded-xl border transition-all duration-200 px-6 pt-7 pb-6 flex flex-col group ${expanded ? "bg-white border-teal-600 shadow-md" : "bg-white border-slate-200 hover:border-teal-600 hover:-translate-y-1 hover:shadow-lg"}`}>
-      <div className="absolute inset-x-0 top-0 h-1 bg-teal-600 group-hover:h-1.5 transition-all duration-200" />
-      {/* Title */}
-      <h3 className="text-base font-semibold text-slate-900 group-hover:text-teal-700 transition-colors duration-200 mb-2 leading-snug">{t(`servicesPage.items.${meta.key}.title`)}</h3>
+    <div
+      role="button"
+      tabIndex={0}
+      aria-expanded={expanded}
+      onClick={toggle}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } }}
+      className={`group cursor-pointer border-r border-b border-slate-200 p-6 md:p-7 transition-colors duration-200 ${expanded ? "bg-teal-800 text-white" : "bg-white text-slate-900 hover:bg-teal-800 hover:text-white"}`}
+    >
+      <div className="flex gap-5">
+        <Icon strokeWidth={1.25} className="w-10 h-10 shrink-0 mt-1" />
+        <div className="w-px self-stretch bg-current opacity-20" />
+        <div className="flex-1 min-w-0">
+          <h3 className="text-base font-semibold mb-1.5 leading-snug">{t(`servicesPage.items.${meta.key}.title`)}</h3>
+          <p className="text-sm leading-relaxed opacity-80 mb-4">{t(`servicesPage.items.${meta.key}.desc`)}</p>
 
-      {/* Desc */}
-      <p className="text-gray-600 text-sm leading-relaxed flex-1 mb-4">{t(`servicesPage.items.${meta.key}.desc`)}</p>
+          {expanded && (
+            <div className="mb-4 space-y-2">
+              <ul className="space-y-1.5">
+                {details.map((d) => (
+                  <li key={d} className="flex items-start gap-2 text-xs opacity-90">
+                    <span className="font-bold mt-0.5">✓</span>
+                    {d}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-3 pl-3 border-l-2 border-white/60">
+                <span className="text-xs font-bold">{t("servicesPage.outputsLabel")} </span>
+                <span className="text-xs opacity-90">{t(`servicesPage.items.${meta.key}.outputs`)}</span>
+              </div>
+            </div>
+          )}
 
-      {/* Expanded details */}
-      {expanded && (
-        <div className="mb-4 space-y-2">
-          <ul className="space-y-1.5">
-            {details.map((d) => (
-              <li key={d} className={`flex items-start gap-2 text-xs text-gray-500`}>
-                <span className={`font-bold mt-0.5 text-teal-600`}>✓</span>
-                {d}
-              </li>
-            ))}
-          </ul>
-          <div className={`mt-3 p-3 rounded-lg bg-gray-50 border-l-2 border-teal-600`}>
-            <span className={`text-xs font-bold text-teal-700`}>{t("servicesPage.outputsLabel")} </span>
-            <span className="text-xs text-gray-500">{t(`servicesPage.items.${meta.key}.outputs`)}</span>
-          </div>
+          <span className={`inline-flex items-center gap-1.5 text-sm font-medium border-b pb-0.5 ${expanded ? "text-white border-white" : "text-teal-700 border-teal-700 group-hover:text-white group-hover:border-white"}`}>
+            {expanded ? t("servicesPage.showLess") : t("servicesPage.exploreService")}
+            <ArrowRight className="w-4 h-4" />
+          </span>
         </div>
-      )}
-
-      {/* Read More */}
-      <button
-        onClick={() => setExpanded(!expanded)}
-        className="inline-flex items-center gap-1 text-sm font-medium text-teal-700 hover:text-teal-800 hover:gap-2 transition-all"
-      >
-        {expanded ? t("servicesPage.showLess") : t("servicesPage.readMore")}
-      </button>
+      </div>
     </div>
   );
 }
@@ -109,19 +117,19 @@ const Services = () => {
         description="Biostatistics, clinical trial support, PK/PD modelling and simulation, survey methodology, DSMB support, data management and statistical programming."
         path="/services"
       />
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">{t("servicesPage.sectionEyebrow")}</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3">
+          <div className="mb-10">
+            <span className="text-teal-700 text-xs font-semibold uppercase tracking-widest">{t("servicesPage.sectionEyebrow")}</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-3 tracking-tight">
               {t("servicesPage.sectionHeading")}
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
+            <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
               {t("servicesPage.sectionSubheading")}
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-200">
             {serviceMeta.map((meta) => (
               <ServiceCard key={meta.key} meta={meta} />
             ))}

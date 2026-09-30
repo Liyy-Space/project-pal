@@ -206,8 +206,8 @@
     "heroTitleHighlight": "Của chúng tôi",
     "heroDescription": "Đối tác khoa học định lượng cho các thử nghiệm lâm sàng, chương trình y tế công cộng, tổ chức nghiên cứu và các tổ chức dựa trên dữ liệu.",
     "sectionEyebrow": "Dịch vụ của chúng tôi",
-    "sectionHeading": "Đa dạng các dịch vụ khoa học dữ liệu",
-    "sectionSubheading": "Cung cấp riêng lẻ hoặc dưới dạng gói tích hợp trong suốt vòng đời của một nghiên cứu. Nhấp vào từng thẻ để xem chi tiết đầy đủ.",
+    "sectionHeading": "Hỗ trợ chuyên môn cho nghiên cứu của bạn.",
+    "sectionSubheading": "Từ thiết kế nghiên cứu đến phân tích và công bố.",
     "readMore": "Xem thêm →",
     "showLess": "Thu gọn ↑",
     "outputsLabel": "Kết quả đầu ra:",
@@ -379,7 +379,8 @@
     "ctaEyebrow": "Hợp tác cùng chúng tôi",
     "ctaHeading": "Hãy cho chúng tôi biết về nghiên cứu, bộ dữ liệu hoặc thời hạn của bạn",
     "ctaDesc": "Chúng tôi sẽ cho bạn biết một cách trung thực những gì cần thiết và cách chúng tôi có thể hỗ trợ — dù đó là một lần rà soát thống kê đơn lẻ hay một hợp tác toàn diện trong suốt vòng đời dự án.",
-    "ctaButton": "Liên hệ ngay"
+    "ctaButton": "Liên hệ ngay",
+    "exploreService": "Khám phá dịch vụ"
   },
   "events": {
     "badge": "Đang diễn ra",

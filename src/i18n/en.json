@@ -206,8 +206,8 @@
     "heroTitleHighlight": "Services",
     "heroDescription": "A quantitative-science partner to clinical trials, public-health programmes, research institutions and data-driven organisations.",
     "sectionEyebrow": "What We Offer",
-    "sectionHeading": "A wide range of data science services",
-    "sectionSubheading": "Offered individually or as an integrated package across the life of a study. Click any card to see full details.",
+    "sectionHeading": "Expert support for your research.",
+    "sectionSubheading": "From study design to analysis and publication.",
     "readMore": "Read More →",
     "showLess": "Show Less ↑",
     "outputsLabel": "Outputs:",
@@ -379,7 +379,8 @@
     "ctaEyebrow": "Work With Us",
     "ctaHeading": "Tell us about your study, dataset or deadline",
     "ctaDesc": "We will tell you honestly what it needs and how we can help — whether that is a single statistical review or a full engagement across the life of the project.",
-    "ctaButton": "Get In Touch"
+    "ctaButton": "Get In Touch",
+    "exploreService": "Explore service"
   },
   "events": {
     "badge": "What's Happening",
