@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEO";
 
-const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
+const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
 const valueIcons = [CheckCircle, Zap, UserPlus, Lightbulb];
 const valueKeys = ["excellence", "innovation", "partnership", "learning"];
@@ -25,6 +25,7 @@ const About = () => {
       <SEO
         title="About Us"
         description="Learn about Neudata's mission, team, and expertise in biostatistics, data science consulting, and clinical trial support across Africa and Asia."
+        path="/about"
       />
 
       {/* Hero Banner */}

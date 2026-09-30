@@ -5,7 +5,7 @@ import { Calendar, Clock, MapPin, ArrowLeft, Users, BarChart3 } from "lucide-rea
 import { supabase } from "@/lib/supabase";
 import SEO from "@/components/SEO";
 
-const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
+const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 const GOOGLE_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdMV8oprpeixxbDHSQMF4I3Jr94zs-s0v-eZeL7dF4gGQkoRA/viewform?usp=dialog";
 
 interface Event {

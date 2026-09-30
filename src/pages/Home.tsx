@@ -7,8 +7,9 @@ import heroImage from "@/assets/hero-data.jpg";
 import posterImage from "@/assets/Poster.png";
 import bachmaiLogo from "@/assets/clients/bachmai.png";
 import stFrancisLogo from "@/assets/clients/st-francis.png";
+import kinshasaLogo from "@/assets/clients/kinshasa.jpg";
 import SEO from "@/components/SEO";
-const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
+const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
 const serviceIcons = [
   { key: "surveyMethodology", icon: BarChart3, color: "text-teal-500" },
@@ -22,11 +23,13 @@ const serviceIcons = [
   { key: "mathematicalModelling", icon: BrainCircuit, color: "text-pink-500" },
   { key: "researchAnalytics", icon: Search, color: "text-rose-500" },
   { key: "trainingCapacity", icon: GraduationCap, color: "text-indigo-500" },
+  { key: "pkpdModeling", icon: FlaskConical, color: "text-emerald-500" },
 ];
 
 const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
+  { name: "University of Kinshasa", logo: kinshasaLogo, url: "https://www.unikin.ac.cd/" },
 ];
 
 const Home = () => {
@@ -36,11 +39,15 @@ const Home = () => {
     
     <div className="pt-16">
       <Helmet>
-        <title>Neudata | Biostatistics & Data Science Consultancy in Kenya</title>
+        <title>Neudata | Biostatistics & Data Science Consultancy</title>
         <meta name="description" content="Expert biostatistics, clinical trial support and data science consulting for research institutions and healthcare organisations across Africa and Asia." />
       </Helmet>
 
       {/* Hero */}
+      <SEO
+        title="Neudata: Biostatistics & Data Science Consultancy"
+        description="Neudata provides biostatistics, clinical trial support, PK/PD modelling, data science consulting and training for research and healthcare organisations."
+      />
       <section className="gradient-hero text-primary-foreground relative overflow-hidden min-h-[75vh] flex items-center">
         <div className="absolute inset-0 grid-pattern opacity-30" />
         <div className="container relative z-10 py-20">
@@ -71,14 +78,18 @@ const Home = () => {
       </section>
 
       {/* Our Clients Section */}
-      <section className="py-14 bg-gray-50 border-y border-gray-100">
+      <section className="py-14 bg-gray-50 border-y border-gray-100 overflow-hidden">
         <div className="container">
           <p className="text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-8">
             {t("home.clients.heading")}
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-            {clients.map((c) => (
-              <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8 py-6 flex items-center justify-center hover:shadow-md transition-all duration-300">
+        </div>
+        <div className="relative w-full overflow-hidden group">
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-32 z-10 bg-gradient-to-r from-gray-50 to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-32 z-10 bg-gradient-to-l from-gray-50 to-transparent" />
+          <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] gap-6 md:gap-8">
+            {[...clients, ...clients, ...clients, ...clients, ...clients, ...clients].map((c, i) => (
+              <a key={`${c.name}-${i}`} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8 py-6 flex items-center justify-center hover:shadow-md transition-all duration-300 shrink-0">
                 <img src={c.logo} alt={c.name} className="h-14 md:h-16 w-auto object-contain" />
               </a>
             ))}
@@ -204,14 +215,12 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 p-6 group"
+                className="relative overflow-hidden bg-white rounded-xl border border-slate-200 hover:border-teal-600 hover:-translate-y-1 hover:shadow-lg transition-all duration-200 px-6 pt-7 pb-6 group flex flex-col"
               >
-                <div className="w-12 h-12 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <s.icon className={`w-5 h-5 ${s.color}`} />
-                </div>
-                <h3 className="text-base font-bold text-gray-900 mb-2">{t(`home.services.items.${s.key}.title`)}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-4">{t(`home.services.items.${s.key}.desc`)}</p>
-                <Link to="/services" className={`inline-flex items-center gap-1 text-sm font-semibold ${s.color} hover:gap-2 transition-all`}>
+                <div className="absolute inset-x-0 top-0 h-1 bg-teal-600 group-hover:h-1.5 transition-all duration-200" />
+                <h3 className="text-base font-semibold text-slate-900 group-hover:text-teal-700 transition-colors duration-200 mb-2">{t(`home.services.items.${s.key}.title`)}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">{t(`home.services.items.${s.key}.desc`)}</p>
+                <Link to="/services" className="mt-auto self-start inline-flex items-center gap-1 text-sm font-medium text-teal-700 transition-transform duration-200 group-hover:translate-x-1">
                   {t("home.services.readMore")}
                 </Link>
               </motion.div>

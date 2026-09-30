@@ -3,7 +3,7 @@ import { supabase } from "@/lib/supabase";
 import { Calendar, Users, Trash2, Edit, Plus, X, Lock } from "lucide-react";
 import { toast } from "sonner";
 
-const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
+const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
 interface EventRow {
   id: string;

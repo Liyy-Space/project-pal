@@ -6,7 +6,8 @@
     "events": "Events",
     "library": "Library",
     "contact": "Contact",
-    "training": "Training"
+    "training": "Training",
+    "experts": "Experts"
   },
   "footer": {
     "tagline": "Data science, biostatistics and training for health and research.",
@@ -91,6 +92,10 @@
         "trainingCapacity": {
           "title": "Training & Capacity",
           "desc": "Leaving teams able to do the work themselves — not dependent on us."
+        },
+        "pkpdModeling": {
+          "title": "PK/PD Modeling and Simulation",
+          "desc": "Quantitative modeling to guide safe, effective dosing decisions across the drug development lifecycle."
         }
       }
     },
@@ -110,9 +115,9 @@
       "buyNow": "Buy Now ↗"
     },
     "cta": {
-      "heading": "Ready to Transform Your Data?",
-      "subheading": "Join hundreds of companies that have already revolutionized their business with our data science expertise. Let's discuss how we can help you achieve your goals.",
-      "button": "Start Your Project"
+      "heading": "Ready to work with us?",
+      "subheading": "Tell us about your study, programme or team, and we'll tell you honestly how we can help.",
+      "button": "Get In Touch"
     },
     "clients": {
       "heading": "Our Clients"
@@ -143,7 +148,7 @@
     "badge": "We'd love to hear from you",
     "titlePrefix": "Contact",
     "titleHighlight": "Us",
-    "subtitle": "Ready to transform your business with data science? Let's discuss your project and explore how we can help.",
+    "subtitle": "Need statistical help, a data science project scoped out, or training for your team? Get in touch and tell us what you're working on.",
     "getInTouch": "Get in touch",
     "getInTouchDesc": "Fill in the form to start a conversation. Our team typically responds within 24 hours on business days.",
     "headOffice": "Head Office",
@@ -178,7 +183,21 @@
       "message": "Message",
       "messagePlaceholder": "Tell us about your project...",
       "sending": "Sending...",
-      "send": "Send Message →"
+      "send": "Send Message →",
+      "mobilePhone": "Mobile Phone Number",
+      "estimatedStartDate": "Estimated Start Date",
+      "howDidYouHear": "How Did You Hear About Neudata",
+      "selectOption": "Select an option",
+      "hearOptions": {
+        "googleSearch": "Google Search",
+        "socialMedia": "Social Media",
+        "referral": "Referral",
+        "event": "Event or Training",
+        "linkedin": "LinkedIn",
+        "other": "Other"
+      },
+      "captchaRequired": "Please confirm you're not a robot.",
+      "optional": "optional"
     }
   },
   "servicesPage": {
@@ -187,8 +206,8 @@
     "heroTitleHighlight": "Services",
     "heroDescription": "A quantitative-science partner to clinical trials, public-health programmes, research institutions and data-driven organisations.",
     "sectionEyebrow": "What We Offer",
-    "sectionHeading": "A wide range of data science services",
-    "sectionSubheading": "Offered individually or as an integrated package across the life of a study. Click any card to see full details.",
+    "sectionHeading": "Expert support for your research.",
+    "sectionSubheading": "From study design to analysis and publication.",
     "readMore": "Read More →",
     "showLess": "Show Less ↑",
     "outputsLabel": "Outputs:",
@@ -360,7 +379,8 @@
     "ctaEyebrow": "Work With Us",
     "ctaHeading": "Tell us about your study, dataset or deadline",
     "ctaDesc": "We will tell you honestly what it needs and how we can help — whether that is a single statistical review or a full engagement across the life of the project.",
-    "ctaButton": "Get In Touch"
+    "ctaButton": "Get In Touch",
+    "exploreService": "Explore service"
   },
   "events": {
     "badge": "What's Happening",
@@ -484,46 +504,85 @@
     "subtitle": "Structured courses and hands-on workshops for healthcare professionals, researchers and institutions.",
     "coursesEyebrow": "Our Courses",
     "coursesHeading": "Learn from people who do this work",
-    "coursesSubheading": "Courses run as live cohorts or in-house workshops. More titles are added as new courses are developed.",
+    "coursesSubheading": "More titles are added as new courses are developed.",
     "enquireButton": "Enquire →",
     "courses": {
       "foundations": {
         "level": "Level 1",
         "title": "Foundations of Clinical Research",
-        "desc": "An entry-level course covering the core concepts behind well-run clinical and public-health research.",
+        "desc": "Core concepts behind well-run clinical and public-health research.",
         "topics": [
           "Study design and types of clinical research",
           "Research ethics and informed consent",
-          "Basic biostatistics and data interpretation",
           "Good Clinical Practice (GCP) essentials"
         ]
       },
       "dataToPublication": {
         "level": "Level 2",
         "title": "From Data to Publication",
-        "desc": "A practical follow-on course for researchers ready to turn collected data into a submission-ready manuscript.",
+        "desc": "Turning collected data into a submission-ready manuscript.",
         "topics": [
           "Structuring an analysis plan around your research question",
           "Common statistical tests and how to report them",
-          "Writing clear methods and results sections",
-          "Navigating journal submission and peer review"
+          "Writing clear methods and results sections"
         ]
       },
       "clinicalDataR": {
         "level": "Free Course",
         "title": "Clinical Data Analysis in R",
-        "desc": "A five-session evening course introducing R for clinical and health data analysis. No prior programming experience required.",
+        "desc": "A five-session evening course introducing R for clinical data analysis.",
         "topics": [
           "Getting started with R and RStudio",
-          "Importing and cleaning clinical datasets",
-          "Descriptive statistics and visualisation",
+          "Importing, cleaning and visualising clinical data",
           "Basic regression and reporting results"
         ]
       }
     },
     "inHouseBadge": "For Institutions",
     "inHouseHeading": "Request in-house training for your department",
-    "inHouseDesc": "We tailor any of our courses — or design a new one — for your hospital, research institution or organisation, delivered on-site or remotely.",
+    "inHouseDesc": "We tailor any course — or design a new one — for your hospital, institution or organisation.",
     "inHouseButton": "Request In-House Training"
+  },
+  "experts": {
+    "badge": "Our People",
+    "titlePrefix": "Meet Our",
+    "titleHighlight": "Experts",
+    "subtitle": "The biostatisticians, epidemiologists and researchers behind our work.",
+    "readMore": "Read More →",
+    "members": {
+      "bernard-isekah-osangir": {
+        "role": "Co-Founder",
+        "degrees": "PhD Biostatistics & Bioinformatics, MSc Statistics & Data Science",
+        "specialties": [
+          "Biostatistics",
+          "Bioinformatics",
+          "Clinical Trial Analysis",
+          "Survey Design"
+        ],
+        "bio": "Bernard has over ten years of experience in public health studies, clinical trials, and data management. He is an expert in designing and analysing studies to support decisions in clinical and public health settings. He works across bioinformatics, statistical methods, and research software development, and teaches R programming, data management, and applied statistics at postgraduate level."
+      },
+      "james-wambua": {
+        "role": "Co-Founder",
+        "degrees": "BSc Statistics, MSc Epidemiology, MSc Mathematical Sciences, BSc Mathematics",
+        "specialties": [
+          "Epidemiology",
+          "Statistics",
+          "Mathematical Modeling",
+          "Health Economics"
+        ],
+        "bio": "James is a research scientist with over nine years of experience specializing in the development and application of advanced data-analytic methodologies to address complex public health challenges using real-world data. He has extensive experience working with and consulting for international organizations, including the European Centre for Disease Prevention and Control (ECDC), international pharmaceutical companies such as Merck & Co., Inc. (MSD), and national research institutions such as KEMRI-Wellcome Trust."
+      },
+      "my-luong-vuong": {
+        "role": "Co-Founder",
+        "degrees": "PharmD, MSc Epidemiology, MSc Biostatistics, PhD Pharmacometrics (in progress)",
+        "specialties": [
+          "Epidemiology",
+          "Biostatistics",
+          "Pharmacometrics",
+          "Modelling and Simulation"
+        ],
+        "bio": "My-Luong Vuong holds a PharmD from Hanoi University of Pharmacy, Vietnam, along with a Master's in Epidemiology from the University of Antwerp, Belgium, and a Master's in Biostatistics from Hasselt University, Belgium. He is currently in his final year of his PhD in pharmacometrics at KU Leuven, Belgium, where he aims to optimise antimicrobial dosing in special patient populations including paediatric patients and critically ill patients admitted to the intensive care unit."
+      }
+    }
   }
 }

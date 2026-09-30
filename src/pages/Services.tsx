@@ -9,21 +9,21 @@ import {
 } from "lucide-react";
 import SEO from "@/components/SEO";
 
-const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
+const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
 const serviceMeta = [
-  { number: "01", key: "surveyMethodology", icon: BarChart3, textColor: "text-teal-500", borderColor: "border-teal-500" },
-  { number: "02", key: "statisticalConsultancy", icon: TrendingUp, textColor: "text-blue-500", borderColor: "border-blue-500" },
-  { number: "03", key: "clinicalTrialSupport", icon: FlaskConical, textColor: "text-red-500", borderColor: "border-red-500" },
-  { number: "04", key: "dsmbSupport", icon: Shield, textColor: "text-orange-500", borderColor: "border-orange-500" },
-  { number: "05", key: "medicalWriting", icon: PenLine, textColor: "text-yellow-600", borderColor: "border-yellow-500" },
-  { number: "06", key: "grantsProposals", icon: FileText, textColor: "text-purple-500", borderColor: "border-purple-500" },
-  { number: "07", key: "dataManagement", icon: Database, textColor: "text-cyan-500", borderColor: "border-cyan-500" },
-  { number: "08", key: "statisticalProgramming", icon: Code2, textColor: "text-green-500", borderColor: "border-green-500" },
-  { number: "09", key: "mathematicalModelling", icon: BrainCircuit, textColor: "text-pink-500", borderColor: "border-pink-500" },
-  { number: "10", key: "researchAnalytics", icon: Search, textColor: "text-rose-500", borderColor: "border-rose-500" },
-  { number: "11", key: "trainingCapacity", icon: GraduationCap, textColor: "text-indigo-500", borderColor: "border-indigo-500" },
-  { number: "12", key: "pkpdModeling", icon: Pill, textColor: "text-violet-500", borderColor: "border-violet-500" },
+  { number: "01", key: "surveyMethodology", icon: BarChart3, textColor: "text-teal-600", borderColor: "border-teal-600" },
+  { number: "02", key: "statisticalConsultancy", icon: TrendingUp, textColor: "text-blue-600", borderColor: "border-blue-600" },
+  { number: "03", key: "clinicalTrialSupport", icon: FlaskConical, textColor: "text-red-600", borderColor: "border-red-600" },
+  { number: "04", key: "dsmbSupport", icon: Shield, textColor: "text-orange-600", borderColor: "border-orange-600" },
+  { number: "05", key: "medicalWriting", icon: PenLine, textColor: "text-amber-700", borderColor: "border-amber-700" },
+  { number: "06", key: "grantsProposals", icon: FileText, textColor: "text-purple-600", borderColor: "border-purple-600" },
+  { number: "07", key: "dataManagement", icon: Database, textColor: "text-cyan-600", borderColor: "border-cyan-600" },
+  { number: "08", key: "statisticalProgramming", icon: Code2, textColor: "text-emerald-700", borderColor: "border-emerald-700" },
+  { number: "09", key: "mathematicalModelling", icon: BrainCircuit, textColor: "text-pink-600", borderColor: "border-pink-600" },
+  { number: "10", key: "researchAnalytics", icon: Search, textColor: "text-rose-600", borderColor: "border-rose-600" },
+  { number: "11", key: "trainingCapacity", icon: GraduationCap, textColor: "text-indigo-600", borderColor: "border-indigo-600" },
+  { number: "12", key: "pkpdModeling", icon: Pill, textColor: "text-violet-600", borderColor: "border-violet-600" },
 ];
 
 const pillarMeta = [
@@ -35,50 +35,50 @@ const pillarMeta = [
 function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
+  const raw = t(`servicesPage.items.${meta.key}.details`, { returnObjects: true });
+  const details = Array.isArray(raw) ? (raw as string[]) : [];
   const Icon = meta.icon;
-  const details = t(`servicesPage.items.${meta.key}.details`, { returnObjects: true }) as string[];
+  const toggle = () => setExpanded(!expanded);
 
   return (
-    <div className={`bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 p-6 flex flex-col group ${expanded ? "ring-2 " + meta.borderColor : ""}`}>
-      <SEO
-        title="Our Services"
-        description="Explore Neudata's full range of data science services: survey methodology, statistical consultancy, clinical trial support, data management, and more."
-      />
-      {/* Icon circle */}
-      <div className={`w-14 h-14 rounded-full bg-gray-50 border border-gray-100 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-        <Icon className={`w-6 h-6 ${meta.textColor}`} />
-      </div>
-      {/* Title */}
-      <h3 className="text-base font-bold text-gray-900 mb-2 leading-snug">{t(`servicesPage.items.${meta.key}.title`)}</h3>
+    <div
+      role="button"
+      tabIndex={0}
+      aria-expanded={expanded}
+      onClick={toggle}
+      onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } }}
+      className={`group cursor-pointer border-r border-b border-slate-200 p-6 md:p-7 transition-colors duration-200 ${expanded ? "bg-teal-800 text-white" : "bg-white text-slate-900 hover:bg-teal-800 hover:text-white"}`}
+    >
+      <div className="flex gap-5">
+        <Icon strokeWidth={1.25} className="w-10 h-10 shrink-0 mt-1" />
+        <div className="w-px self-stretch bg-current opacity-20" />
+        <div className="flex-1 min-w-0">
+          <h3 className="text-base font-semibold mb-1.5 leading-snug">{t(`servicesPage.items.${meta.key}.title`)}</h3>
+          <p className="text-sm leading-relaxed opacity-80 mb-4">{t(`servicesPage.items.${meta.key}.desc`)}</p>
 
-      {/* Desc */}
-      <p className="text-gray-500 text-sm leading-relaxed flex-1 mb-4">{t(`servicesPage.items.${meta.key}.desc`)}</p>
+          {expanded && (
+            <div className="mb-4 space-y-2">
+              <ul className="space-y-1.5">
+                {details.map((d) => (
+                  <li key={d} className="flex items-start gap-2 text-xs opacity-90">
+                    <span className="font-bold mt-0.5">✓</span>
+                    {d}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-3 pl-3 border-l-2 border-white/60">
+                <span className="text-xs font-bold">{t("servicesPage.outputsLabel")} </span>
+                <span className="text-xs opacity-90">{t(`servicesPage.items.${meta.key}.outputs`)}</span>
+              </div>
+            </div>
+          )}
 
-      {/* Expanded details */}
-      {expanded && (
-        <div className="mb-4 space-y-2">
-          <ul className="space-y-1.5">
-            {details.map((d) => (
-              <li key={d} className={`flex items-start gap-2 text-xs text-gray-500`}>
-                <span className={`font-bold mt-0.5 ${meta.textColor}`}>✓</span>
-                {d}
-              </li>
-            ))}
-          </ul>
-          <div className={`mt-3 p-3 rounded-lg bg-gray-50 border-l-2 ${meta.borderColor}`}>
-            <span className={`text-xs font-bold ${meta.textColor}`}>{t("servicesPage.outputsLabel")} </span>
-            <span className="text-xs text-gray-500">{t(`servicesPage.items.${meta.key}.outputs`)}</span>
-          </div>
+          <span className={`inline-flex items-center gap-1.5 text-sm font-medium border-b pb-0.5 ${expanded ? "text-white border-white" : "text-teal-700 border-teal-700 group-hover:text-white group-hover:border-white"}`}>
+            {expanded ? t("servicesPage.showLess") : t("servicesPage.exploreService")}
+            <ArrowRight className="w-4 h-4" />
+          </span>
         </div>
-      )}
-
-      {/* Read More */}
-      <button
-        onClick={() => setExpanded(!expanded)}
-        className={`inline-flex items-center gap-1 text-sm font-semibold ${meta.textColor} hover:gap-2 transition-all`}
-      >
-        {expanded ? t("servicesPage.showLess") : t("servicesPage.readMore")}
-      </button>
+      </div>
     </div>
   );
 }
@@ -112,19 +112,24 @@ const Services = () => {
       </div>
 
       {/* Services Grid */}
-      <section className="py-20 bg-gray-50">
+      <SEO
+        title="Biostatistics, PK/PD & Data Science Services"
+        description="Biostatistics, clinical trial support, PK/PD modelling and simulation, survey methodology, DSMB support, data management and statistical programming."
+        path="/services"
+      />
+      <section className="py-20 bg-white">
         <div className="container">
-          <div className="text-center mb-12">
-            <span className="text-primary text-xs font-semibold uppercase tracking-widest">{t("servicesPage.sectionEyebrow")}</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3">
+          <div className="mb-10">
+            <span className="text-teal-700 text-xs font-semibold uppercase tracking-widest">{t("servicesPage.sectionEyebrow")}</span>
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-3 tracking-tight">
               {t("servicesPage.sectionHeading")}
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
+            <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
               {t("servicesPage.sectionSubheading")}
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-200">
             {serviceMeta.map((meta) => (
               <ServiceCard key={meta.key} meta={meta} />
             ))}

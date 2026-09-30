@@ -3,18 +3,25 @@ import { MessageCircle, MapPin, Mail, Phone, Twitter, Linkedin, Github, Facebook
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
 import { useTranslation } from "react-i18next";
+import ReCAPTCHA from "react-google-recaptcha";
 import SEO from "@/components/SEO";
 
-const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 28%) 0%, hsl(176 69% 22%) 50%, hsl(142 64% 32%) 100%)";
+const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
 const Contact = () => {
   const { t } = useTranslation();
   const formRef = useRef<HTMLFormElement>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [sending, setSending] = useState(false);
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
+    if (!captchaToken) {
+      toast.error(t("contact.form.captchaRequired"));
+      return;
+    }
     setSending(true);
     try {
       await emailjs.sendForm(
@@ -25,6 +32,8 @@ const Contact = () => {
       );
       toast.success(t("contact.toastSuccess"));
       formRef.current.reset();
+      recaptchaRef.current?.reset();
+      setCaptchaToken(null);
     } catch {
       toast.error(t("contact.toastError"));
     } finally {
@@ -37,6 +46,7 @@ const Contact = () => {
       <SEO
         title="Contact Us"
         description="Get in touch with Neudata to discuss your data science, biostatistics, or clinical trial support needs. We respond within 24 hours on business days."
+        path="/contact"
       />
 
       {/* Hero Banner */}
@@ -149,12 +159,12 @@ const Contact = () => {
                 <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.firstName")}</label>
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.firstName")} <span className="text-red-500">*</span></label>
                       <input name="firstName" required placeholder="John"
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.lastName")}</label>
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.lastName")} <span className="text-red-500">*</span></label>
                       <input name="lastName" required placeholder="Doe"
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
@@ -162,19 +172,25 @@ const Contact = () => {
 
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.email")}</label>
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.email")} <span className="text-red-500">*</span></label>
                       <input name="email" type="email" required placeholder="john@company.com"
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.company")}</label>
+                      <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.company")} <span className="text-muted-foreground normal-case font-normal">({t("contact.form.optional")})</span></label>
                       <input name="company" placeholder="Your Company"
                         className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.serviceInterest")}</label>
+                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.mobilePhone")} <span className="text-muted-foreground normal-case font-normal">({t("contact.form.optional")})</span></label>
+                    <input name="mobilePhone" type="tel" placeholder="+254 700 000 000"
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.serviceInterest")} <span className="text-red-500">*</span></label>
                     <select name="service" required
                       className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm">
                       <option value="">{t("contact.form.selectService")}</option>
@@ -187,12 +203,36 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.message")}</label>
+                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.howDidYouHear")}</label>
+                    <select name="howDidYouHear"
+                      className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm">
+                      <option value="">{t("contact.form.selectOption")}</option>
+                      <option value="google-search">{t("contact.form.hearOptions.googleSearch")}</option>
+                      <option value="social-media">{t("contact.form.hearOptions.socialMedia")}</option>
+                      <option value="referral">{t("contact.form.hearOptions.referral")}</option>
+                      <option value="event">{t("contact.form.hearOptions.event")}</option>
+                      <option value="linkedin">{t("contact.form.hearOptions.linkedin")}</option>
+                      <option value="other">{t("contact.form.hearOptions.other")}</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.message")} <span className="text-red-500">*</span></label>
                     <textarea name="message" rows={5} required placeholder={t("contact.form.messagePlaceholder")}
                       className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none text-sm" />
                   </div>
 
-                  <button type="submit" disabled={sending}
+                  <div>
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                      onChange={(token) => setCaptchaToken(token)}
+                      onExpired={() => setCaptchaToken(null)}
+                    />
+                    <input type="hidden" name="g-recaptcha-response" value={captchaToken ?? ""} />
+                  </div>
+
+                  <button type="submit" disabled={sending || !captchaToken}
                     className="w-full py-3.5 rounded-xl font-semibold text-white transition-all disabled:opacity-50 hover:opacity-90 shadow-lg"
                     style={{ background: HERO_GRADIENT }}>
                     {sending ? t("contact.form.sending") : t("contact.form.send")}

@@ -16,7 +16,7 @@ const DEFAULT_IMAGE = `${SITE_URL}/og-image.png`;
 const SEO = ({ title, description, path = "", image = DEFAULT_IMAGE, noIndex = false, jsonLd }: SEOProps) => {
   const { i18n } = useTranslation();
   const url = `${SITE_URL}${path}`;
-  const fullTitle = `${title} | Neudata`;
+  const fullTitle = title.includes("Neudata") ? title : `${title} | Neudata`;
 
   return (
     <Helmet>
@@ -38,10 +38,6 @@ const SEO = ({ title, description, path = "", image = DEFAULT_IMAGE, noIndex = f
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
 
-      {/* hreflang alternates for EN/VN */}
-      <link rel="alternate" hrefLang="en" href={url} />
-      <link rel="alternate" hrefLang="vi" href={url} />
-      <link rel="alternate" hrefLang="x-default" href={url} />
       {jsonLd && (
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       )}

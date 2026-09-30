@@ -14,6 +14,7 @@ const Navbar = () => {
   const navLinks = [
     { to: "/", label: t("nav.home") },
     { to: "/about", label: t("nav.about") },
+    { to: "/experts", label: t("nav.experts") },
     { to: "/services", label: t("nav.services") },
     { to: "/events", label: t("nav.events") },
     { to: "/training", label: t("nav.training") },
@@ -23,7 +24,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card shadow-card">
       <div className="container flex items-center justify-between h-20">
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-          <img src={logo} alt="Neudata logo" className="h-16 w-auto object-contain drop-shadow-md" />
+          <img src={logo} alt="Neudata logo" className="h-20 w-auto object-contain" />
         </Link>
 
         {/* Desktop */}
