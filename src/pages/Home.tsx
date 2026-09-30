@@ -41,6 +41,18 @@ const homeIconNames: Record<string, string> = {
   pkpdModeling: "medication",
 };
 
+const featuredKeys = [
+  "statisticalConsultancy",
+  "clinicalTrialSupport",
+  "pkpdModeling",
+  "surveyMethodology",
+  "dsmbSupport",
+  "dataManagement",
+];
+const featuredServices = featuredKeys
+  .map((k) => serviceIcons.find((x) => x.key === k))
+  .filter((x): x is (typeof serviceIcons)[number] => Boolean(x));
+
 const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
@@ -223,7 +235,7 @@ const Home = () => {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-200 mb-8">
-            {serviceIcons.map((s, i) => (
+            {featuredServices.map((s, i) => (
               <motion.div
                 key={s.key}
                 initial={{ opacity: 0, y: 20 }}
