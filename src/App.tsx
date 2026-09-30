@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import ReactGA from "react-ga4";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -29,6 +32,14 @@ const ScrollToTop = () => {
   return null;
 };
 
+const PageTracker = () => {
+  const location = useLocation();
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search, title: document.title });
+  }, [location]);
+  return null;
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -37,6 +48,7 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Navbar />
+        <PageTracker />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
