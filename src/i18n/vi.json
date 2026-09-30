@@ -542,9 +542,45 @@
     "inHouseButton": "Yêu cầu Đào tạo Nội bộ"
   },
   "experts": {
-    "badge": "Đội Ngũ Của Chúng Tôi",
-    "titlePrefix": "Gặp Gỡ",
-    "titleHighlight": "Chuyên Gia Của Chúng Tôi",
-    "subtitle": "Các nhà thống kê sinh học, dịch tễ học và nghiên cứu viên đứng sau công việc của chúng tôi."
+    "badge": "Đội ngũ của chúng tôi",
+    "titlePrefix": "Gặp gỡ các",
+    "titleHighlight": "chuyên gia",
+    "subtitle": "Các nhà thống kê sinh học, dịch tễ học và nghiên cứu viên đứng sau công việc của chúng tôi.",
+    "readMore": "Xem thêm →",
+    "members": {
+      "bernard-isekah-osangir": {
+        "role": "Đồng sáng lập",
+        "degrees": "Tiến sĩ Thống kê sinh học & Tin sinh học, Thạc sĩ Thống kê & Khoa học dữ liệu",
+        "specialties": [
+          "Thống kê sinh học",
+          "Tin sinh học",
+          "Phân tích thử nghiệm lâm sàng",
+          "Thiết kế khảo sát"
+        ],
+        "bio": "Bernard có hơn mười năm kinh nghiệm trong các nghiên cứu y tế công cộng, thử nghiệm lâm sàng và quản lý dữ liệu. Ông là chuyên gia thiết kế và phân tích các nghiên cứu nhằm hỗ trợ ra quyết định trong bối cảnh lâm sàng và y tế công cộng. Ông làm việc trong các lĩnh vực tin sinh học, phương pháp thống kê và phát triển phần mềm nghiên cứu, đồng thời giảng dạy lập trình R, quản lý dữ liệu và thống kê ứng dụng ở bậc sau đại học."
+      },
+      "james-wambua": {
+        "role": "Đồng sáng lập",
+        "degrees": "Cử nhân Thống kê, Thạc sĩ Dịch tễ học, Thạc sĩ Khoa học Toán, Cử nhân Toán học",
+        "specialties": [
+          "Dịch tễ học",
+          "Thống kê",
+          "Mô hình toán học",
+          "Kinh tế y tế"
+        ],
+        "bio": "James là nhà khoa học nghiên cứu với hơn chín năm kinh nghiệm, chuyên phát triển và ứng dụng các phương pháp phân tích dữ liệu tiên tiến để giải quyết những thách thức phức tạp về y tế công cộng bằng dữ liệu thực tế. Ông có nhiều kinh nghiệm làm việc và tư vấn cho các tổ chức quốc tế, bao gồm Trung tâm Phòng ngừa và Kiểm soát Dịch bệnh Châu Âu (ECDC), các công ty dược phẩm quốc tế như Merck & Co., Inc. (MSD) và các viện nghiên cứu quốc gia như KEMRI-Wellcome Trust."
+      },
+      "my-luong-vuong": {
+        "role": "Đồng sáng lập",
+        "degrees": "Dược sĩ (PharmD), Thạc sĩ Dịch tễ học, Thạc sĩ Thống kê sinh học, Tiến sĩ Pharmacometrics (đang thực hiện)",
+        "specialties": [
+          "Dịch tễ học",
+          "Thống kê sinh học",
+          "Pharmacometrics",
+          "Mô hình hóa và mô phỏng"
+        ],
+        "bio": "My-Luong Vuong tốt nghiệp Dược sĩ (PharmD) tại Đại học Dược Hà Nội, Việt Nam, cùng bằng Thạc sĩ Dịch tễ học tại Đại học Antwerp, Bỉ, và bằng Thạc sĩ Thống kê sinh học tại Đại học Hasselt, Bỉ. Hiện anh đang trong năm cuối chương trình Tiến sĩ về pharmacometrics tại KU Leuven, Bỉ, nơi anh nghiên cứu tối ưu hóa liều kháng sinh cho các nhóm bệnh nhân đặc biệt, bao gồm bệnh nhi và bệnh nhân nặng điều trị tại khoa hồi sức tích cực."
+      }
+    }
   }
 }

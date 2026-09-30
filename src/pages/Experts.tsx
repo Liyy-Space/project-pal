@@ -61,6 +61,7 @@ const teamMembers: TeamMember[] = [
 ];
 
 function MemberCard({ member, onSelect }: { member: TeamMember; onSelect: () => void }) {
+  const { t } = useTranslation();
   return (
     <div
       onClick={onSelect}
@@ -114,13 +115,23 @@ function MemberCard({ member, onSelect }: { member: TeamMember; onSelect: () => 
         )}
       </div>
 
-      <span className="text-primary text-sm font-semibold group-hover:underline">Read More →</span>
+      <span className="text-primary text-sm font-semibold group-hover:underline">{t("experts.readMore")}</span>
     </div>
   );
 }
 
 const Experts = () => {
   const { t } = useTranslation();
+  const members = teamMembers.map((m) => {
+    const sp = t(`experts.members.${m.id}.specialties`, { returnObjects: true });
+    return {
+      ...m,
+      role: t(`experts.members.${m.id}.role`, { defaultValue: m.role }),
+      degrees: t(`experts.members.${m.id}.degrees`, { defaultValue: m.degrees }),
+      bio: t(`experts.members.${m.id}.bio`, { defaultValue: m.bio }),
+      specialties: Array.isArray(sp) ? (sp as string[]) : m.specialties,
+    };
+  });
   const [selected, setSelected] = useState<TeamMember | null>(null);
 
   return (
@@ -149,7 +160,7 @@ const Experts = () => {
       <section className="py-16 bg-gray-50">
         <div className="container">
           <div className="flex flex-wrap justify-center gap-6">
-            {teamMembers.map((member) => (
+            {members.map((member) => (
               <MemberCard key={member.id} member={member} onSelect={() => setSelected(member)} />
             ))}
           </div>

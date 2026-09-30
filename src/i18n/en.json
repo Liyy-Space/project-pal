@@ -545,6 +545,42 @@
     "badge": "Our People",
     "titlePrefix": "Meet Our",
     "titleHighlight": "Experts",
-    "subtitle": "The biostatisticians, epidemiologists and researchers behind our work."
+    "subtitle": "The biostatisticians, epidemiologists and researchers behind our work.",
+    "readMore": "Read More →",
+    "members": {
+      "bernard-isekah-osangir": {
+        "role": "Co-Founder",
+        "degrees": "PhD Biostatistics & Bioinformatics, MSc Statistics & Data Science",
+        "specialties": [
+          "Biostatistics",
+          "Bioinformatics",
+          "Clinical Trial Analysis",
+          "Survey Design"
+        ],
+        "bio": "Bernard has over ten years of experience in public health studies, clinical trials, and data management. He is an expert in designing and analysing studies to support decisions in clinical and public health settings. He works across bioinformatics, statistical methods, and research software development, and teaches R programming, data management, and applied statistics at postgraduate level."
+      },
+      "james-wambua": {
+        "role": "Co-Founder",
+        "degrees": "BSc Statistics, MSc Epidemiology, MSc Mathematical Sciences, BSc Mathematics",
+        "specialties": [
+          "Epidemiology",
+          "Statistics",
+          "Mathematical Modeling",
+          "Health Economics"
+        ],
+        "bio": "James is a research scientist with over nine years of experience specializing in the development and application of advanced data-analytic methodologies to address complex public health challenges using real-world data. He has extensive experience working with and consulting for international organizations, including the European Centre for Disease Prevention and Control (ECDC), international pharmaceutical companies such as Merck & Co., Inc. (MSD), and national research institutions such as KEMRI-Wellcome Trust."
+      },
+      "my-luong-vuong": {
+        "role": "Co-Founder",
+        "degrees": "PharmD, MSc Epidemiology, MSc Biostatistics, PhD Pharmacometrics (in progress)",
+        "specialties": [
+          "Epidemiology",
+          "Biostatistics",
+          "Pharmacometrics",
+          "Modelling and Simulation"
+        ],
+        "bio": "My-Luong Vuong holds a PharmD from Hanoi University of Pharmacy, Vietnam, along with a Master's in Epidemiology from the University of Antwerp, Belgium, and a Master's in Biostatistics from Hasselt University, Belgium. He is currently in his final year of his PhD in pharmacometrics at KU Leuven, Belgium, where he aims to optimise antimicrobial dosing in special patient populations including paediatric patients and critically ill patients admitted to the intensive care unit."
+      }
+    }
   }
 }
