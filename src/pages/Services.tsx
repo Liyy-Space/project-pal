@@ -108,19 +108,22 @@ const Services = () => {
 
   return (
     <div className="pt-16">
-      {/* Hero Banner */} {/* SVC_PLAIN */}
+      {/* Hero Banner */}
       <div className="relative h-72 md:h-96 overflow-hidden">
         <img src={servicesBanner} alt="Our Services" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.8 }} />
-        <div className="absolute inset-0 flex items-end">
-          <div className="container pb-10 md:pb-14">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
-              {t("servicesPage.heroTitlePrefix")} {t("servicesPage.heroTitleHighlight")}
-            </h1>
-            <p className="text-white/80 max-w-xl text-base leading-relaxed">
-              {t("servicesPage.heroDescription")}
-            </p>
+        <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.85 }} />
+        <div className="absolute inset-0 grid-pattern opacity-20" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
+            <Compass className="w-3 h-3 text-teal-300" />
+            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">{t("servicesPage.badge")}</span>
           </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-3">
+            {t("servicesPage.heroTitlePrefix")} <span className="text-teal-300">{t("servicesPage.heroTitleHighlight")}</span>
+          </h1>
+          <p className="text-white/70 max-w-2xl text-sm md:text-base leading-relaxed">
+            {t("servicesPage.heroDescription")}
+          </p>
         </div>
       </div>
 
