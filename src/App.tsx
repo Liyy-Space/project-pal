@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import ReactGA from "react-ga4";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -35,7 +34,10 @@ const ScrollToTop = () => {
 const PageTracker = () => {
   const location = useLocation();
   useEffect(() => {
-    ReactGA.send({ hitType: "pageview", page: location.pathname + location.search, title: document.title });
+    const timer = setTimeout(() => {
+      ReactGA.send({ hitType: "pageview", page: location.pathname + location.search, title: document.title });
+    }, 300);
+    return () => clearTimeout(timer);
   }, [location]);
   return null;
 };
