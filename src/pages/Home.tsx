@@ -26,6 +26,21 @@ const serviceIcons = [
   { key: "pkpdModeling", icon: FlaskConical, color: "text-emerald-500" },
 ];
 
+const homeIconNames: Record<string, string> = {
+  surveyMethodology: "bar_chart",
+  statisticalConsultancy: "trending_up",
+  clinicalTrialSupport: "stethoscope",
+  dsmbSupport: "shield",
+  scientificWriting: "edit_note",
+  grantsProposals: "description",
+  dataManagement: "database",
+  statisticalProgramming: "code",
+  mathematicalModelling: "hub",
+  researchAnalytics: "query_stats",
+  trainingCapacity: "school",
+  pkpdModeling: "medication",
+};
+
 const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
@@ -207,7 +222,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-slate-200 mb-8">
             {serviceIcons.map((s, i) => (
               <motion.div
                 key={s.key}
@@ -215,13 +230,24 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="relative overflow-hidden bg-white rounded-xl border border-slate-200 hover:border-teal-600 hover:-translate-y-1 hover:shadow-lg transition-all duration-200 px-6 pt-7 pb-6 group flex flex-col"
               >
-                <div className="absolute inset-x-0 top-0 h-1 bg-teal-600 group-hover:h-1.5 transition-all duration-200" />
-                <h3 className="text-base font-semibold text-slate-900 group-hover:text-teal-700 transition-colors duration-200 mb-2">{t(`home.services.items.${s.key}.title`)}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">{t(`home.services.items.${s.key}.desc`)}</p>
-                <Link to="/services" className="mt-auto self-start inline-flex items-center gap-1 text-sm font-medium text-teal-700 transition-transform duration-200 group-hover:translate-x-1">
-                  {t("home.services.readMore")}
+                <Link to="/services" className="group flex gap-5 h-full border-r border-b border-slate-200 bg-white text-slate-900 p-6 md:p-7 transition-colors duration-200 hover:bg-teal-800 hover:text-white">
+                  <span
+                    className="material-symbols-outlined shrink-0 mt-1 select-none text-teal-700 group-hover:text-white transition-colors duration-200"
+                    style={{ fontSize: 40, lineHeight: 1, fontVariationSettings: "'wght' 200" }}
+                    aria-hidden="true"
+                  >
+                    {homeIconNames[s.key] ?? "circle"}
+                  </span>
+                  <div className="w-px self-stretch bg-current opacity-20" />
+                  <div className="flex-1 min-w-0 flex flex-col">
+                    <h3 className="text-base font-semibold mb-1.5 leading-snug">{t(`home.services.items.${s.key}.title`)}</h3>
+                    <p className="text-sm leading-relaxed opacity-80 mb-4">{t(`home.services.items.${s.key}.desc`)}</p>
+                    <span className="mt-auto self-start inline-flex items-center gap-1.5 text-sm font-medium border-b pb-0.5 text-teal-700 border-teal-700 group-hover:text-white group-hover:border-white">
+                      {t("servicesPage.exploreService", { defaultValue: "Explore service" })}
+                      <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </div>
                 </Link>
               </motion.div>
             ))}
