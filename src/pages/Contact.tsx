@@ -184,8 +184,8 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.estimatedStartDate")} <span className="text-red-500">*</span></label>
-                    <input name="estimatedStartDate" type="date" required
+                    <label className="block text-xs font-semibold text-foreground mb-1.5 uppercase tracking-wide">{t("contact.form.mobilePhone")}</label>
+                    <input name="mobilePhone" type="tel" placeholder="+254 700 000 000"
                       className="w-full px-4 py-3 rounded-xl border border-input bg-muted text-foreground focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none text-sm" />
                   </div>
 
