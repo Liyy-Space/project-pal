@@ -32,12 +32,26 @@ const pillarMeta = [
   { key: "reproducible", icon: GitBranch },
 ];
 
+const iconNames: Record<string, string> = {
+  surveyMethodology: "bar_chart",
+  statisticalConsultancy: "trending_up",
+  clinicalTrialSupport: "stethoscope",
+  dsmbSupport: "shield",
+  medicalWriting: "edit_note",
+  grantsProposals: "description",
+  dataManagement: "database",
+  statisticalProgramming: "code",
+  mathematicalModelling: "hub",
+  researchAnalytics: "query_stats",
+  trainingCapacity: "school",
+  pkpdModeling: "medication",
+};
+
 function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   const raw = t(`servicesPage.items.${meta.key}.details`, { returnObjects: true });
   const details = Array.isArray(raw) ? (raw as string[]) : [];
-  const Icon = meta.icon;
   const toggle = () => setExpanded(!expanded);
 
   return (
@@ -50,7 +64,13 @@ function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
       className={`group cursor-pointer border-r border-b border-slate-200 p-6 md:p-7 transition-colors duration-200 ${expanded ? "bg-teal-800 text-white" : "bg-white text-slate-900 hover:bg-teal-800 hover:text-white"}`}
     >
       <div className="flex gap-5">
-        <Icon strokeWidth={1.25} className="w-10 h-10 shrink-0 mt-1" />
+        <span
+          className={`material-symbols-outlined shrink-0 mt-1 select-none transition-colors duration-200 ${expanded ? "text-white" : "text-teal-700 group-hover:text-white"}`}
+          style={{ fontSize: 40, lineHeight: 1, fontVariationSettings: "'wght' 200" }}
+          aria-hidden="true"
+        >
+          {iconNames[meta.key] ?? "circle"}
+        </span>
         <div className="w-px self-stretch bg-current opacity-20" />
         <div className="flex-1 min-w-0">
           <h3 className="text-base font-semibold mb-1.5 leading-snug">{t(`servicesPage.items.${meta.key}.title`)}</h3>
@@ -119,12 +139,12 @@ const Services = () => {
       />
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="mb-10">
-            <span className="text-teal-700 text-xs font-semibold uppercase tracking-widest">{t("servicesPage.sectionEyebrow")}</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-3 tracking-tight">
+          <div className="text-center mb-12">
+            <span className="text-primary text-xs font-semibold uppercase tracking-widest">{t("servicesPage.sectionEyebrow")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3">
               {t("servicesPage.sectionHeading")}
             </h2>
-            <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
               {t("servicesPage.sectionSubheading")}
             </p>
           </div>
