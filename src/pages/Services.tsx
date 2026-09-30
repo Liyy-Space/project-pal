@@ -108,26 +108,19 @@ const Services = () => {
 
   return (
     <div className="pt-16">
-      {/* Hero Banner */}
+      {/* Hero Banner */} {/* SVC_PLAIN */}
       <div className="relative h-72 md:h-96 overflow-hidden">
-        <img
-          src={servicesBanner}
-          alt="Our Services"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.85 }} />
-        <div className="absolute inset-0 grid-pattern opacity-20" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-          <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
-            <BarChart3 className="w-3 h-3 text-teal-300" />
-            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">{t("servicesPage.badge")}</span>
+        <img src={servicesBanner} alt="Our Services" className="absolute inset-0 w-full h-full object-cover" />
+        <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.8 }} />
+        <div className="absolute inset-0 flex items-end">
+          <div className="container pb-10 md:pb-14">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-3">
+              {t("servicesPage.heroTitlePrefix")} {t("servicesPage.heroTitleHighlight")}
+            </h1>
+            <p className="text-white/80 max-w-xl text-base leading-relaxed">
+              {t("servicesPage.heroDescription")}
+            </p>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-            {t("servicesPage.heroTitlePrefix")} <span className="text-teal-300">{t("servicesPage.heroTitleHighlight")}</span>
-          </h1>
-          <p className="text-white/70 max-w-2xl text-sm md:text-base leading-relaxed">
-            {t("servicesPage.heroDescription")}
-          </p>
         </div>
       </div>
 
@@ -158,22 +151,17 @@ const Services = () => {
       </section>
 
       {/* Pillars */}
-      <section className="py-20 text-white relative overflow-hidden" style={{ background: HERO_GRADIENT }}>
-        <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />
-        <div className="container relative">
-          <div className="text-center mb-12">
-            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">{t("servicesPage.approachEyebrow")}</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-3">{t("servicesPage.approachHeading")}</h2>
-            <p className="text-white/60 max-w-xl mx-auto text-sm">{t("servicesPage.approachSubheading")}</p>
+      <section className="py-20 bg-slate-50">
+        <div className="container">
+          <div className="max-w-2xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">{t("servicesPage.approachHeading")}</h2>
+            <p className="text-muted-foreground text-sm">{t("servicesPage.approachSubheading")}</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-10">
             {pillarMeta.map((p) => (
-              <div key={p.key} className="bg-white/10 border border-white/20 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/15 transition-all text-center">
-                <div className="w-12 h-12 rounded-full bg-teal-500/30 border border-teal-400/30 flex items-center justify-center mb-4 mx-auto">
-                  <p.icon className="w-5 h-5 text-teal-300" />
-                </div>
-                <h3 className="text-white font-bold mb-2">{t(`servicesPage.pillars.${p.key}.title`)}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{t(`servicesPage.pillars.${p.key}.desc`)}</p>
+              <div key={p.key} className="border-t-2 border-teal-700 pt-5">
+                <h3 className="text-slate-900 font-semibold mb-2">{t(`servicesPage.pillars.${p.key}.title`)}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{t(`servicesPage.pillars.${p.key}.desc`)}</p>
               </div>
             ))}
           </div>
