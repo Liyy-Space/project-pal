@@ -196,7 +196,8 @@
         "linkedin": "LinkedIn",
         "other": "Khác"
       },
-      "captchaRequired": "Vui lòng xác nhận bạn không phải là robot."
+      "captchaRequired": "Vui lòng xác nhận bạn không phải là robot.",
+      "optional": "không bắt buộc"
     }
   },
   "servicesPage": {
