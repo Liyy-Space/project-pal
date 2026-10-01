@@ -17,7 +17,6 @@ import Experts from "./pages/Experts";
 import EventDetail from "./pages/EventDetail";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import AdminEvents from "./pages/AdminEvents";
 
