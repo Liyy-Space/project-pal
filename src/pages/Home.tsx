@@ -8,6 +8,7 @@ import posterImage from "@/assets/Poster.png";
 import bachmaiLogo from "@/assets/clients/bachmai.png";
 import stFrancisLogo from "@/assets/clients/st-francis.png";
 import kinshasaLogo from "@/assets/clients/kinshasa.jpg";
+import nationalGeriatricLogo from "@/assets/clients/national-geriatric-hospital.png";
 import SEO from "@/components/SEO";
 const HERO_GRADIENT = "linear-gradient(135deg, hsl(224 76% 22%) 0%, hsl(199 70% 22%) 50%, hsl(178 65% 20%) 100%)";
 
@@ -57,6 +58,7 @@ const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
   { name: "University of Kinshasa", logo: kinshasaLogo, url: "https://www.unikin.ac.cd/" },
+  { name: "National Geriatric Hospital", logo: nationalGeriatricLogo, url: "https://benhvienlaokhoa.vn/" },
 ];
 
 const Home = () => {
