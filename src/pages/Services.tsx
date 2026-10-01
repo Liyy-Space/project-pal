@@ -64,13 +64,21 @@ function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
       className={`group cursor-pointer border-r border-b border-slate-200 p-6 md:p-7 transition-colors duration-200 ${expanded ? "bg-teal-800 text-white" : "bg-white text-slate-900 hover:bg-teal-800 hover:text-white"}`}
     >
       <div className="flex gap-5">
-        <span
-          className={`material-symbols-outlined shrink-0 mt-1 select-none transition-colors duration-200 ${expanded ? "text-white" : "text-teal-700 group-hover:text-white"}`}
-          style={{ fontSize: 40, lineHeight: 1, fontVariationSettings: "'wght' 200" }}
-          aria-hidden="true"
-        >
-          {iconNames[meta.key] ?? "circle"}
-        </span>
+        {meta.key === "pkpdModeling" ? (
+          <meta.icon
+            className={`w-10 h-10 shrink-0 mt-1 transition-colors duration-200 ${expanded ? "text-white" : "text-teal-700 group-hover:text-white"}`}
+            strokeWidth={1.5}
+            aria-hidden="true"
+          />
+        ) : (
+          <span
+            className={`material-symbols-outlined shrink-0 mt-1 select-none transition-colors duration-200 ${expanded ? "text-white" : "text-teal-700 group-hover:text-white"}`}
+            style={{ fontSize: 40, lineHeight: 1, fontVariationSettings: "'wght' 200" }}
+            aria-hidden="true"
+          >
+            {iconNames[meta.key] ?? "circle"}
+          </span>
+        )}
         <div className="w-px self-stretch bg-current opacity-20" />
         <div className="flex-1 min-w-0">
           <h3 className="text-base font-semibold mb-1.5 leading-snug">{t(`servicesPage.items.${meta.key}.title`)}</h3>
