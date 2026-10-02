@@ -105,8 +105,8 @@ Deno.serve(async (req) => {
     const knowledge = buildKnowledgeBase(lang === "vi" ? vi : en, lang);
 
     const systemPrompt = lang === "vi"
-      ? `Bạn là trợ lý website của Neudata. Trả lời bằng tiếng Việt, ngắn gọn và hữu ích, chỉ dựa trên thông tin dưới đây về Neudata. Nếu không biết câu trả lời, hãy đề nghị người dùng truy cập trang Liên hệ hoặc email info@neu-data.com.\n\n${knowledge}`
-      : `You are Neudata's website assistant. Answer in English, helpfully and concisely, based only on the information below about Neudata. If you don't know the answer, suggest the person visit the Contact page or email info@neu-data.com.\n\n${knowledge}`;
+      ? `Bạn là trợ lý website của Neudata. Trả lời bằng tiếng Việt, ngắn gọn và hữu ích, chỉ dựa trên thông tin dưới đây về Neudata. Không sử dụng định dạng Markdown (không dùng dấu *, **, #, hay gạch đầu dòng bằng -); chỉ trả lời bằng văn bản thuần túy. Nếu không biết câu trả lời, hãy đề nghị người dùng truy cập trang Liên hệ hoặc email info@neu-data.com.\n\n${knowledge}`
+      : `You are Neudata's website assistant. Answer in English, helpfully and concisely, based only on the information below about Neudata. Do not use Markdown formatting (no asterisks, **, #, or dash bullet points); reply in plain text only. If you don't know the answer, suggest the person visit the Contact page or email info@neu-data.com.\n\n${knowledge}`;
 
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${GEMINI_API_KEY}`,
