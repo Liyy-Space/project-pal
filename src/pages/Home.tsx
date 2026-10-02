@@ -119,7 +119,9 @@ const Home = () => {
           <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] gap-6 md:gap-8">
             {[...clients, ...clients, ...clients, ...clients, ...clients, ...clients].map((c, i) => (
               <a key={`${c.name}-${i}`} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-2xl shadow-sm border border-gray-100 px-8 py-6 flex items-center justify-center hover:shadow-md transition-all duration-300 shrink-0">
-                <img src={c.logo} alt={c.name} className="h-14 md:h-16 w-auto object-contain" />
+                <div className="w-28 h-14 md:w-32 md:h-16 flex items-center justify-center">
+                  <img src={c.logo} alt={c.name} className="max-h-full max-w-full object-contain" />
+                </div>
               </a>
             ))}
           </div>
