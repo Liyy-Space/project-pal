@@ -1,0 +1,588 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "events": "Events",
+    "library": "Library",
+    "contact": "Contact",
+    "training": "Training",
+    "experts": "Experts"
+  },
+  "footer": {
+    "tagline": "Data science, biostatistics and training for health and research.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Info",
+    "location": "Nairobi, Kenya — soon expanding to Vietnam",
+    "rights": "All rights reserved."
+  },
+  "home": {
+    "hero": {
+      "title1": "From data to evidence to",
+      "titleHighlight": "decisions",
+      "subtitle": "Neudata helps hospitals, research institutions, public-health programmes and organisations get more from their data, through expert consulting, practical tools and hands-on training.",
+      "exploreServices": "Explore Services",
+      "getStarted": "Get Started"
+    },
+    "event": {
+      "eyebrow": "Don't Miss Out",
+      "heading": "Featured Event",
+      "subheading": "Join our upcoming professional short course and level up your data skills.",
+      "badge": "Professional Short Course",
+      "courseTitle": "Clinical Data Analysis in R",
+      "coursePhase": "Phase I — Introductory Training",
+      "courseDesc": "A five-session evening course for Doctors, Nurses, Medical Researchers and Allied Health Professionals. No prior programming experience required.",
+      "scheduleTitle": "Every Tuesday",
+      "scheduleDates": "8 September – 6 October 2026",
+      "timeTitle": "8:00 PM Start",
+      "timeDesc": "90 minutes per session • 5 sessions total",
+      "audienceTitle": "For Healthcare Professionals",
+      "audienceDesc": "Doctors, Nurses, Researchers, Allied Health",
+      "contactTitle": "Contact to Register",
+      "registerNow": "Register Now",
+      "learnMore": "Learn More"
+    },
+    "services": {
+      "eyebrow": "What We Offer",
+      "heading": "A wide range of data science services",
+      "subheading": "From survey methodology to clinical trials, statistical modelling to scientific writing — we cover the full spectrum of quantitative research support.",
+      "readMore": "Read More →",
+      "viewAll": "View All Services",
+      "items": {
+        "surveyMethodology": {
+          "title": "Survey Methodology",
+          "desc": "Designing surveys that produce defensible estimates and clean field data."
+        },
+        "statisticalConsultancy": {
+          "title": "Statistical Consultancy",
+          "desc": "A senior statistician on call for design, analysis and reviewer questions."
+        },
+        "clinicalTrialSupport": {
+          "title": "Clinical Trial Support",
+          "desc": "End-to-end biostatistics aligned to ICH-GCP for interventional studies."
+        },
+        "dsmbSupport": {
+          "title": "DSMB Support",
+          "desc": "Independent statistical membership and unblinded analytics for trials."
+        },
+        "scientificWriting": {
+          "title": "Scientific Writing",
+          "desc": "Submission-ready scientific text written to report what the data show."
+        },
+        "grantsProposals": {
+          "title": "Grants & Proposals",
+          "desc": "Strengthening the quantitative spine of competitive applications."
+        },
+        "dataManagement": {
+          "title": "Data Management",
+          "desc": "Clean, well-governed data with an audit trail — the foundation of everything."
+        },
+        "statisticalProgramming": {
+          "title": "Statistical Programming",
+          "desc": "Production-quality R, Python, Stata and SAS code, documented and reproducible."
+        },
+        "mathematicalModelling": {
+          "title": "Mathematical Modelling",
+          "desc": "Models that explain mechanisms, project forward and quantify uncertainty."
+        },
+        "researchAnalytics": {
+          "title": "Research & Analytics",
+          "desc": "Full-cycle research support and applied data science for decisions."
+        },
+        "trainingCapacity": {
+          "title": "Training & Capacity",
+          "desc": "Leaving teams able to do the work themselves — not dependent on us."
+        },
+        "pkpdModeling": {
+          "title": "PK/PD Modeling and Simulation",
+          "desc": "Quantitative modeling to guide safe, effective dosing decisions across the drug development lifecycle."
+        }
+      }
+    },
+    "books": {
+      "eyebrow": "Curated Reading List",
+      "heading1": "Some books entertain.",
+      "heading2": "Others change how we see data.",
+      "subheading": "Our team has curated 37 essential books across data science, statistics, clinical research, machine learning, and more.",
+      "browse": "Browse the Collection",
+      "suggest": "Suggest a Book",
+      "stats": {
+        "curated": "Curated Books",
+        "categories": "Categories",
+        "freeOnline": "Free Online"
+      },
+      "readFree": "Read Free Online ↗",
+      "buyNow": "Buy Now ↗"
+    },
+    "cta": {
+      "heading": "Ready to work with us?",
+      "subheading": "Tell us about your study, programme or team, and we'll tell you honestly how we can help.",
+      "button": "Get In Touch"
+    },
+    "clients": {
+      "heading": "Our Clients"
+    }
+  },
+  "about": {
+    "badge": "Who We Are",
+    "heroTitlePrefix": "About",
+    "heroDescription": "We are a team of passionate data scientists, engineers, and consultants dedicated to helping businesses unlock the full potential of their data.",
+    "missionTitle": "Our Mission",
+    "missionP1": "At Neudata, we believe that data is the key to unlocking business success in the digital age. Our mission is to democratize data science by making advanced analytics accessible to organizations of all sizes.",
+    "missionP2": "We combine cutting-edge technology with deep industry expertise to deliver solutions that not only solve today's challenges but also prepare our clients for tomorrow's opportunities.",
+    "values": {
+      "excellence": "Excellence in Delivery",
+      "innovation": "Innovation First",
+      "partnership": "Client Partnership",
+      "learning": "Continuous Learning"
+    },
+    "getInTouch": "Get In Touch",
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Happy Clients",
+      "team": "Team Members",
+      "years": "Years Experience"
+    }
+  },
+  "contact": {
+    "badge": "We'd love to hear from you",
+    "titlePrefix": "Contact",
+    "titleHighlight": "Us",
+    "subtitle": "Need statistical help, a data science project scoped out, or training for your team? Get in touch and tell us what you're working on.",
+    "getInTouch": "Get in touch",
+    "getInTouchDesc": "Fill in the form to start a conversation. Our team typically responds within 24 hours on business days.",
+    "headOffice": "Head Office",
+    "headOfficeLocation": "Nairobi, Kenya",
+    "headOfficeHours": "Mon - Fri: 9:00 AM - 6:00 PM",
+    "branches": "Branches",
+    "branchesLocation": "Hanoi, Vietnam (Coming Soon)",
+    "branchesNote": "Registration in progress",
+    "emailUs": "Email Us",
+    "responseTime": "Response Time",
+    "responseTimeValue": "Within 24 hours",
+    "responseTimeNote": "Business days only",
+    "followUs": "Follow us",
+    "sendMessage": "Send us a message",
+    "sendMessageDesc": "We'd love to learn more about your project. Fill in the details below.",
+    "toastSuccess": "Message sent successfully!",
+    "toastError": "Failed to send message. Please try again.",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "company": "Company",
+      "serviceInterest": "Service Interest",
+      "selectService": "Select a service",
+      "services": {
+        "dataAnalytics": "Data Analytics & Visualization",
+        "machineLearning": "Machine Learning Solutions",
+        "dataEngineering": "Data Engineering & Infrastructure",
+        "consulting": "Training & Consulting",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "sending": "Sending...",
+      "send": "Send Message →",
+      "mobilePhone": "Mobile Phone Number",
+      "estimatedStartDate": "Estimated Start Date",
+      "howDidYouHear": "How Did You Hear About Neudata",
+      "selectOption": "Select an option",
+      "hearOptions": {
+        "googleSearch": "Google Search",
+        "socialMedia": "Social Media",
+        "referral": "Referral",
+        "event": "Event or Training",
+        "linkedin": "LinkedIn",
+        "other": "Other"
+      },
+      "captchaRequired": "Please confirm you're not a robot.",
+      "optional": "optional"
+    }
+  },
+  "servicesPage": {
+    "badge": "What We Offer",
+    "heroTitlePrefix": "Our",
+    "heroTitleHighlight": "Services",
+    "heroDescription": "A quantitative-science partner to clinical trials, public-health programmes, research institutions and data-driven organisations.",
+    "sectionEyebrow": "What We Offer",
+    "sectionHeading": "A wide range of data science services",
+    "sectionSubheading": "Offered individually or as an integrated package across the life of a study. Click any card to see full details.",
+    "readMore": "Read More →",
+    "showLess": "Show Less ↑",
+    "outputsLabel": "Outputs:",
+    "items": {
+      "surveyMethodology": {
+        "title": "Survey Methodology & Field Data Systems",
+        "desc": "Designing surveys that produce defensible estimates, and the field systems that collect them cleanly the first time.",
+        "details": [
+          "Sample design — stratification, PPS and multi-stage cluster sampling",
+          "GIS and spatial sampling: PSU delineation, gridded enumeration-area frames",
+          "Electronic data capture in SurveyCTO / ODK / XLSForm",
+          "Weighting, non-response adjustment and design-based variance estimation",
+          "Coverage, serosurvey, KAP, nutrition and health-facility assessments"
+        ],
+        "outputs": "Sampling plan, programmed instrument, field manuals, weighting report, public-use dataset."
+      },
+      "statisticalConsultancy": {
+        "title": "Statistical Consultancy",
+        "desc": "A senior statistician on call for design, analysis and the questions reviewers will eventually ask.",
+        "details": [
+          "Study and experimental design: hypotheses, endpoints, estimands, randomization",
+          "Applied modelling — regression, mixed models, survival analysis, Bayesian approaches",
+          "Causal inference: propensity scores, matching, instrumental variables",
+          "Statistical analysis plans (SAPs) and reproducible analysis",
+          "Methods review and statistical input for manuscripts and theses"
+        ],
+        "outputs": "Study design memo, SAP, analysis report with reproducible code, reviewer-response support."
+      },
+      "clinicalTrialSupport": {
+        "title": "Clinical Trial Support",
+        "desc": "End-to-end biostatistics and data services for interventional and observational studies, aligned to ICH-GCP.",
+        "details": [
+          "Protocol and statistical-section development, endpoint and estimand definition",
+          "Sample-size, power and adaptive / interim-analysis planning",
+          "CRF design, edit checks, database build in REDCap and comparable EDC platforms",
+          "Analysis to CDISC-aligned standards, CONSORT-compliant reporting",
+          "Pharmacovigilance and safety-data handling, listings and summaries"
+        ],
+        "outputs": "Protocol statistics, SAP, validated trial database, CSR-ready tables, listings and figures."
+      },
+      "dsmbSupport": {
+        "title": "Data & Safety Monitoring Board (DSMB)",
+        "desc": "Independent statistical membership and the unblinded analytics that keep trial participants safe.",
+        "details": [
+          "Independent statistician membership on DSMBs and safety-monitoring committees",
+          "DSMB charters, stopping rules and group-sequential frameworks",
+          "Preparation of closed and open safety reports for board review",
+          "Unblinded interim analyses delivered independently of the study team",
+          "Benefit–risk summaries and minuted recommendations to sponsors"
+        ],
+        "outputs": "DSMB charter, interim safety reports, group-sequential plan, independent statistician sign-off."
+      },
+      "medicalWriting": {
+        "title": "Medical & Scientific Writing",
+        "desc": "Turning analysis into clear, submission-ready scientific text — written to report what the data actually show.",
+        "details": [
+          "Manuscripts, abstracts and conference posters, including methods and results sections",
+          "Clinical study reports, protocols and statistical sections",
+          "Systematic reviews, meta-analyses and evidence syntheses (PRISMA-aligned)",
+          "Policy briefs and technical reports for non-specialist audiences",
+          "Journal submission support, reviewer responses and revision handling"
+        ],
+        "outputs": "Publication-ready manuscript, CSR, technical report, reviewer-response document."
+      },
+      "grantsProposals": {
+        "title": "Grants & Proposal Development",
+        "desc": "Strengthening the quantitative spine of competitive applications — the part funders scrutinise hardest.",
+        "details": [
+          "Study-design, sampling and statistical sections for grant applications",
+          "Power and sample-size justification, and analysis plans reviewers can assess",
+          "Monitoring-and-evaluation and data-management plans aligned to funder requirements",
+          "Budgeting and justification for data, analytics and statistical components",
+          "Concept notes, full proposals and responses to reviewer queries"
+        ],
+        "outputs": "Methods and analysis sections, sample-size justification, M&E and data-management plans."
+      },
+      "dataManagement": {
+        "title": "Data Management",
+        "desc": "Clean, well-governed data with an audit trail — the foundation everything else depends on.",
+        "details": [
+          "Database design and build, EDC configuration, and ETL / data-integration pipelines",
+          "Data-quality monitoring: validation rules, automated checks, query management",
+          "Data cleaning, harmonization and linkage, including record matching and de-duplication",
+          "Governance: data-management plans, SOPs, audit trails, de-identification",
+          "Secure storage, controlled access and analysis-ready dataset preparation"
+        ],
+        "outputs": "Data-management plan, validated database, DQ reports, locked analysis dataset, linkage SOP."
+      },
+      "statisticalProgramming": {
+        "title": "Statistical Programming & Software",
+        "desc": "Production-quality code and tools — well documented, version-controlled and reproducible.",
+        "details": [
+          "Statistical programming in R, Python, Stata and SAS, including package development",
+          "Reproducible analytical workflows, automated reporting (R Markdown / Quarto)",
+          "Interactive dashboards (Shiny, Power BI) for monitoring and dissemination",
+          "Methodological software — simulation engines and custom statistical methods",
+          "Code review, validation and refactoring of inherited analysis code"
+        ],
+        "outputs": "Documented codebase, reproducible pipeline, dashboard, validated analysis package."
+      },
+      "mathematicalModelling": {
+        "title": "Mathematical & Statistical Modelling",
+        "desc": "Models that explain mechanisms, project forward and quantify uncertainty honestly.",
+        "details": [
+          "Infectious-disease and compartmental models (SIR / SEIR) and transmission dynamics",
+          "Forecasting and time-series methods for surveillance and programme planning",
+          "Bayesian hierarchical modelling, small-area estimation and spatial models",
+          "Simulation, scenario analysis and sensitivity / uncertainty quantification",
+          "Latent-variable and multi-omics integration methods"
+        ],
+        "outputs": "Calibrated model, forecasts with uncertainty intervals, simulation study, technical documentation."
+      },
+      "researchAnalytics": {
+        "title": "Research & Analytics",
+        "desc": "Full-cycle research support and the applied data science behind data-driven decisions.",
+        "details": [
+          "End-to-end study support — from research question through analysis to dissemination",
+          "Epidemiological and public-health analytics, including surveillance and programme evaluation",
+          "Predictive modelling and machine learning where genuinely warranted",
+          "Data visualization, KPI tracking and analytical reporting for operational decisions",
+          "Secondary analysis and evidence synthesis of existing data assets"
+        ],
+        "outputs": "Research outputs, evaluation reports, predictive models with validation, decision-ready analytics."
+      },
+      "trainingCapacity": {
+        "title": "Training & Capacity Building",
+        "desc": "Leaving teams able to do the work themselves — not dependent on us.",
+        "details": [
+          "Hands-on courses in R, Python, Stata and reproducible research",
+          "Applied biostatistics, survey methods, epidemiology and data management",
+          "Mentored, on-the-job support for analysts, students and institutional staff",
+          "Curriculum design and tailored in-house workshops in English and French",
+          "Ongoing methods support and analytical mentoring after handover"
+        ],
+        "outputs": "Course materials, hands-on workshops, mentoring plan, certificate-ready curricula."
+      },
+      "pkpdModeling": {
+        "title": "PK/PD Modeling and Simulation",
+        "desc": "Quantitative modeling to guide safe, effective dosing decisions across the drug development lifecycle.",
+        "details": [
+          "Population pharmacokinetics (PopPK) modeling",
+          "Longitudinal pharmacokinetic/pharmacodynamic (PK/PD) models",
+          "Translational modeling",
+          "Exposure-response modeling",
+          "Integrated efficacy-safety analysis",
+          "Bridging between populations (e.g., by region, race, and disease)",
+          "Clinical trial simulations"
+        ],
+        "outputs": "Population PK/PD models, exposure-response analyses, simulation reports supporting dose selection and trial design."
+      }
+    },
+    "approachEyebrow": "Our Approach",
+    "approachHeading": "How We Work",
+    "approachSubheading": "Three commitments that hold across every engagement.",
+    "pillars": {
+      "methodologicallyLed": {
+        "title": "Methodologically led",
+        "desc": "Senior statisticians own the design and the analysis, not just the code."
+      },
+      "standardsAware": {
+        "title": "Standards-aware",
+        "desc": "Work delivered to ICH-GCP, CONSORT, STROBE and GAMP expectations where they apply."
+      },
+      "reproducible": {
+        "title": "Reproducible",
+        "desc": "Versioned code, documented pipelines and analysis plans you can hand to an auditor."
+      }
+    },
+    "ctaEyebrow": "Work With Us",
+    "ctaHeading": "Tell us about your study, dataset or deadline",
+    "ctaDesc": "We will tell you honestly what it needs and how we can help — whether that is a single statistical review or a full engagement across the life of the project.",
+    "ctaButton": "Get In Touch",
+    "exploreService": "Explore service"
+  },
+  "events": {
+    "badge": "What's Happening",
+    "title1": "Our",
+    "titleHighlight": "Events",
+    "subtitle": "Discover ongoing, upcoming events, workshops, and training sessions from Neudata.",
+    "searchPlaceholder": "Search events by title, category or location...",
+    "loading": "Loading events...",
+    "ongoingHeading": "Ongoing Events",
+    "upcomingHeading": "Upcoming Events",
+    "pastHeading": "Past Events",
+    "noUpcoming": "No upcoming events",
+    "checkBackSoon": "Check back soon for new events!",
+    "viewRegister": "View Event & Register →",
+    "ongoingBadge": "🟢 Ongoing",
+    "pastBadge": "Past Event",
+    "defaultCategory": "Event",
+    "free": "Free"
+  },
+  "eventDetail": {
+    "notFound": "Event not found",
+    "backToEvents": "Back to Events",
+    "dateLabel": "Date",
+    "timeLabel": "Time",
+    "locationLabel": "Location",
+    "capacityLabel": "Capacity",
+    "attendees": "attendees",
+    "aboutEvent": "About the Event",
+    "speakersGuests": "Speakers & Guests",
+    "registerButton": "Register for This Event ↗",
+    "registrationComingSoon": "Registration link coming soon.",
+    "viewPoster": "View Full Poster ↗",
+    "noPaymentRequired": "No payment required at this stage"
+  },
+  "books": {
+    "hero": {
+      "badge": "Curated Library",
+      "titleMain": "Essential Resources for",
+      "titleHighlight": "Data Professionals",
+      "subtitle": "37 hand-picked resources across data science, statistics, clinical research, and more — curated by our expert team.",
+      "browseButton": "Browse Collection →",
+      "suggestButton": "Suggest a Book"
+    },
+    "stats": {
+      "curatedResources": "Curated Resources",
+      "categories": "Categories",
+      "freeOnlineStat": "Free Online",
+      "expertPicks": "Expert Picks"
+    },
+    "section": {
+      "eyebrow": "Our Library",
+      "title": "Browse by Category",
+      "subtitle": "Hover over any book card to reveal its description and access links. Hover over a row to pause it."
+    },
+    "categories": {
+      "foundations": "Foundations & Data Science",
+      "survey": "Survey Methodology",
+      "statistical": "Statistical Consultancy",
+      "clinical": "Clinical Trials",
+      "writing": "Scientific Writing",
+      "grants": "Grants & Proposals",
+      "programming": "Programming & Software",
+      "engineering": "Data Engineering",
+      "modelling": "Mathematical Modelling",
+      "epidemiology": "Epidemiology",
+      "training": "Training & Reproducibility"
+    },
+    "booksCountSuffix": "books",
+    "freeOnline": "Free Online ↗",
+    "buyNow": "Buy Now ↗",
+    "disclaimer": "Book covers and information are provided for reference purposes only. All rights belong to their respective authors and publishers.",
+    "suggestCta": {
+      "title": "Suggest a Title",
+      "subtitle": "This list grows. If there is a book that has shaped how you work — tell us and we will consider it for the collection.",
+      "button": "Suggest a Book →"
+    },
+    "items": {
+      "b01": "The standard entry point to the tidyverse: importing, tidying, transforming, visualising and modelling data in R.",
+      "b02": "Data wrangling with pandas and NumPy, by the creator of pandas.",
+      "b03": "NumPy, pandas, Matplotlib and scikit-learn for the working data scientist.",
+      "b04": "Statistical thinking for a general and professional audience — excellent for non-specialist stakeholders.",
+      "b05": "A clear, modern treatment of survey sampling theory and practice.",
+      "b06": "The foundational text on total survey error, questionnaire design and survey operations.",
+      "b07": "The reference for design-based inference and calibration estimators in complex surveys.",
+      "b08": "The most accessible route into modern statistical learning; Springer-authorised free PDFs.",
+      "b09": "The advanced companion to ISL — the deeper theory behind the methods.",
+      "b10": "Indispensable for applied regression, splines, validation and prediction modelling.",
+      "b11": "The standard reference for logistic regression, contingency tables and models for categorical outcomes.",
+      "b12": "The core text on trial design, conduct, monitoring and analysis.",
+      "b13": "Practical guidance on research questions, study designs and sample size.",
+      "b14": "Group-sequential methods and interim monitoring — directly relevant to DSMB statistical work.",
+      "b15": "The definitive practical guide to running and contributing to DSMBs.",
+      "b16": "A practical guide to writing and publishing in the biological and health sciences.",
+      "b17": "A long-standing standard on structuring and submitting scientific manuscripts.",
+      "b18": "The essential checklists every manuscript and protocol should follow.",
+      "b19": "A structured, widely used workbook for building competitive proposals.",
+      "b20": "On narrative and structure in both papers and funding proposals.",
+      "b21": "How R really works — essential for writing robust, efficient R code and packages.",
+      "b22": "The reference for building, testing and shipping R packages.",
+      "b23": "Writing idiomatic, high-quality Python — a step beyond introductory texts.",
+      "b24": "Principles of readable, maintainable code that apply across languages.",
+      "b25": "A vendor-neutral map of the modern data lifecycle.",
+      "b26": "The reference on the systems behind reliable, scalable data infrastructure.",
+      "b27": "The short, foundational paper on structuring data for analysis — free.",
+      "b28": "The best modern introduction to applied Bayesian modelling.",
+      "b29": "The comprehensive Bayesian reference; the authors provide a free PDF.",
+      "b30": "The standard, fully free text on time-series forecasting.",
+      "b31": "The reference for compartmental and transmission-dynamic models.",
+      "b32": "The definitive graduate-level epidemiology reference.",
+      "b33": "The leading modern text on causal inference from observational data.",
+      "b34": "A clear, applied medical-statistics text widely used in public-health training.",
+      "b35": "Reproducible reporting and automated documents in R.",
+      "b36": "The classic on data visualisation and the ethics of showing data well.",
+      "b37": "A practical, free guide to making clear, honest figures."
+    }
+  },
+  "training": {
+    "badge": "Build Your Skills",
+    "title1": "Training &",
+    "titleHighlight": "Capacity Building",
+    "subtitle": "Structured courses and hands-on workshops for healthcare professionals, researchers and institutions.",
+    "coursesEyebrow": "Our Courses",
+    "coursesHeading": "Learn from people who do this work",
+    "coursesSubheading": "More titles are added as new courses are developed.",
+    "enquireButton": "Enquire →",
+    "courses": {
+      "foundations": {
+        "level": "Level 1",
+        "title": "Foundations of Clinical Research",
+        "desc": "Core concepts behind well-run clinical and public-health research.",
+        "topics": [
+          "Study design and types of clinical research",
+          "Research ethics and informed consent",
+          "Good Clinical Practice (GCP) essentials"
+        ]
+      },
+      "dataToPublication": {
+        "level": "Level 2",
+        "title": "From Data to Publication",
+        "desc": "Turning collected data into a submission-ready manuscript.",
+        "topics": [
+          "Structuring an analysis plan around your research question",
+          "Common statistical tests and how to report them",
+          "Writing clear methods and results sections"
+        ]
+      },
+      "clinicalDataR": {
+        "level": "Free Course",
+        "title": "Clinical Data Analysis in R",
+        "desc": "A five-session evening course introducing R for clinical data analysis.",
+        "topics": [
+          "Getting started with R and RStudio",
+          "Importing, cleaning and visualising clinical data",
+          "Basic regression and reporting results"
+        ]
+      }
+    },
+    "inHouseBadge": "For Institutions",
+    "inHouseHeading": "Request in-house training for your department",
+    "inHouseDesc": "We tailor any course — or design a new one — for your hospital, institution or organisation.",
+    "inHouseButton": "Request In-House Training"
+  },
+  "experts": {
+    "badge": "Our People",
+    "titlePrefix": "Meet Our",
+    "titleHighlight": "Experts",
+    "subtitle": "The biostatisticians, epidemiologists and researchers behind our work.",
+    "readMore": "Read More →",
+    "members": {
+      "bernard-isekah-osangir": {
+        "role": "Co-Founder",
+        "degrees": "PhD Biostatistics & Bioinformatics, MSc Statistics & Data Science",
+        "specialties": [
+          "Biostatistics",
+          "Bioinformatics",
+          "Clinical Trial Analysis",
+          "Survey Design"
+        ],
+        "bio": "Bernard has over ten years of experience in public health studies, clinical trials, and data management. He is an expert in designing and analysing studies to support decisions in clinical and public health settings. He works across bioinformatics, statistical methods, and research software development, and teaches R programming, data management, and applied statistics at postgraduate level."
+      },
+      "james-wambua": {
+        "role": "Co-Founder",
+        "degrees": "BSc Statistics, MSc Epidemiology, MSc Mathematical Sciences, BSc Mathematics",
+        "specialties": [
+          "Epidemiology",
+          "Statistics",
+          "Mathematical Modeling",
+          "Health Economics"
+        ],
+        "bio": "James is a research scientist with over nine years of experience specializing in the development and application of advanced data-analytic methodologies to address complex public health challenges using real-world data. He has extensive experience working with and consulting for international organizations, including the European Centre for Disease Prevention and Control (ECDC), international pharmaceutical companies such as Merck & Co., Inc. (MSD), and national research institutions such as KEMRI-Wellcome Trust."
+      },
+      "my-luong-vuong": {
+        "role": "Co-Founder",
+        "degrees": "PharmD, MSc Epidemiology, MSc Biostatistics, PhD Pharmacometrics (in progress)",
+        "specialties": [
+          "Epidemiology",
+          "Biostatistics",
+          "Pharmacometrics",
+          "Modelling and Simulation"
+        ],
+        "bio": "My-Luong Vuong holds a PharmD from Hanoi University of Pharmacy, Vietnam, along with a Master's in Epidemiology from the University of Antwerp, Belgium, and a Master's in Biostatistics from Hasselt University, Belgium. He is currently in his final year of his PhD in pharmacometrics at KU Leuven, Belgium, where he aims to optimise antimicrobial dosing in special patient populations including paediatric patients and critically ill patients admitted to the intensive care unit."
+      }
+    }
+  }
+}

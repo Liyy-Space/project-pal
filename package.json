@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run sync-locales && vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "sync-locales": "mkdir -p public/locales && cp src/i18n/en.json public/locales/en.json && cp src/i18n/vi.json public/locales/vi.json"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
