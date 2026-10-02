@@ -72,7 +72,9 @@ const Footer = () => {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             {clients.map((c) => (
               <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg px-4 py-2 flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
-                <img src={c.logo} alt={c.name} className="h-8 w-auto object-contain" />
+                <div className="w-16 h-8 flex items-center justify-center">
+                  <img src={c.logo} alt={c.name} className="max-h-full max-w-full object-contain" />
+                </div>
               </a>
             ))}
           </div>
