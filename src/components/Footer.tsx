@@ -4,12 +4,14 @@ import { useTranslation } from "react-i18next";
 import bachmaiLogo from "@/assets/clients/bachmai.png";
 import stFrancisLogo from "@/assets/clients/st-francis.png";
 import kinshasaLogo from "@/assets/clients/kinshasa.jpg";
+import nationalGeriatricLogo from "@/assets/clients/national-geriatric-hospital.png";
 import logo from "@/assets/logo.png";
 
 const clients = [
   { name: "Bach Mai Hospital", logo: bachmaiLogo, url: "https://bachmai.gov.vn/" },
   { name: "St. Francis Hospital Nsambya", logo: stFrancisLogo, url: "https://stfrancishospitalnsambya.org/wp/" },
   { name: "University of Kinshasa", logo: kinshasaLogo, url: "https://www.unikin.ac.cd/" },
+  { name: "National Geriatric Hospital", logo: nationalGeriatricLogo, url: "https://benhvienlaokhoa.vn/" },
 ];
 
 const Footer = () => {
@@ -70,7 +72,9 @@ const Footer = () => {
           <div className="flex items-center justify-center gap-4 flex-wrap">
             {clients.map((c) => (
               <a key={c.name} href={c.url} target="_blank" rel="noopener noreferrer" className="bg-white rounded-lg px-4 py-2 flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity">
-                <img src={c.logo} alt={c.name} className="h-8 w-auto object-contain" />
+                <div className="w-16 h-8 flex items-center justify-center">
+                  <img src={c.logo} alt={c.name} className="max-h-full max-w-full object-contain" />
+                </div>
               </a>
             ))}
           </div>

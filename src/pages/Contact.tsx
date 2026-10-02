@@ -1,3 +1,4 @@
+import ReactGA from "react-ga4";
 import { useState, useRef } from "react";
 import { MessageCircle, MapPin, Mail, Phone, Twitter, Linkedin, Github, Facebook } from "lucide-react";
 import emailjs from "@emailjs/browser";
@@ -31,6 +32,7 @@ const Contact = () => {
         { publicKey: "EXA1v79zfibZQipgZ" }
       );
       toast.success(t("contact.toastSuccess"));
+      ReactGA.event("contact_form_submit", { form_service: (formRef.current.elements.namedItem("service") as HTMLSelectElement | null)?.value ?? "" });
       formRef.current.reset();
       recaptchaRef.current?.reset();
       setCaptchaToken(null);

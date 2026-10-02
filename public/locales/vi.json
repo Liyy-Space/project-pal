@@ -1,0 +1,588 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Về chúng tôi",
+    "services": "Dịch vụ",
+    "events": "Sự kiện",
+    "library": "Thư viện",
+    "contact": "Liên hệ",
+    "training": "Đào tạo",
+    "experts": "Chuyên Gia"
+  },
+  "footer": {
+    "tagline": "Khoa học dữ liệu, thống kê sinh học và đào tạo cho lĩnh vực y tế và nghiên cứu.",
+    "quickLinks": "Liên kết nhanh",
+    "contactInfo": "Thông tin liên hệ",
+    "location": "Nairobi, Kenya — sắp mở rộng sang Việt Nam",
+    "rights": "Đã đăng ký bản quyền."
+  },
+  "home": {
+    "hero": {
+      "title1": "Từ dữ liệu đến bằng chứng đến",
+      "titleHighlight": "quyết định",
+      "subtitle": "Neudata giúp bệnh viện, viện nghiên cứu, chương trình y tế công cộng và các tổ chức khai thác tối đa giá trị từ dữ liệu của họ, thông qua tư vấn chuyên môn, công cụ thực tiễn và đào tạo thực hành.",
+      "exploreServices": "Khám phá dịch vụ",
+      "getStarted": "Bắt đầu ngay"
+    },
+    "event": {
+      "eyebrow": "Đừng bỏ lỡ",
+      "heading": "Sự kiện nổi bật",
+      "subheading": "Tham gia khóa học ngắn hạn chuyên nghiệp sắp tới và nâng cao kỹ năng dữ liệu của bạn.",
+      "badge": "Khóa học ngắn hạn chuyên nghiệp",
+      "courseTitle": "Phân tích dữ liệu lâm sàng bằng R",
+      "coursePhase": "Giai đoạn I — Đào tạo nhập môn",
+      "courseDesc": "Khóa học buổi tối gồm năm buổi dành cho Bác sĩ, Điều dưỡng, Nhà nghiên cứu Y khoa và các Chuyên gia Y tế liên quan. Không yêu cầu kinh nghiệm lập trình trước đó.",
+      "scheduleTitle": "Mỗi thứ Ba",
+      "scheduleDates": "8 tháng 9 – 6 tháng 10 năm 2026",
+      "timeTitle": "Bắt đầu lúc 8:00 tối",
+      "timeDesc": "90 phút mỗi buổi • tổng cộng 5 buổi",
+      "audienceTitle": "Dành cho chuyên gia y tế",
+      "audienceDesc": "Bác sĩ, Điều dưỡng, Nhà nghiên cứu, Nhân viên y tế liên quan",
+      "contactTitle": "Liên hệ để đăng ký",
+      "registerNow": "Đăng ký ngay",
+      "learnMore": "Tìm hiểu thêm"
+    },
+    "services": {
+      "eyebrow": "Dịch vụ của chúng tôi",
+      "heading": "Đa dạng các dịch vụ khoa học dữ liệu",
+      "subheading": "Từ phương pháp khảo sát đến thử nghiệm lâm sàng, từ mô hình hóa thống kê đến viết bài khoa học — chúng tôi bao phủ toàn bộ phổ hỗ trợ nghiên cứu định lượng.",
+      "readMore": "Xem thêm →",
+      "viewAll": "Xem tất cả dịch vụ",
+      "items": {
+        "surveyMethodology": {
+          "title": "Phương pháp khảo sát",
+          "desc": "Thiết kế khảo sát tạo ra ước tính đáng tin cậy và dữ liệu thực địa sạch."
+        },
+        "statisticalConsultancy": {
+          "title": "Tư vấn thống kê",
+          "desc": "Một chuyên gia thống kê cấp cao sẵn sàng hỗ trợ thiết kế, phân tích và các câu hỏi từ người phản biện."
+        },
+        "clinicalTrialSupport": {
+          "title": "Hỗ trợ thử nghiệm lâm sàng",
+          "desc": "Thống kê sinh học toàn diện tuân theo ICH-GCP cho các nghiên cứu can thiệp."
+        },
+        "dsmbSupport": {
+          "title": "Hỗ trợ DSMB",
+          "desc": "Thành viên thống kê độc lập và phân tích dữ liệu không mù cho các thử nghiệm."
+        },
+        "scientificWriting": {
+          "title": "Viết bài khoa học",
+          "desc": "Văn bản khoa học sẵn sàng nộp, được viết để báo cáo đúng những gì dữ liệu thể hiện."
+        },
+        "grantsProposals": {
+          "title": "Tài trợ & Đề xuất",
+          "desc": "Củng cố nền tảng định lượng cho các đơn xin tài trợ cạnh tranh."
+        },
+        "dataManagement": {
+          "title": "Quản lý dữ liệu",
+          "desc": "Dữ liệu sạch, được quản lý tốt với dấu vết kiểm toán — nền tảng của mọi thứ."
+        },
+        "statisticalProgramming": {
+          "title": "Lập trình thống kê",
+          "desc": "Mã nguồn R, Python, Stata và SAS chất lượng sản xuất, có tài liệu và có thể tái lập."
+        },
+        "mathematicalModelling": {
+          "title": "Mô hình hóa toán học",
+          "desc": "Các mô hình giải thích cơ chế, dự báo tương lai và định lượng độ không chắc chắn."
+        },
+        "researchAnalytics": {
+          "title": "Nghiên cứu & Phân tích",
+          "desc": "Hỗ trợ nghiên cứu toàn diện và khoa học dữ liệu ứng dụng cho việc ra quyết định."
+        },
+        "trainingCapacity": {
+          "title": "Đào tạo & Nâng cao năng lực",
+          "desc": "Giúp các nhóm có thể tự thực hiện công việc — không phụ thuộc vào chúng tôi."
+        },
+        "pkpdModeling": {
+          "title": "Mô hình hóa và mô phỏng PK/PD",
+          "desc": "Mô hình định lượng giúp định hướng các quyết định về liều dùng an toàn và hiệu quả trong toàn bộ vòng đời phát triển thuốc."
+        }
+      }
+    },
+    "books": {
+      "eyebrow": "Danh sách đọc được tuyển chọn",
+      "heading1": "Một số cuốn sách mang tính giải trí.",
+      "heading2": "Những cuốn khác thay đổi cách chúng ta nhìn nhận dữ liệu.",
+      "subheading": "Đội ngũ của chúng tôi đã tuyển chọn 37 cuốn sách thiết yếu về khoa học dữ liệu, thống kê, nghiên cứu lâm sàng, học máy và nhiều lĩnh vực khác.",
+      "browse": "Duyệt bộ sưu tập",
+      "suggest": "Đề xuất một cuốn sách",
+      "stats": {
+        "curated": "Sách được tuyển chọn",
+        "categories": "Danh mục",
+        "freeOnline": "Miễn phí trực tuyến"
+      },
+      "readFree": "Đọc miễn phí trực tuyến ↗",
+      "buyNow": "Mua ngay ↗"
+    },
+    "cta": {
+      "heading": "Sẵn sàng hợp tác cùng chúng tôi?",
+      "subheading": "Hãy cho chúng tôi biết về nghiên cứu, chương trình hoặc đội ngũ của bạn, chúng tôi sẽ nói thật về cách chúng tôi có thể hỗ trợ.",
+      "button": "Liên Hệ Ngay"
+    },
+    "clients": {
+      "heading": "Khách Hàng Của Chúng Tôi"
+    }
+  },
+  "about": {
+    "badge": "Chúng tôi là ai",
+    "heroTitlePrefix": "Về",
+    "heroDescription": "Chúng tôi là đội ngũ các nhà khoa học dữ liệu, kỹ sư và chuyên gia tư vấn tận tâm giúp doanh nghiệp khai phá toàn bộ tiềm năng dữ liệu của họ.",
+    "missionTitle": "Sứ mệnh của chúng tôi",
+    "missionP1": "Tại Neudata, chúng tôi tin rằng dữ liệu là chìa khóa để mở ra thành công cho doanh nghiệp trong thời đại số. Sứ mệnh của chúng tôi là phổ cập khoa học dữ liệu bằng cách giúp các phân tích nâng cao trở nên dễ tiếp cận với các tổ chức thuộc mọi quy mô.",
+    "missionP2": "Chúng tôi kết hợp công nghệ tiên tiến với chuyên môn sâu trong ngành để mang đến các giải pháp không chỉ giải quyết thách thức hôm nay mà còn chuẩn bị cho khách hàng của chúng tôi những cơ hội của ngày mai.",
+    "values": {
+      "excellence": "Xuất sắc trong triển khai",
+      "innovation": "Đổi mới là ưu tiên",
+      "partnership": "Đồng hành cùng khách hàng",
+      "learning": "Học hỏi không ngừng"
+    },
+    "getInTouch": "Liên hệ với chúng tôi",
+    "stats": {
+      "projects": "Dự án đã hoàn thành",
+      "clients": "Khách hàng hài lòng",
+      "team": "Thành viên đội ngũ",
+      "years": "Năm kinh nghiệm"
+    }
+  },
+  "contact": {
+    "badge": "Chúng tôi rất muốn lắng nghe bạn",
+    "titlePrefix": "Liên hệ",
+    "titleHighlight": "với chúng tôi",
+    "subtitle": "Bạn cần hỗ trợ thống kê, lên kế hoạch cho một dự án khoa học dữ liệu, hay đào tạo cho đội ngũ của mình? Hãy liên hệ và cho chúng tôi biết bạn đang thực hiện điều gì.",
+    "getInTouch": "Liên hệ với chúng tôi",
+    "getInTouchDesc": "Điền vào biểu mẫu để bắt đầu cuộc trò chuyện. Đội ngũ của chúng tôi thường phản hồi trong vòng 24 giờ vào các ngày làm việc.",
+    "headOffice": "Trụ sở chính",
+    "headOfficeLocation": "Nairobi, Kenya",
+    "headOfficeHours": "Thứ Hai - Thứ Sáu: 9:00 - 18:00",
+    "branches": "Chi nhánh",
+    "branchesLocation": "Hà Nội, Việt Nam (Sắp ra mắt)",
+    "branchesNote": "Đang trong quá trình đăng ký",
+    "emailUs": "Email cho chúng tôi",
+    "responseTime": "Thời gian phản hồi",
+    "responseTimeValue": "Trong vòng 24 giờ",
+    "responseTimeNote": "Chỉ trong ngày làm việc",
+    "followUs": "Theo dõi chúng tôi",
+    "sendMessage": "Gửi tin nhắn cho chúng tôi",
+    "sendMessageDesc": "Chúng tôi rất muốn tìm hiểu thêm về dự án của bạn. Vui lòng điền thông tin bên dưới.",
+    "toastSuccess": "Tin nhắn đã được gửi thành công!",
+    "toastError": "Gửi tin nhắn thất bại. Vui lòng thử lại.",
+    "form": {
+      "firstName": "Tên",
+      "lastName": "Họ",
+      "email": "Email",
+      "company": "Công ty",
+      "serviceInterest": "Dịch vụ quan tâm",
+      "selectService": "Chọn một dịch vụ",
+      "services": {
+        "dataAnalytics": "Phân tích & Trực quan hóa dữ liệu",
+        "machineLearning": "Giải pháp học máy",
+        "dataEngineering": "Kỹ thuật & Hạ tầng dữ liệu",
+        "consulting": "Đào tạo & Tư vấn",
+        "other": "Khác"
+      },
+      "message": "Tin nhắn",
+      "messagePlaceholder": "Hãy cho chúng tôi biết về dự án của bạn...",
+      "sending": "Đang gửi...",
+      "send": "Gửi tin nhắn →",
+      "mobilePhone": "Số Điện Thoại Di Động",
+      "estimatedStartDate": "Ngày Bắt Đầu Dự Kiến",
+      "howDidYouHear": "Bạn Biết Đến Neudata Qua Đâu",
+      "selectOption": "Chọn một tùy chọn",
+      "hearOptions": {
+        "googleSearch": "Tìm kiếm Google",
+        "socialMedia": "Mạng xã hội",
+        "referral": "Được giới thiệu",
+        "event": "Sự kiện hoặc khóa đào tạo",
+        "linkedin": "LinkedIn",
+        "other": "Khác"
+      },
+      "captchaRequired": "Vui lòng xác nhận bạn không phải là robot.",
+      "optional": "không bắt buộc"
+    }
+  },
+  "servicesPage": {
+    "badge": "Dịch vụ của chúng tôi",
+    "heroTitlePrefix": "Dịch vụ",
+    "heroTitleHighlight": "Của chúng tôi",
+    "heroDescription": "Đối tác khoa học định lượng cho các thử nghiệm lâm sàng, chương trình y tế công cộng, tổ chức nghiên cứu và các tổ chức dựa trên dữ liệu.",
+    "sectionEyebrow": "Dịch vụ của chúng tôi",
+    "sectionHeading": "Hỗ trợ chuyên môn cho nghiên cứu của bạn.",
+    "sectionSubheading": "Từ thiết kế nghiên cứu đến phân tích và công bố.",
+    "readMore": "Xem thêm →",
+    "showLess": "Thu gọn ↑",
+    "outputsLabel": "Kết quả đầu ra:",
+    "items": {
+      "surveyMethodology": {
+        "title": "Phương pháp khảo sát & Hệ thống dữ liệu thực địa",
+        "desc": "Thiết kế các cuộc khảo sát tạo ra ước tính đáng tin cậy, cùng các hệ thống thực địa thu thập dữ liệu sạch ngay từ lần đầu.",
+        "details": [
+          "Thiết kế mẫu — phân tầng, PPS và lấy mẫu cụm nhiều giai đoạn",
+          "GIS và lấy mẫu không gian: phân định PSU, khung khu vực điều tra dạng lưới",
+          "Thu thập dữ liệu điện tử bằng SurveyCTO / ODK / XLSForm",
+          "Trọng số, điều chỉnh không phản hồi và ước tính phương sai theo thiết kế",
+          "Khảo sát phủ sóng, huyết thanh học, KAP, dinh dưỡng và đánh giá cơ sở y tế"
+        ],
+        "outputs": "Kế hoạch lấy mẫu, công cụ được lập trình, sổ tay thực địa, báo cáo trọng số, bộ dữ liệu công khai."
+      },
+      "statisticalConsultancy": {
+        "title": "Tư vấn thống kê",
+        "desc": "Một chuyên gia thống kê cấp cao sẵn sàng hỗ trợ thiết kế, phân tích và các câu hỏi mà người phản biện sẽ đặt ra.",
+        "details": [
+          "Thiết kế nghiên cứu và thực nghiệm: giả thuyết, điểm cuối, ước lượng, ngẫu nhiên hóa",
+          "Mô hình hóa ứng dụng — hồi quy, mô hình hỗn hợp, phân tích sống còn, phương pháp Bayes",
+          "Suy luận nhân quả: điểm xu hướng, ghép cặp, biến công cụ",
+          "Kế hoạch phân tích thống kê (SAP) và phân tích có thể tái lập",
+          "Rà soát phương pháp và hỗ trợ thống kê cho bài báo và luận văn"
+        ],
+        "outputs": "Bản ghi nhớ thiết kế nghiên cứu, SAP, báo cáo phân tích kèm mã nguồn tái lập, hỗ trợ phản hồi phản biện."
+      },
+      "clinicalTrialSupport": {
+        "title": "Hỗ trợ thử nghiệm lâm sàng",
+        "desc": "Dịch vụ thống kê sinh học và dữ liệu toàn diện cho các nghiên cứu can thiệp và quan sát, tuân theo ICH-GCP.",
+        "details": [
+          "Phát triển đề cương và phần thống kê, định nghĩa điểm cuối và ước lượng",
+          "Lập kế hoạch cỡ mẫu, độ mạnh và phân tích thích ứng / phân tích giữa kỳ",
+          "Thiết kế CRF, kiểm tra chỉnh sửa, xây dựng cơ sở dữ liệu trên REDCap và các nền tảng EDC tương đương",
+          "Phân tích theo tiêu chuẩn CDISC, báo cáo tuân thủ CONSORT",
+          "Xử lý dữ liệu cảnh giác dược và an toàn, danh sách và bảng tóm tắt"
+        ],
+        "outputs": "Phần thống kê đề cương, SAP, cơ sở dữ liệu thử nghiệm đã xác thực, bảng biểu sẵn sàng cho CSR."
+      },
+      "dsmbSupport": {
+        "title": "Hội đồng Giám sát Dữ liệu & An toàn (DSMB)",
+        "desc": "Thành viên thống kê độc lập và phân tích dữ liệu không mù giúp bảo vệ an toàn cho người tham gia thử nghiệm.",
+        "details": [
+          "Thành viên thống kê độc lập trong DSMB và ủy ban giám sát an toàn",
+          "Điều lệ DSMB, quy tắc dừng nghiên cứu và khung phân tích tuần tự theo nhóm",
+          "Chuẩn bị báo cáo an toàn kín và mở để hội đồng xem xét",
+          "Phân tích giữa kỳ không mù được thực hiện độc lập với nhóm nghiên cứu",
+          "Tóm tắt lợi ích–rủi ro và khuyến nghị được ghi biên bản gửi nhà tài trợ"
+        ],
+        "outputs": "Điều lệ DSMB, báo cáo an toàn giữa kỳ, kế hoạch phân tích tuần tự theo nhóm, xác nhận của chuyên gia thống kê độc lập."
+      },
+      "medicalWriting": {
+        "title": "Viết bài y khoa & khoa học",
+        "desc": "Chuyển hóa phân tích thành văn bản khoa học rõ ràng, sẵn sàng nộp — được viết để phản ánh đúng những gì dữ liệu thể hiện.",
+        "details": [
+          "Bài báo, tóm tắt và áp phích hội nghị, bao gồm phần phương pháp và kết quả",
+          "Báo cáo nghiên cứu lâm sàng, đề cương và phần thống kê",
+          "Tổng quan hệ thống, phân tích gộp và tổng hợp bằng chứng (theo chuẩn PRISMA)",
+          "Tóm tắt chính sách và báo cáo kỹ thuật cho đối tượng không chuyên",
+          "Hỗ trợ nộp bài cho tạp chí, phản hồi người phản biện và xử lý chỉnh sửa"
+        ],
+        "outputs": "Bài báo sẵn sàng xuất bản, CSR, báo cáo kỹ thuật, tài liệu phản hồi người phản biện."
+      },
+      "grantsProposals": {
+        "title": "Phát triển đề xuất & Tài trợ",
+        "desc": "Củng cố nền tảng định lượng của các đơn xin tài trợ cạnh tranh — phần mà nhà tài trợ xem xét kỹ lưỡng nhất.",
+        "details": [
+          "Phần thiết kế nghiên cứu, lấy mẫu và thống kê cho đơn xin tài trợ",
+          "Giải trình cỡ mẫu và độ mạnh, cùng kế hoạch phân tích mà người phản biện có thể đánh giá",
+          "Kế hoạch giám sát-đánh giá và quản lý dữ liệu phù hợp với yêu cầu nhà tài trợ",
+          "Lập ngân sách và giải trình cho các hợp phần dữ liệu, phân tích và thống kê",
+          "Ý tưởng đề xuất, đề xuất đầy đủ và phản hồi các câu hỏi từ người phản biện"
+        ],
+        "outputs": "Phần phương pháp và phân tích, giải trình cỡ mẫu, kế hoạch giám sát-đánh giá và quản lý dữ liệu."
+      },
+      "dataManagement": {
+        "title": "Quản lý dữ liệu",
+        "desc": "Dữ liệu sạch, được quản lý tốt với dấu vết kiểm toán — nền tảng mà mọi thứ khác phụ thuộc vào.",
+        "details": [
+          "Thiết kế và xây dựng cơ sở dữ liệu, cấu hình EDC, và quy trình ETL / tích hợp dữ liệu",
+          "Giám sát chất lượng dữ liệu: quy tắc xác thực, kiểm tra tự động, quản lý truy vấn",
+          "Làm sạch, hài hòa và liên kết dữ liệu, bao gồm khớp bản ghi và loại bỏ trùng lặp",
+          "Quản trị: kế hoạch quản lý dữ liệu, SOP, dấu vết kiểm toán, ẩn danh hóa",
+          "Lưu trữ an toàn, kiểm soát truy cập và chuẩn bị bộ dữ liệu sẵn sàng phân tích"
+        ],
+        "outputs": "Kế hoạch quản lý dữ liệu, cơ sở dữ liệu đã xác thực, báo cáo chất lượng dữ liệu, bộ dữ liệu phân tích đã khóa, SOP liên kết dữ liệu."
+      },
+      "statisticalProgramming": {
+        "title": "Lập trình & Phần mềm thống kê",
+        "desc": "Mã nguồn và công cụ chất lượng sản xuất — có tài liệu đầy đủ, quản lý phiên bản và có thể tái lập.",
+        "details": [
+          "Lập trình thống kê bằng R, Python, Stata và SAS, bao gồm phát triển gói phần mềm",
+          "Quy trình phân tích có thể tái lập, báo cáo tự động (R Markdown / Quarto)",
+          "Bảng điều khiển tương tác (Shiny, Power BI) cho giám sát và phổ biến",
+          "Phần mềm phương pháp luận — công cụ mô phỏng và phương pháp thống kê tùy chỉnh",
+          "Rà soát mã nguồn, xác thực và tái cấu trúc mã phân tích kế thừa"
+        ],
+        "outputs": "Kho mã nguồn có tài liệu, quy trình có thể tái lập, bảng điều khiển, gói phân tích đã xác thực."
+      },
+      "mathematicalModelling": {
+        "title": "Mô hình hóa toán học & thống kê",
+        "desc": "Các mô hình giải thích cơ chế, dự báo tương lai và định lượng độ không chắc chắn một cách trung thực.",
+        "details": [
+          "Mô hình bệnh truyền nhiễm và mô hình ngăn (SIR / SEIR) và động lực lây truyền",
+          "Phương pháp dự báo và chuỗi thời gian cho giám sát và lập kế hoạch chương trình",
+          "Mô hình phân cấp Bayes, ước tính khu vực nhỏ và mô hình không gian",
+          "Mô phỏng, phân tích kịch bản và định lượng độ nhạy / độ không chắc chắn",
+          "Phương pháp biến ẩn và tích hợp đa omics"
+        ],
+        "outputs": "Mô hình đã hiệu chỉnh, dự báo kèm khoảng không chắc chắn, nghiên cứu mô phỏng, tài liệu kỹ thuật."
+      },
+      "researchAnalytics": {
+        "title": "Nghiên cứu & Phân tích",
+        "desc": "Hỗ trợ nghiên cứu toàn diện và khoa học dữ liệu ứng dụng đằng sau các quyết định dựa trên dữ liệu.",
+        "details": [
+          "Hỗ trợ nghiên cứu toàn diện — từ câu hỏi nghiên cứu đến phân tích và phổ biến kết quả",
+          "Phân tích dịch tễ học và y tế công cộng, bao gồm giám sát và đánh giá chương trình",
+          "Mô hình dự đoán và học máy khi thực sự cần thiết",
+          "Trực quan hóa dữ liệu, theo dõi KPI và báo cáo phân tích cho quyết định vận hành",
+          "Phân tích thứ cấp và tổng hợp bằng chứng từ các tài sản dữ liệu hiện có"
+        ],
+        "outputs": "Kết quả nghiên cứu, báo cáo đánh giá, mô hình dự đoán đã xác thực, phân tích sẵn sàng cho quyết định."
+      },
+      "trainingCapacity": {
+        "title": "Đào tạo & Nâng cao năng lực",
+        "desc": "Giúp các nhóm có thể tự thực hiện công việc — không phụ thuộc vào chúng tôi.",
+        "details": [
+          "Khóa học thực hành về R, Python, Stata và nghiên cứu có thể tái lập",
+          "Thống kê sinh học ứng dụng, phương pháp khảo sát, dịch tễ học và quản lý dữ liệu",
+          "Hỗ trợ kèm cặp thực tế cho nhà phân tích, sinh viên và nhân viên tổ chức",
+          "Thiết kế chương trình giảng dạy và hội thảo nội bộ tùy chỉnh bằng tiếng Anh và tiếng Pháp",
+          "Hỗ trợ phương pháp liên tục và kèm cặp phân tích sau bàn giao"
+        ],
+        "outputs": "Tài liệu khóa học, hội thảo thực hành, kế hoạch kèm cặp, chương trình giảng dạy sẵn sàng cấp chứng chỉ."
+      },
+      "pkpdModeling": {
+        "title": "Mô Hình Hóa & Mô Phỏng PK/PD",
+        "desc": "Mô hình hóa định lượng để hướng dẫn quyết định liều dùng an toàn, hiệu quả xuyên suốt vòng đời phát triển thuốc.",
+        "details": [
+          "Mô hình dược động học quần thể (PopPK)",
+          "Mô hình dược động học/dược lực học (PK/PD) theo chuỗi thời gian",
+          "Mô hình chuyển dịch (translational modeling)",
+          "Mô hình quan hệ phơi nhiễm-đáp ứng",
+          "Phân tích tích hợp hiệu quả-an toàn",
+          "Kết nối giữa các quần thể (theo khu vực, chủng tộc, bệnh lý)",
+          "Mô phỏng thử nghiệm lâm sàng"
+        ],
+        "outputs": "Mô hình PK/PD quần thể, phân tích phơi nhiễm-đáp ứng, báo cáo mô phỏng hỗ trợ lựa chọn liều và thiết kế thử nghiệm."
+      }
+    },
+    "approachEyebrow": "Cách chúng tôi làm việc",
+    "approachHeading": "Cách chúng tôi làm việc",
+    "approachSubheading": "Ba cam kết xuyên suốt mọi dự án hợp tác.",
+    "pillars": {
+      "methodologicallyLed": {
+        "title": "Dẫn dắt bởi phương pháp luận",
+        "desc": "Các chuyên gia thống kê cấp cao phụ trách thiết kế và phân tích, không chỉ là viết mã."
+      },
+      "standardsAware": {
+        "title": "Tuân thủ tiêu chuẩn",
+        "desc": "Công việc được thực hiện theo các tiêu chuẩn ICH-GCP, CONSORT, STROBE và GAMP khi có liên quan."
+      },
+      "reproducible": {
+        "title": "Có thể tái lập",
+        "desc": "Mã nguồn có quản lý phiên bản, quy trình có tài liệu và kế hoạch phân tích có thể giao cho kiểm toán viên."
+      }
+    },
+    "ctaEyebrow": "Hợp tác cùng chúng tôi",
+    "ctaHeading": "Hãy cho chúng tôi biết về nghiên cứu, bộ dữ liệu hoặc thời hạn của bạn",
+    "ctaDesc": "Chúng tôi sẽ cho bạn biết một cách trung thực những gì cần thiết và cách chúng tôi có thể hỗ trợ — dù đó là một lần rà soát thống kê đơn lẻ hay một hợp tác toàn diện trong suốt vòng đời dự án.",
+    "ctaButton": "Liên hệ ngay",
+    "exploreService": "Khám phá dịch vụ"
+  },
+  "events": {
+    "badge": "Đang diễn ra",
+    "title1": "Các",
+    "titleHighlight": "Sự kiện",
+    "subtitle": "Khám phá các sự kiện đang diễn ra, sắp tới, hội thảo và các buổi đào tạo từ Neudata.",
+    "searchPlaceholder": "Tìm kiếm sự kiện theo tên, danh mục hoặc địa điểm...",
+    "loading": "Đang tải sự kiện...",
+    "ongoingHeading": "Sự kiện đang diễn ra",
+    "upcomingHeading": "Sự kiện sắp tới",
+    "pastHeading": "Sự kiện đã qua",
+    "noUpcoming": "Chưa có sự kiện sắp tới",
+    "checkBackSoon": "Hãy quay lại sớm để xem các sự kiện mới!",
+    "viewRegister": "Xem sự kiện & Đăng ký →",
+    "ongoingBadge": "🟢 Đang diễn ra",
+    "pastBadge": "Đã kết thúc",
+    "defaultCategory": "Sự kiện",
+    "free": "Miễn phí"
+  },
+  "eventDetail": {
+    "notFound": "Không tìm thấy sự kiện",
+    "backToEvents": "Quay lại Sự kiện",
+    "dateLabel": "Ngày",
+    "timeLabel": "Thời gian",
+    "locationLabel": "Địa điểm",
+    "capacityLabel": "Sức chứa",
+    "attendees": "người tham dự",
+    "aboutEvent": "Về sự kiện này",
+    "speakersGuests": "Diễn giả & Khách mời",
+    "registerButton": "Đăng ký sự kiện này ↗",
+    "registrationComingSoon": "Liên kết đăng ký sẽ sớm được cập nhật.",
+    "viewPoster": "Xem toàn bộ áp phích ↗",
+    "noPaymentRequired": "Chưa yêu cầu thanh toán ở giai đoạn này"
+  },
+  "books": {
+    "hero": {
+      "badge": "Thư Viện Được Tuyển Chọn",
+      "titleMain": "Tài Nguyên Thiết Yếu Cho",
+      "titleHighlight": "Chuyên Gia Dữ Liệu",
+      "subtitle": "37 tài liệu được tuyển chọn kỹ lưỡng thuộc các lĩnh vực khoa học dữ liệu, thống kê, nghiên cứu lâm sàng và nhiều hơn nữa — do đội ngũ chuyên gia của chúng tôi tuyển chọn.",
+      "browseButton": "Khám Phá Bộ Sưu Tập →",
+      "suggestButton": "Đề Xuất Một Cuốn Sách"
+    },
+    "stats": {
+      "curatedResources": "Tài Liệu Được Tuyển Chọn",
+      "categories": "Danh Mục",
+      "freeOnlineStat": "Miễn Phí Trực Tuyến",
+      "expertPicks": "Lựa Chọn Chuyên Gia"
+    },
+    "section": {
+      "eyebrow": "Thư Viện Của Chúng Tôi",
+      "title": "Duyệt Theo Danh Mục",
+      "subtitle": "Di chuột qua thẻ sách bất kỳ để xem mô tả và liên kết truy cập. Di chuột qua một hàng để tạm dừng cuộn."
+    },
+    "categories": {
+      "foundations": "Nền Tảng & Khoa Học Dữ Liệu",
+      "survey": "Phương Pháp Khảo Sát",
+      "statistical": "Tư Vấn Thống Kê",
+      "clinical": "Thử Nghiệm Lâm Sàng",
+      "writing": "Viết Khoa Học",
+      "grants": "Tài Trợ & Đề Xuất Dự Án",
+      "programming": "Lập Trình & Phần Mềm",
+      "engineering": "Kỹ Thuật Dữ Liệu",
+      "modelling": "Mô Hình Hóa Toán Học",
+      "epidemiology": "Dịch Tễ Học",
+      "training": "Đào Tạo & Khả Năng Tái Lập"
+    },
+    "booksCountSuffix": "cuốn sách",
+    "freeOnline": "Miễn Phí Trực Tuyến ↗",
+    "buyNow": "Mua Ngay ↗",
+    "disclaimer": "Ảnh bìa và thông tin sách chỉ mang tính chất tham khảo. Mọi quyền thuộc về tác giả và nhà xuất bản tương ứng.",
+    "suggestCta": {
+      "title": "Đề Xuất Một Tựa Sách",
+      "subtitle": "Danh sách này sẽ tiếp tục mở rộng. Nếu có cuốn sách nào đã định hình cách bạn làm việc — hãy cho chúng tôi biết, chúng tôi sẽ cân nhắc đưa vào bộ sưu tập.",
+      "button": "Đề Xuất Một Cuốn Sách →"
+    },
+    "items": {
+      "b01": "Điểm khởi đầu chuẩn cho tidyverse: nhập, làm sạch, biến đổi, trực quan hóa và mô hình hóa dữ liệu trong R.",
+      "b02": "Xử lý và làm sạch dữ liệu với pandas và NumPy, do chính người tạo ra pandas biên soạn.",
+      "b03": "NumPy, pandas, Matplotlib và scikit-learn dành cho nhà khoa học dữ liệu thực hành.",
+      "b04": "Tư duy thống kê dành cho độc giả phổ thông và chuyên môn — rất phù hợp với các bên liên quan không chuyên.",
+      "b05": "Một cách trình bày rõ ràng, hiện đại về lý thuyết và thực hành lấy mẫu khảo sát.",
+      "b06": "Cuốn sách nền tảng về tổng sai số khảo sát, thiết kế bảng hỏi và vận hành khảo sát.",
+      "b07": "Tài liệu tham khảo về suy luận dựa trên thiết kế và ước lượng hiệu chỉnh trong khảo sát phức tạp.",
+      "b08": "Con đường dễ tiếp cận nhất để bước vào học máy thống kê hiện đại; có bản PDF miễn phí được Springer cho phép.",
+      "b09": "Tài liệu nâng cao đồng hành cùng ISL — lý thuyết chuyên sâu hơn đằng sau các phương pháp.",
+      "b10": "Không thể thiếu cho hồi quy ứng dụng, splines, kiểm định và mô hình dự đoán.",
+      "b11": "Tài liệu tham khảo chuẩn cho hồi quy logistic, bảng tương liên và mô hình cho biến kết quả phân loại.",
+      "b12": "Giáo trình cốt lõi về thiết kế, triển khai, giám sát và phân tích thử nghiệm lâm sàng.",
+      "b13": "Hướng dẫn thực tế về câu hỏi nghiên cứu, thiết kế nghiên cứu và cỡ mẫu.",
+      "b14": "Các phương pháp tuần tự nhóm và giám sát giữa kỳ — liên quan trực tiếp đến công việc thống kê của DSMB.",
+      "b15": "Hướng dẫn thực hành toàn diện nhất về vận hành và đóng góp cho DSMB.",
+      "b16": "Hướng dẫn thực tế để viết và xuất bản trong lĩnh vực khoa học sinh học và sức khỏe.",
+      "b17": "Một chuẩn mực lâu đời về cách xây dựng và nộp bản thảo khoa học.",
+      "b18": "Các danh mục kiểm tra thiết yếu mà mọi bản thảo và đề cương nên tuân theo.",
+      "b19": "Sổ tay có cấu trúc, được sử dụng rộng rãi để xây dựng hồ sơ đề xuất cạnh tranh.",
+      "b20": "Về cách kể chuyện và cấu trúc trong cả bài báo lẫn đề xuất tài trợ.",
+      "b21": "Cách R thực sự hoạt động — thiết yếu để viết mã và gói R vững chắc, hiệu quả.",
+      "b22": "Tài liệu tham khảo để xây dựng, kiểm thử và phát hành các gói R.",
+      "b23": "Viết Python theo phong cách chuẩn mực, chất lượng cao — vượt xa các giáo trình nhập môn.",
+      "b24": "Các nguyên tắc viết mã dễ đọc, dễ bảo trì, áp dụng được cho mọi ngôn ngữ.",
+      "b25": "Bản đồ trung lập về nền tảng công nghệ, bao quát toàn bộ vòng đời dữ liệu hiện đại.",
+      "b26": "Tài liệu tham khảo về các hệ thống đằng sau hạ tầng dữ liệu đáng tin cậy, có khả năng mở rộng.",
+      "b27": "Bài báo nền tảng ngắn gọn về cách cấu trúc dữ liệu để phân tích — miễn phí.",
+      "b28": "Giáo trình nhập môn hiện đại tốt nhất về mô hình hóa Bayes ứng dụng.",
+      "b29": "Tài liệu tham khảo toàn diện về Bayes; các tác giả cung cấp bản PDF miễn phí.",
+      "b30": "Giáo trình chuẩn, hoàn toàn miễn phí về dự báo chuỗi thời gian.",
+      "b31": "Tài liệu tham khảo về mô hình ngăn và động lực lây truyền.",
+      "b32": "Tài liệu tham khảo dịch tễ học sau đại học mang tính quyết định.",
+      "b33": "Giáo trình hiện đại hàng đầu về suy luận nhân quả từ dữ liệu quan sát.",
+      "b34": "Một giáo trình thống kê y khoa ứng dụng, rõ ràng, được sử dụng rộng rãi trong đào tạo y tế công cộng.",
+      "b35": "Báo cáo có thể tái lập và tài liệu tự động trong R.",
+      "b36": "Tác phẩm kinh điển về trực quan hóa dữ liệu và đạo đức trình bày dữ liệu.",
+      "b37": "Hướng dẫn thực tế, miễn phí để tạo ra các biểu đồ rõ ràng, trung thực."
+    }
+  },
+  "training": {
+    "badge": "Nâng cao kỹ năng",
+    "title1": "Đào tạo &",
+    "titleHighlight": "Nâng cao năng lực",
+    "subtitle": "Các khóa học có cấu trúc và hội thảo thực hành dành cho chuyên gia y tế, nhà nghiên cứu và tổ chức.",
+    "coursesEyebrow": "Khóa học của chúng tôi",
+    "coursesHeading": "Học từ những người trực tiếp làm công việc này",
+    "coursesSubheading": "Thêm khóa học mới sẽ được cập nhật.",
+    "enquireButton": "Tìm hiểu →",
+    "courses": {
+      "foundations": {
+        "level": "Cấp độ 1",
+        "title": "Nền tảng Nghiên cứu Lâm sàng",
+        "desc": "Các khái niệm cốt lõi đằng sau một nghiên cứu lâm sàng và y tế công cộng được thực hiện tốt.",
+        "topics": [
+          "Thiết kế nghiên cứu và các loại hình nghiên cứu lâm sàng",
+          "Đạo đức nghiên cứu và sự đồng thuận có hiểu biết",
+          "Kiến thức cốt lõi về Thực hành Lâm sàng Tốt (GCP)"
+        ]
+      },
+      "dataToPublication": {
+        "level": "Cấp độ 2",
+        "title": "Từ Dữ liệu đến Xuất bản",
+        "desc": "Chuyển hóa dữ liệu thu thập được thành bản thảo sẵn sàng nộp.",
+        "topics": [
+          "Xây dựng kế hoạch phân tích dựa trên câu hỏi nghiên cứu",
+          "Các phép kiểm định thống kê phổ biến và cách báo cáo",
+          "Viết phần phương pháp và kết quả rõ ràng"
+        ]
+      },
+      "clinicalDataR": {
+        "level": "Khóa học miễn phí",
+        "title": "Phân tích Dữ liệu Lâm sàng bằng R",
+        "desc": "Khóa học buổi tối gồm năm buổi giới thiệu R cho phân tích dữ liệu lâm sàng.",
+        "topics": [
+          "Bắt đầu với R và RStudio",
+          "Nhập, làm sạch và trực quan hóa dữ liệu lâm sàng",
+          "Hồi quy cơ bản và báo cáo kết quả"
+        ]
+      }
+    },
+    "inHouseBadge": "Dành cho tổ chức",
+    "inHouseHeading": "Yêu cầu đào tạo nội bộ cho đơn vị của bạn",
+    "inHouseDesc": "Chúng tôi tùy chỉnh bất kỳ khóa học nào — hoặc thiết kế khóa học mới — cho tổ chức của bạn.",
+    "inHouseButton": "Yêu cầu Đào tạo Nội bộ"
+  },
+  "experts": {
+    "badge": "Đội ngũ của chúng tôi",
+    "titlePrefix": "Gặp gỡ các",
+    "titleHighlight": "chuyên gia",
+    "subtitle": "Các nhà thống kê sinh học, dịch tễ học và nghiên cứu viên đứng sau công việc của chúng tôi.",
+    "readMore": "Xem thêm →",
+    "members": {
+      "bernard-isekah-osangir": {
+        "role": "Đồng sáng lập",
+        "degrees": "Tiến sĩ Thống kê sinh học & Tin sinh học, Thạc sĩ Thống kê & Khoa học dữ liệu",
+        "specialties": [
+          "Thống kê sinh học",
+          "Tin sinh học",
+          "Phân tích thử nghiệm lâm sàng",
+          "Thiết kế khảo sát"
+        ],
+        "bio": "Bernard có hơn mười năm kinh nghiệm trong các nghiên cứu y tế công cộng, thử nghiệm lâm sàng và quản lý dữ liệu. Ông là chuyên gia thiết kế và phân tích các nghiên cứu nhằm hỗ trợ ra quyết định trong bối cảnh lâm sàng và y tế công cộng. Ông làm việc trong các lĩnh vực tin sinh học, phương pháp thống kê và phát triển phần mềm nghiên cứu, đồng thời giảng dạy lập trình R, quản lý dữ liệu và thống kê ứng dụng ở bậc sau đại học."
+      },
+      "james-wambua": {
+        "role": "Đồng sáng lập",
+        "degrees": "Cử nhân Thống kê, Thạc sĩ Dịch tễ học, Thạc sĩ Khoa học Toán, Cử nhân Toán học",
+        "specialties": [
+          "Dịch tễ học",
+          "Thống kê",
+          "Mô hình toán học",
+          "Kinh tế y tế"
+        ],
+        "bio": "James là nhà khoa học nghiên cứu với hơn chín năm kinh nghiệm, chuyên phát triển và ứng dụng các phương pháp phân tích dữ liệu tiên tiến để giải quyết những thách thức phức tạp về y tế công cộng bằng dữ liệu thực tế. Ông có nhiều kinh nghiệm làm việc và tư vấn cho các tổ chức quốc tế, bao gồm Trung tâm Phòng ngừa và Kiểm soát Dịch bệnh Châu Âu (ECDC), các công ty dược phẩm quốc tế như Merck & Co., Inc. (MSD) và các viện nghiên cứu quốc gia như KEMRI-Wellcome Trust."
+      },
+      "my-luong-vuong": {
+        "role": "Đồng sáng lập",
+        "degrees": "Dược sĩ (PharmD), Thạc sĩ Dịch tễ học, Thạc sĩ Thống kê sinh học, Tiến sĩ Pharmacometrics (đang thực hiện)",
+        "specialties": [
+          "Dịch tễ học",
+          "Thống kê sinh học",
+          "Pharmacometrics",
+          "Mô hình hóa và mô phỏng"
+        ],
+        "bio": "My-Luong Vuong tốt nghiệp Dược sĩ (PharmD) tại Đại học Dược Hà Nội, Việt Nam, cùng bằng Thạc sĩ Dịch tễ học tại Đại học Antwerp, Bỉ, và bằng Thạc sĩ Thống kê sinh học tại Đại học Hasselt, Bỉ. Hiện anh đang trong năm cuối chương trình Tiến sĩ về pharmacometrics tại KU Leuven, Bỉ, nơi anh nghiên cứu tối ưu hóa liều kháng sinh cho các nhóm bệnh nhân đặc biệt, bao gồm bệnh nhi và bệnh nhân nặng điều trị tại khoa hồi sức tích cực."
+      }
+    }
+  }
+}

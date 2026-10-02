@@ -32,12 +32,26 @@ const pillarMeta = [
   { key: "reproducible", icon: GitBranch },
 ];
 
+const iconNames: Record<string, string> = {
+  surveyMethodology: "bar_chart",
+  statisticalConsultancy: "trending_up",
+  clinicalTrialSupport: "stethoscope",
+  dsmbSupport: "shield",
+  medicalWriting: "edit_note",
+  grantsProposals: "description",
+  dataManagement: "database",
+  statisticalProgramming: "code",
+  mathematicalModelling: "hub",
+  researchAnalytics: "query_stats",
+  trainingCapacity: "school",
+  pkpdModeling: "medication",
+};
+
 function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   const raw = t(`servicesPage.items.${meta.key}.details`, { returnObjects: true });
   const details = Array.isArray(raw) ? (raw as string[]) : [];
-  const Icon = meta.icon;
   const toggle = () => setExpanded(!expanded);
 
   return (
@@ -50,7 +64,21 @@ function ServiceCard({ meta }: { meta: typeof serviceMeta[0] }) {
       className={`group cursor-pointer border-r border-b border-slate-200 p-6 md:p-7 transition-colors duration-200 ${expanded ? "bg-teal-800 text-white" : "bg-white text-slate-900 hover:bg-teal-800 hover:text-white"}`}
     >
       <div className="flex gap-5">
-        <Icon strokeWidth={1.25} className="w-10 h-10 shrink-0 mt-1" />
+        {meta.key === "pkpdModeling" ? (
+          <meta.icon
+            className={`w-10 h-10 shrink-0 mt-1 transition-colors duration-200 ${expanded ? "text-white" : "text-teal-700 group-hover:text-white"}`}
+            strokeWidth={1.5}
+            aria-hidden="true"
+          />
+        ) : (
+          <span
+            className={`material-symbols-outlined shrink-0 mt-1 select-none transition-colors duration-200 ${expanded ? "text-white" : "text-teal-700 group-hover:text-white"}`}
+            style={{ fontSize: 40, lineHeight: 1, fontVariationSettings: "'wght' 200" }}
+            aria-hidden="true"
+          >
+            {iconNames[meta.key] ?? "circle"}
+          </span>
+        )}
         <div className="w-px self-stretch bg-current opacity-20" />
         <div className="flex-1 min-w-0">
           <h3 className="text-base font-semibold mb-1.5 leading-snug">{t(`servicesPage.items.${meta.key}.title`)}</h3>
@@ -90,19 +118,15 @@ const Services = () => {
     <div className="pt-16">
       {/* Hero Banner */}
       <div className="relative h-72 md:h-96 overflow-hidden">
-        <img
-          src={servicesBanner}
-          alt="Our Services"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <img src={servicesBanner} alt="Our Services" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0" style={{ background: HERO_GRADIENT, opacity: 0.85 }} />
         <div className="absolute inset-0 grid-pattern opacity-20" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
           <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-4">
-            <BarChart3 className="w-3 h-3 text-teal-300" />
+            <Compass className="w-3 h-3 text-teal-300" />
             <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">{t("servicesPage.badge")}</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-3">
             {t("servicesPage.heroTitlePrefix")} <span className="text-teal-300">{t("servicesPage.heroTitleHighlight")}</span>
           </h1>
           <p className="text-white/70 max-w-2xl text-sm md:text-base leading-relaxed">
@@ -119,12 +143,12 @@ const Services = () => {
       />
       <section className="py-20 bg-white">
         <div className="container">
-          <div className="mb-10">
-            <span className="text-teal-700 text-xs font-semibold uppercase tracking-widest">{t("servicesPage.sectionEyebrow")}</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mt-3 mb-3 tracking-tight">
+          <div className="text-center mb-12">
+            <span className="text-primary text-xs font-semibold uppercase tracking-widest">{t("servicesPage.sectionEyebrow")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 mb-3">
               {t("servicesPage.sectionHeading")}
             </h2>
-            <p className="text-muted-foreground max-w-2xl text-base md:text-lg">
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm">
               {t("servicesPage.sectionSubheading")}
             </p>
           </div>
@@ -138,22 +162,17 @@ const Services = () => {
       </section>
 
       {/* Pillars */}
-      <section className="py-20 text-white relative overflow-hidden" style={{ background: HERO_GRADIENT }}>
-        <div className="absolute inset-0 grid-pattern opacity-20 pointer-events-none" />
-        <div className="container relative">
-          <div className="text-center mb-12">
-            <span className="text-teal-300 text-xs font-semibold uppercase tracking-widest">{t("servicesPage.approachEyebrow")}</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-3">{t("servicesPage.approachHeading")}</h2>
-            <p className="text-white/60 max-w-xl mx-auto text-sm">{t("servicesPage.approachSubheading")}</p>
+      <section className="py-20 bg-slate-50">
+        <div className="container">
+          <div className="max-w-2xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">{t("servicesPage.approachHeading")}</h2>
+            <p className="text-muted-foreground text-sm">{t("servicesPage.approachSubheading")}</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-10">
             {pillarMeta.map((p) => (
-              <div key={p.key} className="bg-white/10 border border-white/20 rounded-2xl p-6 backdrop-blur-sm hover:bg-white/15 transition-all text-center">
-                <div className="w-12 h-12 rounded-full bg-teal-500/30 border border-teal-400/30 flex items-center justify-center mb-4 mx-auto">
-                  <p.icon className="w-5 h-5 text-teal-300" />
-                </div>
-                <h3 className="text-white font-bold mb-2">{t(`servicesPage.pillars.${p.key}.title`)}</h3>
-                <p className="text-white/60 text-sm leading-relaxed">{t(`servicesPage.pillars.${p.key}.desc`)}</p>
+              <div key={p.key} className="border-t-2 border-teal-700 pt-5">
+                <h3 className="text-slate-900 font-semibold mb-2">{t(`servicesPage.pillars.${p.key}.title`)}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{t(`servicesPage.pillars.${p.key}.desc`)}</p>
               </div>
             ))}
           </div>
